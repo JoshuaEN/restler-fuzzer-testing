@@ -1,3 +1,22 @@
+# Probem: Matching Uniqueness Required
+This branch has the [Server\restler-fuzzer\results](Server\restler-fuzzer\results) for a PUT only resource (a resource that can only be created via a PUT request to a specific resource). This run largely failed, with only 1 requests succeeding.
+
+The core problem is that the RESTler-fuzzer grammar does not provide the same unique value for `id` when calling `PUT api/v1/putOnlys/{putOnlyId}` as `putOnlyId`. Rather, RESTler-fuzzer only provides a unique value for `putOnlyId`, using a fuzzable string for the `id` in the body. Because the server expects the `id` in the body to match the identifier in the URL, this leads for 400 errors when attempting to create the resource.
+
+The endpoint logic described above matches that of a real production system.
+
+## Desired Resolution
+The desired resolution is to be able to declaratively instruct the compiler what params should be unique, and when the same unique value needs to appear more than once in a request.
+
+## This run can be reproduced by:
+1. Get [RESTler-fuzzer](https://github.com/microsoft/restler-fuzzer) and [build it](https://github.com/microsoft/restler-fuzzer#build-instructions)
+1. Run `dotnet run -c PUT_ONLYS` for the Server project
+1. Once the server has started and is accepting requests, run `python Server/restler-fuzzer/run.py --restler_drop_dir {{path-to-restler-fuzzer-bin}}`, which will:
+    1. Download the swagger.json from the local server
+    1. Insert absolute paths into the [config.template.json](Server\restler-fuzzer\inputs\config.template.json) (note: logic is currently hard-coded of what paths to insert and where)
+    1. Run restler compile with the [config.json](Server\restler-fuzzer\results\config.json) created in the last step
+    1. Run restler test with the result of the compilation
+
 # Simple demo project to test various RESTler-fuzzer features
 
 ## Running Server + RESTler-fuzzer

@@ -1,0 +1,54 @@
+{
+  "/api/v1/PutOnlys/{putOnlyId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "producer_method": "PUT",
+          "producer_resource_name": "id",
+          "consumer_param": "putOnlyId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "producer_method": "PUT",
+          "producer_resource_name": "id",
+          "consumer_param": "putOnlyId"
+        }
+      ]
+    },
+    "PUT": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "restler_custom_payload_uuid_suffix__putOnlyId",
+          "consumer_param": "putOnlyId"
+        }
+      ],
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "description"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        }
+      ]
+    }
+  }
+}

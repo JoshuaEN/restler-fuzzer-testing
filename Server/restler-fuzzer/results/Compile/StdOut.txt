@@ -1,0 +1,61 @@
+[11/24/2020 10:46:42 AM] Generating grammar...
+[11/24/2020 10:46:43 AM] Getting requests...
+[11/24/2020 10:46:43 AM] Getting dependencies...
+[11/24/2020 10:46:43 AM] Get consumers.
+[11/24/2020 10:46:43 AM] Get producers.
+[11/24/2020 10:46:43 AM] Done processing producers
+[11/24/2020 10:46:43 AM] Compute dependencies
+[11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Get }[
+11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Put }[[11/24/2020 10:46:43 AM] [11/24/2020 10:46:43 AM] [11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Get }
+[11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys"
+  method = Get }
+[11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Delete }
+[11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys"
+  method = Get }
+Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Delete }
+[11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Get }
+11/24/2020 10:46:43 AM] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Put }[11/24/2020 10:46:43 AMSecond pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Put }
+
+[11/24/2020 10:46:43 AM] 
+Second pass dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Delete }
+] Second pass dependencies for request { endpoint = "/api/v1/PutOnlys"
+  method = Get }
+[11/24/2020 10:46:43 AM[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys"
+  method = Get }] Done dependencies for request { endpoint = "/api/v1/PutOnlys"
+  method = Get }
+
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Get }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Delete }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Delete }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys"
+  method = Get }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Put }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Get }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Delete }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Put }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Get }
+[11/24/2020 10:46:43 AM] Done dependencies for request { endpoint = "/api/v1/PutOnlys/{putOnlyId}"
+  method = Put }
+[11/24/2020 10:46:43 AM] Dependency analysis completed.
+[11/24/2020 10:46:43 AM] Generating request primitives...
+Writing new dictionary to C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json
+[11/24/2020 10:46:43 AM] Generating python grammar...
+[11/24/2020 10:46:43 AM] Done generating python grammar.
+Workflow completed.  See C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile for REST-ler grammar.

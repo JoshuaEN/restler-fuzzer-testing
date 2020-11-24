@@ -1,0 +1,118 @@
+2020-11-24 10:46:45.260: Going to fuzz a set with 4 requests
+2020-11-24 10:46:45.260: Request-0: Value Combinations: 1
+2020-11-24 10:46:45.260: Request-1: Value Combinations: 1
+2020-11-24 10:46:45.260: Request-2: Value Combinations: 1
+2020-11-24 10:46:45.260: Request-3: Value Combinations: 1
+2020-11-24 10:46:45.260: Avg. Value Combinations per Request: 1
+2020-11-24 10:46:45.260: Median Value Combinations per Request: 1.0
+2020-11-24 10:46:45.260: Min Value Combinations per Request: 1
+2020-11-24 10:46:45.260: Max Value Combinations per Request: 1
+2020-11-24 10:46:45.260: Total dependencies: 3
+
+2020-11-24 10:46:45.268: Starting directed-smoke-test
+
+2020-11-24 10:46:45.278: Will attempt to render 4 requests found
+
+Rendering request 0 from scratch
+
+2020-11-24 10:46:45.691: Request 0
+2020-11-24 10:46:45.691: Endpoint - /api/v1/PutOnlys
+2020-11-24 10:46:45.692: Hex Def - 2dc4935576247a0425946958bda2e248ba9c5647
+2020-11-24 10:46:45.692: Sequence length that satisfies dependencies: 1
+2020-11-24 10:46:45.702: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PutOnlys'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: '\r\n'
+
+Rendering request 1 from scratch
+
+2020-11-24 10:46:46.637: Request 1
+2020-11-24 10:46:46.637: Endpoint - /api/v1/PutOnlys/{putOnlyId}
+2020-11-24 10:46:46.637: Hex Def - c110c6538495209542c152173daeca0cd218a67d
+2020-11-24 10:46:46.638: Sequence length that satisfies dependencies: 1
+2020-11-24 10:46:46.648: Rendering INVALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PutOnlys'
+		- restler_static_string: '/'
+		+ restler_custom_payload_uuid4_suffix: putonlyid
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ',\n    "name":'
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ',\n    "description":'
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix for request 2 with previous request 1
+	but that prefix was INVALID (root = 1)
+
+2020-11-24 10:46:46.942: Request 2
+2020-11-24 10:46:46.942: Endpoint - /api/v1/PutOnlys/{putOnlyId}
+2020-11-24 10:46:46.942: Hex Def - 8a259a2ffff6f6113d1b5d18de15a4670e66c797
+2020-11-24 10:46:46.942: Sequence length that satisfies dependencies: 2
+2020-11-24 10:46:46.954: Rendering INVALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PutOnlys'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_v1_PutOnlys__putOnlyId__put_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix for request 3 with previous request 1
+	but that prefix was INVALID (root = 1)
+
+2020-11-24 10:46:47.193: Request 3
+2020-11-24 10:46:47.193: Endpoint - /api/v1/PutOnlys/{putOnlyId}
+2020-11-24 10:46:47.193: Hex Def - f746f59d741ad41833fe9ea2049a7eb2f7ff263a
+2020-11-24 10:46:47.193: Sequence length that satisfies dependencies: 2
+2020-11-24 10:46:47.205: Rendering INVALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PutOnlys'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_v1_PutOnlys__putOnlyId__put_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: '\r\n'
+
+2020-11-24 10:46:47.377: Final Swagger spec coverage: 1 / 4
+2020-11-24 10:46:47.377: Rendered requests: 2 / 4
+2020-11-24 10:46:47.377: Rendered requests with "valid" status codes: 1 / 2
+2020-11-24 10:46:47.377: Num fully valid requests (no resource creation failures): 1
+2020-11-24 10:46:47.377: Num requests not rendered due to invalid sequence re-renders: 0
+2020-11-24 10:46:47.377: Num invalid requests caused by failed resource creations: 0
+2020-11-24 10:46:47.377: Total Creations of Dyn Objects: 0
+2020-11-24 10:46:47.377: Total Requests Sent: {'gc': 0, 'main_driver': 2}
+2020-11-24 10:46:47.377: Bug Buckets: {}

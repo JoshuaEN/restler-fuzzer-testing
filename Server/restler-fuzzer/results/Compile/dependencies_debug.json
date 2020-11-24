@@ -1,0 +1,296 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "putOnlyId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "PutOnlys"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "PutOnlys",
+        "PathContainerName": "PutOnlys",
+        "CandidateTypeNames": [
+          "put__only"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "putOnlyId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "ResponseObject": {
+        "id": {
+          "RequestId": {
+            "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+            "method": "Put"
+          },
+          "ResourceReference": {
+            "BodyResource": {
+              "name": "id",
+              "fullPath": {
+                "path": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "ContainerName": "PutOnlys",
+          "PathContainerName": "PutOnlys",
+          "CandidateTypeNames": [
+            "put__only"
+          ],
+          "AccessPath": "id",
+          "AccessPathParts": {
+            "path": [
+              "id"
+            ]
+          },
+          "ResourceName": "id",
+          "ProducerParameterName": "id",
+          "IsNestedBodyResource": false,
+          "PrimitiveType": "String"
+        }
+      }
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "putOnlyId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "PutOnlys"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "PutOnlys",
+        "PathContainerName": "PutOnlys",
+        "CandidateTypeNames": [
+          "put__only"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "putOnlyId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "DictionaryPayload": [
+        "UuidSuffix",
+        "String",
+        "putOnlyId",
+        false
+      ]
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "description",
+            "fullPath": {
+              "path": [
+                "description"
+              ]
+            }
+          }
+        },
+        "ContainerName": "PutOnlys",
+        "PathContainerName": "PutOnlys",
+        "CandidateTypeNames": [
+          "put__only"
+        ],
+        "AccessPath": "description",
+        "AccessPathParts": {
+          "path": [
+            "description"
+          ]
+        },
+        "ResourceName": "description",
+        "ProducerParameterName": "description",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "PutOnlys",
+        "PathContainerName": "PutOnlys",
+        "CandidateTypeNames": [
+          "put__only"
+        ],
+        "AccessPath": "id",
+        "AccessPathParts": {
+          "path": [
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "name",
+            "fullPath": {
+              "path": [
+                "name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "PutOnlys",
+        "PathContainerName": "PutOnlys",
+        "CandidateTypeNames": [
+          "put__only"
+        ],
+        "AccessPath": "name",
+        "AccessPathParts": {
+          "path": [
+            "name"
+          ]
+        },
+        "ResourceName": "name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "putOnlyId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "PutOnlys"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "PutOnlys",
+        "PathContainerName": "PutOnlys",
+        "CandidateTypeNames": [
+          "put__only"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "putOnlyId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "ResponseObject": {
+        "id": {
+          "RequestId": {
+            "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+            "method": "Put"
+          },
+          "ResourceReference": {
+            "BodyResource": {
+              "name": "id",
+              "fullPath": {
+                "path": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "ContainerName": "PutOnlys",
+          "PathContainerName": "PutOnlys",
+          "CandidateTypeNames": [
+            "put__only"
+          ],
+          "AccessPath": "id",
+          "AccessPathParts": {
+            "path": [
+              "id"
+            ]
+          },
+          "ResourceName": "id",
+          "ProducerParameterName": "id",
+          "IsNestedBodyResource": false,
+          "PrimitiveType": "String"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,68 @@
+{
+    "2dc4935576247a0425946958bda2e248ba9c5647": {
+        "verb": "GET",
+        "endpoint": "/api/v1/PutOnlys",
+        "verb_endpoint": "GET /api/v1/PutOnlys",
+        "valid": 1,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 0
+    },
+    "c110c6538495209542c152173daeca0cd218a67d": {
+        "verb": "PUT",
+        "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+        "verb_endpoint": "PUT /api/v1/PutOnlys/{putOnlyId}",
+        "valid": 0,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "400",
+        "status_text": "Bad Request",
+        "error_message": "53\r\n{\"error\":\"Expected Id putonlyiddc9c04f5c6 from URL to match Id fuzzstring in body\"}\r\n0",
+        "request_order": 1
+    },
+    "8a259a2ffff6f6113d1b5d18de15a4670e66c797": {
+        "verb": "DELETE",
+        "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+        "verb_endpoint": "DELETE /api/v1/PutOnlys/{putOnlyId}",
+        "valid": 0,
+        "matching_prefix": {
+            "id": "c110c6538495209542c152173daeca0cd218a67d",
+            "valid": 0
+        },
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": null,
+        "status_text": null,
+        "error_message": null,
+        "request_order": 2
+    },
+    "f746f59d741ad41833fe9ea2049a7eb2f7ff263a": {
+        "verb": "GET",
+        "endpoint": "/api/v1/PutOnlys/{putOnlyId}",
+        "verb_endpoint": "GET /api/v1/PutOnlys/{putOnlyId}",
+        "valid": 0,
+        "matching_prefix": {
+            "id": "c110c6538495209542c152173daeca0cd218a67d",
+            "valid": 0
+        },
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": null,
+        "status_text": null,
+        "error_message": null,
+        "request_order": 3
+    }
+}

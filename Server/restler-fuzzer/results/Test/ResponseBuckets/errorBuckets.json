@@ -1,0 +1,25 @@
+{
+  "400": {
+    "ee761034-1af0-48fb-ad7d-6969246a848d": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/api/v1/PutOnlys/putonlyid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "53\r\n{\"error\":\"Expected Id putonlyid_RANDOM_SUFFIX_ABSTRACTED_ from URL to match Id fuzzstring in body\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  }
+}

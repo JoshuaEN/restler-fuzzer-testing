@@ -1,0 +1,53 @@
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PutOnlys'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: '\r\n'
+
+2020-11-24 10:46:45.549: Sending: 'GET /api/v1/PutOnlys HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-11-24 10:46:45.670: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 24 Nov 2020 15:46:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PutOnlys'
+		- restler_static_string: '/'
+		+ restler_custom_payload_uuid4_suffix: putonlyid
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n    "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n    "description":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2020-11-24 10:46:46.305: Sending: 'PUT /api/v1/PutOnlys/putonlyiddc9c04f5c6 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\nContent-Length: 83\r\nUser-Agent: restler/7.1.0\r\n\r\n{\n    "id":"fuzzstring",\n    "name":"fuzzstring",\n    "description":"fuzzstring"}\r\n'
+
+2020-11-24 10:46:46.598: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 24 Nov 2020 15:46:46 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n53\r\n{"error":"Expected Id putonlyiddc9c04f5c6 from URL to match Id fuzzstring in body"}\r\n0\r\n\r\n'
+
+2020-11-24 10:46:46.620: 'Error: all of the expected dynamic objects were not present in the response.'
