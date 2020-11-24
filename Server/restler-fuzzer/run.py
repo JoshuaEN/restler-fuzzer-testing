@@ -31,9 +31,15 @@ def download_spec(url, api_spec_path):
 
 def transform_template_config(output_config_path, inputs_path, results_path, compile_path):
     config = json.loads(inputs_path.joinpath('config.template.json').read_bytes())
-    config["SwaggerSpecFilePath"] = [str(results_path.joinpath('swagger.json'))]
-    config["GrammarOutputDirectoryPath"] = str(compile_path)
-    config["CustomDictionaryFilePath"] = str(inputs_path.joinpath('dict.json'))
+
+    if "SwaggerSpecFilePath" in config:
+        config["SwaggerSpecFilePath"] = [str(results_path.joinpath('swagger.json'))]
+    if "GrammarOutputDirectoryPath" in config:
+        config["GrammarOutputDirectoryPath"] = str(compile_path)
+    if "CustomDictionaryFilePath" in config:
+        config["CustomDictionaryFilePath"] = str(inputs_path.joinpath('dict.json'))
+    if "AnnotationFilePath" in config:
+        config["AnnotationFilePath"] = str(inputs_path.joinpath('annotations.json'))
 
     output_config_path.write_text(json.dumps(config,sort_keys=True, indent=4))
 
