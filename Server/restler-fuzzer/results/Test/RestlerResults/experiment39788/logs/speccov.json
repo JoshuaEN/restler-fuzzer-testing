@@ -1,0 +1,86 @@
+{
+    "5a4bb517b29c0568e42c5f106794dbe172eda598": {
+        "verb": "GET",
+        "endpoint": "/api/v1/Traditionals",
+        "verb_endpoint": "GET /api/v1/Traditionals",
+        "valid": 1,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 0
+    },
+    "fe1acbd243d42cf054495e4c398092de76af2f45": {
+        "verb": "POST",
+        "endpoint": "/api/v1/Traditionals",
+        "verb_endpoint": "POST /api/v1/Traditionals",
+        "valid": 1,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 1
+    },
+    "263953933d37ae8d1d684175612201a18da87ea1": {
+        "verb": "DELETE",
+        "endpoint": "/api/v1/Traditionals/{traditionalId}",
+        "verb_endpoint": "DELETE /api/v1/Traditionals/{traditionalId}",
+        "valid": 0,
+        "matching_prefix": {
+            "id": "fe1acbd243d42cf054495e4c398092de76af2f45",
+            "valid": 1
+        },
+        "invalid_due_to_sequence_failure": 1,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": null,
+        "status_text": null,
+        "error_message": null,
+        "request_order": 2
+    },
+    "69c8e8e6a3bd7d25cd53af868d9755221a3684c3": {
+        "verb": "PUT",
+        "endpoint": "/api/v1/Traditionals/{traditionalId}",
+        "verb_endpoint": "PUT /api/v1/Traditionals/{traditionalId}",
+        "valid": 0,
+        "matching_prefix": {
+            "id": "fe1acbd243d42cf054495e4c398092de76af2f45",
+            "valid": 1
+        },
+        "invalid_due_to_sequence_failure": 1,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": null,
+        "status_text": null,
+        "error_message": null,
+        "request_order": 3
+    },
+    "6ea32ac1bdacc83d6b2278f82bee84a04dec9bba": {
+        "verb": "GET",
+        "endpoint": "/api/v1/Traditionals/{traditionalId}",
+        "verb_endpoint": "GET /api/v1/Traditionals/{traditionalId}",
+        "valid": 0,
+        "matching_prefix": {
+            "id": "fe1acbd243d42cf054495e4c398092de76af2f45",
+            "valid": 1
+        },
+        "invalid_due_to_sequence_failure": 1,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": null,
+        "status_text": null,
+        "error_message": null,
+        "request_order": 4
+    }
+}

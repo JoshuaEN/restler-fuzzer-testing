@@ -29,5 +29,7 @@
     },
     "restler_custom_payload_unquoted": {},
     "restler_custom_payload_uuid4_suffix": {
+      "traditionalId": "traditionalId",
+      "id": "id"
     }
   }

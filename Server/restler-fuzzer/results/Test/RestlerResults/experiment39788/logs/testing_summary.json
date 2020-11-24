@@ -1,0 +1,14 @@
+{
+    "final_spec_coverage": "2 / 5",
+    "rendered_requests": "2 / 5",
+    "rendered_requests_valid_status": "2 / 2",
+    "num_fully_valid": 2,
+    "num_sequence_failures": 3,
+    "num_invalid_by_failed_resource_creations": 0,
+    "total_object_creations": 1,
+    "total_requests_sent": {
+        "gc": 1,
+        "main_driver": 8
+    },
+    "bug_buckets": {}
+}

@@ -1,0 +1,196 @@
+{
+  "409": {
+    "d7ca4add-5afa-43b9-bdf4-a176dec44f06": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddee1-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddee0-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddedf-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddede-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddedd-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddedc-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddedb-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389ddeda-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389dded9-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "POST",
+            "path": "/api/v1/Traditionals",
+            "query": "",
+            "body": "{\n    \"id\":\"fuzzstring\",\n    \"name\":\"fuzzstring\",\n    \"description\":\"fuzzstring\"}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 409,
+            "codeDescription": "Conflict",
+            "content": "84\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.8\",\"title\":\"Conflict\",\"status\":409,\"traceId\":\"|389dded8-40bdaae0e64fc8b7.\"}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  }
+}

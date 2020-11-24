@@ -1,0 +1,3 @@
+Initializing: Garbage collection every 30 seconds.
+Terminating garbage collection. Waiting for max 300 seconds.
+Done.

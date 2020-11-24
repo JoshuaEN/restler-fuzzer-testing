@@ -1,0 +1,431 @@
+{
+  "Requests": [
+    {
+      "id": {
+        "endpoint": "/api/v1/Traditionals",
+        "method": "Get"
+      },
+      "method": "Get",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "Traditionals"
+          ]
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/Traditionals",
+        "method": "Post"
+      },
+      "method": "Post",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "Traditionals"
+          ]
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": [
+              [
+                "body",
+                {
+                  "InternalNode": [
+                    {
+                      "name": "",
+                      "propertyType": "Object",
+                      "isRequired": true,
+                      "isReadOnly": false
+                    },
+                    [
+                      {
+                        "LeafNode": {
+                          "name": "id",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": true,
+                          "isReadOnly": false
+                        }
+                      },
+                      {
+                        "LeafNode": {
+                          "name": "name",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": true,
+                          "isReadOnly": false
+                        }
+                      },
+                      {
+                        "LeafNode": {
+                          "name": "description",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": false,
+                          "isReadOnly": false
+                        }
+                      }
+                    ]
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      ],
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "httpVersion": "1.1",
+      "responseParser": {
+        "writerVariables": [
+          {
+            "requestId": {
+              "endpoint": "/api/v1/Traditionals",
+              "method": "Post"
+            },
+            "accessPathParts": {
+              "path": [
+                "id"
+              ]
+            }
+          }
+        ]
+      },
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/Traditionals/{traditionalId}",
+        "method": "Get"
+      },
+      "method": "Get",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "Traditionals"
+          ]
+        },
+        {
+          "DynamicObject": "_api_v1_Traditionals_post_id"
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/Traditionals/{traditionalId}",
+        "method": "Put"
+      },
+      "method": "Put",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "Traditionals"
+          ]
+        },
+        {
+          "DynamicObject": "_api_v1_Traditionals_post_id"
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": [
+              [
+                "body",
+                {
+                  "InternalNode": [
+                    {
+                      "name": "",
+                      "propertyType": "Object",
+                      "isRequired": true,
+                      "isReadOnly": false
+                    },
+                    [
+                      {
+                        "LeafNode": {
+                          "name": "id",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": true,
+                          "isReadOnly": false
+                        }
+                      },
+                      {
+                        "LeafNode": {
+                          "name": "name",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": true,
+                          "isReadOnly": false
+                        }
+                      },
+                      {
+                        "LeafNode": {
+                          "name": "description",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": false,
+                          "isReadOnly": false
+                        }
+                      }
+                    ]
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      ],
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/Traditionals/{traditionalId}",
+        "method": "Delete"
+      },
+      "method": "Delete",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "Traditionals"
+          ]
+        },
+        {
+          "DynamicObject": "_api_v1_Traditionals_post_id"
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    }
+  ]
+}

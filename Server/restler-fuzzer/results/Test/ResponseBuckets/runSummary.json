@@ -1,0 +1,11 @@
+{
+  "requestsCount": 15,
+  "sequencesCount": 0,
+  "bugCount": 0,
+  "codeCounts": {
+    "409": 15
+  },
+  "errorBuckets": {
+    "(409, d7ca4add-5afa-43b9-bdf4-a176dec44f06)": 15
+  }
+}

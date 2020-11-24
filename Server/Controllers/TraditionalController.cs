@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Server.Attributes;
 using Server.Models;
 using Server.Services;
 
@@ -28,6 +29,7 @@ namespace Server.Controllers
         /// <param name="traditional"></param>
         /// <returns></returns>
         [HttpPost]
+        [ResterAnnotationAttribute(producerResourceName: "restler_fuzzable_uuid4", consumerParam: "id")]
         public ActionResult<Traditional> Create([FromBody, BindRequired] Traditional traditional) => base._Create(traditional);
 
         /// <summary>

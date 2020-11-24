@@ -1,0 +1,446 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "description",
+            "fullPath": {
+              "path": [
+                "description"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPath": "description",
+        "AccessPathParts": {
+          "path": [
+            "description"
+          ]
+        },
+        "ResourceName": "description",
+        "ProducerParameterName": "description",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPath": "id",
+        "AccessPathParts": {
+          "path": [
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body",
+      "annotation": {
+        "producerId": {
+          "requestId": {
+            "endpoint": "",
+            "method": "NotSupported"
+          },
+          "resourceName": "restler_fuzzable_uuid4"
+        },
+        "producerParameter": {
+          "ResourceName": "restler_fuzzable_uuid4"
+        },
+        "consumerParameter": {
+          "ResourceName": "id"
+        }
+      }
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "name",
+            "fullPath": {
+              "path": [
+                "name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPath": "name",
+        "AccessPathParts": {
+          "path": [
+            "name"
+          ]
+        },
+        "ResourceName": "name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals/{traditionalId}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "traditionalId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "Traditionals"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "traditionalId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "ResponseObject": {
+        "id": {
+          "RequestId": {
+            "endpoint": "/api/v1/Traditionals",
+            "method": "Post"
+          },
+          "ResourceReference": {
+            "BodyResource": {
+              "name": "id",
+              "fullPath": {
+                "path": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "ContainerName": "Traditionals",
+          "PathContainerName": "Traditionals",
+          "CandidateTypeNames": [
+            "traditional"
+          ],
+          "AccessPath": "id",
+          "AccessPathParts": {
+            "path": [
+              "id"
+            ]
+          },
+          "ResourceName": "id",
+          "ProducerParameterName": "id",
+          "IsNestedBodyResource": false,
+          "PrimitiveType": "String"
+        }
+      }
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals/{traditionalId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "traditionalId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "Traditionals"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "traditionalId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "ResponseObject": {
+        "id": {
+          "RequestId": {
+            "endpoint": "/api/v1/Traditionals",
+            "method": "Post"
+          },
+          "ResourceReference": {
+            "BodyResource": {
+              "name": "id",
+              "fullPath": {
+                "path": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "ContainerName": "Traditionals",
+          "PathContainerName": "Traditionals",
+          "CandidateTypeNames": [
+            "traditional"
+          ],
+          "AccessPath": "id",
+          "AccessPathParts": {
+            "path": [
+              "id"
+            ]
+          },
+          "ResourceName": "id",
+          "ProducerParameterName": "id",
+          "IsNestedBodyResource": false,
+          "PrimitiveType": "String"
+        }
+      }
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals/{traditionalId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "description",
+            "fullPath": {
+              "path": [
+                "description"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPath": "description",
+        "AccessPathParts": {
+          "path": [
+            "description"
+          ]
+        },
+        "ResourceName": "description",
+        "ProducerParameterName": "description",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals/{traditionalId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPath": "id",
+        "AccessPathParts": {
+          "path": [
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals/{traditionalId}",
+          "method": "Put"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "name",
+            "fullPath": {
+              "path": [
+                "name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPath": "name",
+        "AccessPathParts": {
+          "path": [
+            "name"
+          ]
+        },
+        "ResourceName": "name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Traditionals/{traditionalId}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "traditionalId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "Traditionals"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "Traditionals",
+        "PathContainerName": "Traditionals",
+        "CandidateTypeNames": [
+          "traditional"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "traditionalId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "ResponseObject": {
+        "id": {
+          "RequestId": {
+            "endpoint": "/api/v1/Traditionals",
+            "method": "Post"
+          },
+          "ResourceReference": {
+            "BodyResource": {
+              "name": "id",
+              "fullPath": {
+                "path": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "ContainerName": "Traditionals",
+          "PathContainerName": "Traditionals",
+          "CandidateTypeNames": [
+            "traditional"
+          ],
+          "AccessPath": "id",
+          "AccessPathParts": {
+            "path": [
+              "id"
+            ]
+          },
+          "ResourceName": "id",
+          "ProducerParameterName": "id",
+          "IsNestedBodyResource": false,
+          "PrimitiveType": "String"
+        }
+      }
+    }
+  }
+]
