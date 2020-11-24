@@ -54,5 +54,5 @@ Several configurations are available to enable just specific controllers:
 
 More generally, controllers are enabled/disabled using preprocessor directives:
  * ENDPOINT_TRADITIONALS
- * ENDPOINT_PUT_ONLY
- * ENDPOINT_POST_ON_RESOURCE<
+ * ENDPOINT_PUT_ONLYS
+ * ENDPOINT_POST_ON_RESOURCES
