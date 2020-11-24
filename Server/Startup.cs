@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using Server.Controllers;
+using Server.Models;
+using Server.Services;
 
 namespace Server
 {
@@ -32,6 +35,16 @@ namespace Server
             });
             services.AddSwaggerGen();
             services.AddLogging();
+
+            #if ENDPOINT_POST_ON_RESOURCES
+                services.AddSingleton<InMemoryStorageService<PostOnResourceController, string, PostOnResource>>();
+            #endif
+            #if ENDPOINT_PUT_ONLYS
+                services.AddSingleton<InMemoryStorageService<PutOnlyController, string, PutOnly>>();
+            #endif
+            #if ENDPOINT_TRADITIONALS
+                services.AddSingleton<InMemoryStorageService<TraditionalController, string, Traditional>>();
+            #endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

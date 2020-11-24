@@ -6,14 +6,19 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Server.Models;
+using Server.Services;
 
 namespace Server.Controllers
 {
 #if ENDPOINT_POST_ON_RESOURCES
     [Route("api/v1/PostOnResources")]
     [ApiController]
-    public class PostOnResourcesController : BaseInMemoryController<string, PostOnResource>
+    public class PostOnResourceController : BaseInMemoryController<PostOnResourceController, string, PostOnResource>
     {
+        public PostOnResourceController(InMemoryStorageService<PostOnResourceController, string, PostOnResource> storageService) : base(storageService)
+        {
+        }
+
         [HttpGet]
         public IList<PostOnResource> Index() => base._Index();
 

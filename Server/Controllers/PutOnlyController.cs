@@ -6,14 +6,19 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Server.Models;
+using Server.Services;
 
 namespace Server.Controllers
 {
 #if ENDPOINT_PUT_ONLYS
     [Route("api/v1/PutOnlys")]
     [ApiController]
-    public class PutOnlysController : BaseInMemoryController<string, PutOnly>
+    public class PutOnlyController : BaseInMemoryController<PutOnlyController, string, PutOnly>
     {
+        public PutOnlyController(InMemoryStorageService<PutOnlyController, string, PutOnly> storageService) : base(storageService)
+        {
+        }
+
         [HttpGet]
         public IList<PutOnly> Index() => base._Index();
 

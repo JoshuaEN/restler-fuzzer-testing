@@ -6,25 +6,29 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Server.Models;
+using Server.Services;
 
 namespace Server.Controllers
 {
 #if ENDPOINT_TRADITIONALS
     [Route("api/v1/Traditionals")]
     [ApiController]
-    public class TraditionalsController : BaseInMemoryController<string, Traditional>
+    public class TraditionalController : BaseInMemoryController<TraditionalController, string, Traditional>
     {
+        public TraditionalController(InMemoryStorageService<TraditionalController, string, Traditional> storageService) : base(storageService)
+        {
+        }
+
         [HttpGet]
         public IList<Traditional> Index() => base._Index();
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="traditionalId" example="default"></param>
         /// <param name="traditional"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult<Traditional> Create([BindRequired] string traditionalId, [FromBody, BindRequired] Traditional traditional) => base._Create(traditionalId, traditional);
+        public ActionResult<Traditional> Create([FromBody, BindRequired] Traditional traditional) => base._Create(traditional);
 
         /// <summary>
         /// 

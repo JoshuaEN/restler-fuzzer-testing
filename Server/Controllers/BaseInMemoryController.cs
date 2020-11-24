@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Server.Models;
+using Server.Services;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -8,26 +9,37 @@ using System.Threading.Tasks;
 
 namespace Server.Controllers
 {
-    public abstract class BaseInMemoryController<TKey, TValue> : ControllerBase where TValue : IInMemoryModel<TKey>
+    public abstract class BaseInMemoryController<TController, TKey, TValue> : ControllerBase where TController : BaseInMemoryController<TController, TKey, TValue> where TValue : IInMemoryModel<TKey>
     {
         private ConcurrentDictionary<TKey, TValue> store = new ConcurrentDictionary<TKey, TValue>();
+
+        protected BaseInMemoryController(InMemoryStorageService<TController, TKey, TValue> storageService)
+        {
+            if (storageService == null)
+            {
+                throw new ArgumentNullException(nameof(storageService));
+            }
+
+            store = storageService.GetStorage();
+        }
 
         protected IList<TValue> _Index()
         {
             return this.store.Values.ToList();
         }
 
-        protected ActionResult<TValue> _Create(TKey key, TValue value)
+        protected ActionResult<TValue> _Create(TValue value)
         {
+            if (value == null)
             {
-                var check = CheckPair(key, value);
-                if (check != null)
-                {
-                    return check;
-                }
+                throw new ArgumentNullException(nameof(value));
+            }
+            if (value.Id == null)
+            {
+                throw new ArgumentNullException(nameof(value.Id));
             }
 
-            if (this.store.TryAdd(key, value))
+            if (this.store.TryAdd(value.Id, value))
             {
                 return Ok(value);
             }
