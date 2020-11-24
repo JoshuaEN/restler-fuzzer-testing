@@ -29,9 +29,9 @@ def download_spec(url, api_spec_path):
     swagger = requests.get(url)
     Path(api_spec_path).write_bytes(swagger.content)
 
-def transform_template_config(output_config_path, inputs_path, compile_path):
+def transform_template_config(output_config_path, inputs_path, results_path, compile_path):
     config = json.loads(inputs_path.joinpath('config.template.json').read_bytes())
-    config["SwaggerSpecFilePath"] = [str(inputs_path.joinpath('swagger.json'))]
+    config["SwaggerSpecFilePath"] = [str(results_path.joinpath('swagger.json'))]
     config["GrammarOutputDirectoryPath"] = str(compile_path)
     config["CustomDictionaryFilePath"] = str(inputs_path.joinpath('dict.json'))
 
@@ -110,8 +110,8 @@ if __name__ == '__main__':
     restler_dll_path = Path(os.path.abspath(args.restler_drop_dir)).joinpath('restler', 'Restler.dll')
     base_path = Path(os.path.abspath(os.path.dirname(__file__)))
     inputs_path = base_path.joinpath('inputs')
-    api_spec_path = inputs_path.joinpath('swagger.json')
     results_path = base_path.joinpath('results')
+    api_spec_path = results_path.joinpath('swagger.json')
     compile_path = results_path.joinpath('Compile')
     output_config_path = results_path.joinpath('config.json')
 
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     download_spec('http://localhost:5000/swagger/v1/swagger.json', api_spec_path)
 
     # Get a config with the abs paths filled in
-    transform_template_config(output_config_path, inputs_path, compile_path)
+    transform_template_config(output_config_path, inputs_path, results_path, compile_path)
 
     # Compile
     compile_spec(output_config_path, results_path, restler_dll_path.absolute())
