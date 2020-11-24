@@ -1,0 +1,18 @@
+{
+    "SwaggerSpecFilePath": [
+      ".\\inputs\\swagger.json"
+    ],
+    "GrammarOutputDirectoryPath": ".\\results\\Compile",
+    "CustomDictionaryFilePath": ".\\inputs\\dict.json",
+    "IncludeOptionalParameters": true,
+    "UseQueryExamples": true,
+    "UseBodyExamples": true,
+    "DiscoverExamples": true,
+    "ExamplesDirectory": "",
+    "DataFuzzing": true,
+    "ReadOnlyFuzz": false,
+    "ResolveQueryDependencies": true,
+    "ResolveBodyDependencies": true,
+    "UseRefreshableToken": false,
+    "AllowGetProducers": false
+  }
