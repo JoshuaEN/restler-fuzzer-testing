@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
@@ -13,5 +14,26 @@
     <Folder Include="restler-fuzzer\results\" />
   </ItemGroup>
 
+  <!-- For default dotnet run -->
+  <PropertyGroup Condition="'$(Configuration)'!='TRADITIONALS'and'$(Configuration)'!='PUT_ONLYS'and'$(Configuration)'!='POST_ON_RESOURCES'">
+    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES</DefineConstants>
+  </PropertyGroup>
+
+  <!-- For Visual Studio -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES</DefineConstants>
+  </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='TRADITIONALS'">
+    <DefineConstants>ENDPOINT_TRADITIONALS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='PUT_ONLYS'">
+    <DefineConstants>ENDPOINT_PUT_ONLYS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='POST_ON_RESOURCES'">
+    <DefineConstants>ENDPOINT_POST_ON_RESOURCES</DefineConstants>
+  </PropertyGroup>
 
 </Project>

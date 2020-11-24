@@ -1,9 +1,9 @@
 {
     "SwaggerSpecFilePath": [
-      ".\\inputs\\swagger.json"
+      "will/be/overwritten/by/run.py/swagger.json"
     ],
-    "GrammarOutputDirectoryPath": ".\\results\\Compile",
-    "CustomDictionaryFilePath": ".\\inputs\\dict.json",
+    "GrammarOutputDirectoryPath": "will/be/overwritten/by/run.py/Compile",
+    "CustomDictionaryFilePath": "will/be/overwritten/by/run.py/dict.json",
     "IncludeOptionalParameters": true,
     "UseQueryExamples": true,
     "UseBodyExamples": true,
