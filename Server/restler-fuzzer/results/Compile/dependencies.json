@@ -11,7 +11,7 @@
         {
           "producer_endpoint": "",
           "producer_method": "",
-          "producer_resource_name": "",
+          "producer_resource_name": "restler_custom_payload__id",
           "consumer_param": "id"
         },
         {
@@ -61,9 +61,9 @@
           "consumer_param": "description"
         },
         {
-          "producer_endpoint": "",
-          "producer_method": "",
-          "producer_resource_name": "",
+          "producer_endpoint": "/api/v1/Traditionals",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
           "consumer_param": "id"
         },
         {

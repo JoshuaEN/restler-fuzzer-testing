@@ -1,79 +1,73 @@
-[11/24/2020 9:23:50 AM] Generating grammar...
-[11/24/2020 9:23:50 AM] Getting requests...
-[11/24/2020 9:23:50 AM] Getting dependencies...
-[11/24/2020 9:23:50 AM] Get consumers.
-[11/24/2020 9:23:50 AM] Get producers.
-[11/24/2020 9:23:50 AM] Done processing producers
-[11/24/2020 9:23:50 AM] Compute dependencies
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Post }
-[[11/24/2020 9:23:50 AM] [11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Delete }
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+[11/24/2020 4:35:26 PM] Generating grammar...
+[11/24/2020 4:35:26 PM] Getting requests...
+[11/24/2020 4:35:27 PM] Getting dependencies...
+[11/24/2020 4:35:27 PM] Get consumers.
+[11/24/2020 4:35:27 PM] Get producers.
+[11/24/2020 4:35:27 PM] Done processing producers
+[11/24/2020 4:35:27 PM] Compute dependencies
+[11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Put }[11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
   method = Get }
-[11/24/2020 9:23:50 AM[] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Post }
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+[[11/24/2020 4:35:27 PM[] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Post }[11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Get }[
+11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Put }[11/24/2020 4:35:27 PM] [Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
   method = Get }
-Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Get }
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Get }
-[11/24/2020 9:23:50 AM11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Get }
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Delete }
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Delete }
-11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+
+[11/24/2020 4:35:27 PM[11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
   method = Put }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+[11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
   method = Delete }
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Get }
-[] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Put }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Post }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Delete }
-[11/24/2020 9:23:50 AM[11/24/2020 9:23:50 AM[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Put }
-] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Get }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Get }
-11/24/2020 9:23:50 AM[11/24/2020 9:23:50 AM] ] Done dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Get }Done dependencies for request { endpoint = "/api/v1/Traditionals"
+11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
   method = Post }
 
-] Done dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Get }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
-  method = Get }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Put }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Get }
-Annotated resource not found: { producerId = { requestId = { endpoint = ""
-                               method = NotSupported }
-                 resourceName = "restler_fuzzable_uuid4" }
-  producerParameter = ResourceName "restler_fuzzable_uuid4"
-  consumerParameter = ResourceName "id"
-  exceptConsumerId = None }
-[11/24/2020 9:23:50 AM[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Delete }] 
-Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Put }
-[11/24/2020 9:23:50 AM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
+[11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
   method = Post }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
-  method = Put }
-[11/24/2020 9:23:50 AM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
+[11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Get }
+] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Delete }[11/24/2020 4:35:27 PM] 11/24/2020 4:35:27 PMDone dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Get }
+] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Delete }
+11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Get }
+
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Get }[
+11/24/2020 4:35:27 PM] Second pass dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Get }
+
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
   method = Post }
-[11/24/2020 9:23:50 AM] Dependency analysis completed.
-[11/24/2020 9:23:50 AM] Generating request primitives...
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Delete }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Put }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Post }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Get }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Get }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Get }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Delete }
+[[11/24/2020 4:35:27 PM11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Get }
+] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Delete }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Put }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals"
+  method = Post }
+[11/24/2020 4:35:27 PM] Done dependencies for request { endpoint = "/api/v1/Traditionals/{traditionalId}"
+  method = Put }
+[11/24/2020 4:35:27 PM] Dependency analysis completed.
+[11/24/2020 4:35:27 PM] Generating request primitives...
 Writing new dictionary to C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json
-[11/24/2020 9:23:50 AM] Generating python grammar...
-[11/24/2020 9:23:50 AM] Done generating python grammar.
+[11/24/2020 4:35:27 PM] Generating python grammar...
+[11/24/2020 4:35:27 PM] Done generating python grammar.
 Workflow completed.  See C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile for REST-ler grammar.

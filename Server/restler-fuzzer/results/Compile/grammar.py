@@ -73,7 +73,7 @@ request = requests.Request([
     primitives.restler_static_string("{"),
     primitives.restler_static_string("""
     "id":"""),
-    primitives.restler_fuzzable_string("fuzzstring", quoted=True),
+    primitives.restler_custom_payload("id", quoted=True),
     primitives.restler_static_string(""",
     "name":"""),
     primitives.restler_fuzzable_string("fuzzstring", quoted=True),
@@ -139,8 +139,9 @@ request = requests.Request([
     primitives.restler_static_string("{"),
     primitives.restler_static_string("""
     "id":"""),
-    primitives.restler_fuzzable_string("fuzzstring", quoted=True),
-    primitives.restler_static_string(""",
+    primitives.restler_static_string('"'),
+    primitives.restler_static_string(_api_v1_Traditionals_post_id.reader()),
+    primitives.restler_static_string("""",
     "name":"""),
     primitives.restler_fuzzable_string("fuzzstring", quoted=True),
     primitives.restler_static_string(""",

@@ -68,22 +68,15 @@
         "IsNestedBodyResource": false,
         "PrimitiveType": "String"
       },
-      "parameterKind": "Body",
-      "annotation": {
-        "producerId": {
-          "requestId": {
-            "endpoint": "",
-            "method": "NotSupported"
-          },
-          "resourceName": "restler_fuzzable_uuid4"
-        },
-        "producerParameter": {
-          "ResourceName": "restler_fuzzable_uuid4"
-        },
-        "consumerParameter": {
-          "ResourceName": "id"
-        }
-      }
+      "parameterKind": "Body"
+    },
+    "producer": {
+      "DictionaryPayload": [
+        "String",
+        "String",
+        "id",
+        false
+      ]
     }
   },
   {
@@ -333,7 +326,57 @@
         "IsNestedBodyResource": false,
         "PrimitiveType": "String"
       },
-      "parameterKind": "Body"
+      "parameterKind": "Body",
+      "annotation": {
+        "producerId": {
+          "requestId": {
+            "endpoint": "/api/v1/Traditionals",
+            "method": "Post"
+          },
+          "resourceName": "id"
+        },
+        "producerParameter": {
+          "ResourceName": "id"
+        },
+        "consumerParameter": {
+          "ResourceName": "id"
+        }
+      }
+    },
+    "producer": {
+      "ResponseObject": {
+        "id": {
+          "RequestId": {
+            "endpoint": "/api/v1/Traditionals",
+            "method": "Post"
+          },
+          "ResourceReference": {
+            "BodyResource": {
+              "name": "id",
+              "fullPath": {
+                "path": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "ContainerName": "Traditionals",
+          "PathContainerName": "Traditionals",
+          "CandidateTypeNames": [
+            "traditional"
+          ],
+          "AccessPath": "id",
+          "AccessPathParts": {
+            "path": [
+              "id"
+            ]
+          },
+          "ResourceName": "id",
+          "ProducerParameterName": "id",
+          "IsNestedBodyResource": false,
+          "PrimitiveType": "String"
+        }
+      }
     }
   },
   {

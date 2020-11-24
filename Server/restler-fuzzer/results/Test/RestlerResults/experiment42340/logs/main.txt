@@ -1,0 +1,165 @@
+2020-11-24 16:35:29.036: Going to fuzz a set with 5 requests
+2020-11-24 16:35:29.036: Request-0: Value Combinations: 1
+2020-11-24 16:35:29.036: Request-1: Value Combinations: 1
+2020-11-24 16:35:29.036: Request-2: Value Combinations: 1
+2020-11-24 16:35:29.036: Request-3: Value Combinations: 1
+2020-11-24 16:35:29.036: Request-4: Value Combinations: 1
+2020-11-24 16:35:29.036: Avg. Value Combinations per Request: 1
+2020-11-24 16:35:29.036: Median Value Combinations per Request: 1
+2020-11-24 16:35:29.036: Min Value Combinations per Request: 1
+2020-11-24 16:35:29.036: Max Value Combinations per Request: 1
+2020-11-24 16:35:29.036: Total dependencies: 4
+
+2020-11-24 16:35:29.041: Starting directed-smoke-test
+
+2020-11-24 16:35:29.050: Will attempt to render 5 requests found
+
+Rendering request 0 from scratch
+
+2020-11-24 16:35:29.320: Request 0
+2020-11-24 16:35:29.320: Endpoint - /api/v1/Traditionals
+2020-11-24 16:35:29.320: Hex Def - 5a4bb517b29c0568e42c5f106794dbe172eda598
+2020-11-24 16:35:29.320: Sequence length that satisfies dependencies: 1
+2020-11-24 16:35:29.331: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'Traditionals'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: '\r\n'
+
+Rendering request 1 from scratch
+
+2020-11-24 16:35:29.967: Request 1
+2020-11-24 16:35:29.967: Endpoint - /api/v1/Traditionals
+2020-11-24 16:35:29.967: Hex Def - fe1acbd243d42cf054495e4c398092de76af2f45
+2020-11-24 16:35:29.967: Sequence length that satisfies dependencies: 1
+2020-11-24 16:35:29.977: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'Traditionals'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_custom_payload: ['tid-1', 'tid-2', 'tid-3', 'tid-4', 'tid-5', 'tid-6', 'tid-7', 'tid-8', 'tid-9', 'tid-10', 'tid-11', 'tid-12', 'tid-13', 'tid-14', 'tid-15', 'tid-16', 'tid-17', 'tid-18', 'tid-19', 'tid-20', 'tid-21', 'tid-22', 'tid-23', 'tid-24', 'tid-25', 'tid-26', 'tid-27', 'tid-28', 'tid-29', 'tid-30', 'tid-31', 'tid-32', 'tid-33', 'tid-34', 'tid-35', 'tid-36', 'tid-37', 'tid-38', 'tid-39', 'tid-40', 'tid-41', 'tid-42', 'tid-43', 'tid-44', 'tid-45', 'tid-46', 'tid-47', 'tid-48', 'tid-49', 'tid-50', 'tid-51', 'tid-52', 'tid-53', 'tid-54', 'tid-55', 'tid-56', 'tid-57', 'tid-58', 'tid-59', 'tid-60', 'tid-61', 'tid-62', 'tid-63', 'tid-64', 'tid-65', 'tid-66', 'tid-67', 'tid-68', 'tid-69', 'tid-70', 'tid-71', 'tid-72', 'tid-73', 'tid-74', 'tid-75', 'tid-76', 'tid-77', 'tid-78', 'tid-79', 'tid-80', 'tid-81', 'tid-82', 'tid-83', 'tid-84', 'tid-85', 'tid-86', 'tid-87', 'tid-88', 'tid-89', 'tid-90', 'tid-91', 'tid-92', 'tid-93', 'tid-94', 'tid-95', 'tid-96', 'tid-97', 'tid-98', 'tid-99', 'tid-100', 'tid-101', 'tid-102', 'tid-103', 'tid-104', 'tid-105', 'tid-106', 'tid-107', 'tid-108', 'tid-109', 'tid-110', 'tid-111', 'tid-112', 'tid-113', 'tid-114', 'tid-115', 'tid-116', 'tid-117', 'tid-118', 'tid-119', 'tid-120', 'tid-121', 'tid-122', 'tid-123', 'tid-124', 'tid-125', 'tid-126', 'tid-127', 'tid-128', 'tid-129', 'tid-130', 'tid-131', 'tid-132', 'tid-133', 'tid-134', 'tid-135', 'tid-136', 'tid-137', 'tid-138', 'tid-139', 'tid-140', 'tid-141', 'tid-142', 'tid-143', 'tid-144', 'tid-145', 'tid-146', 'tid-147', 'tid-148', 'tid-149', 'tid-150', 'tid-151', 'tid-152', 'tid-153', 'tid-154', 'tid-155', 'tid-156', 'tid-157', 'tid-158', 'tid-159', 'tid-160', 'tid-161', 'tid-162', 'tid-163', 'tid-164', 'tid-165', 'tid-166', 'tid-167', 'tid-168', 'tid-169', 'tid-170', 'tid-171', 'tid-172', 'tid-173', 'tid-174', 'tid-175', 'tid-176', 'tid-177', 'tid-178', 'tid-179', 'tid-180', 'tid-181', 'tid-182', 'tid-183', 'tid-184', 'tid-185', 'tid-186', 'tid-187', 'tid-188', 'tid-189', 'tid-190', 'tid-191', 'tid-192', 'tid-193', 'tid-194', 'tid-195', 'tid-196', 'tid-197', 'tid-198', 'tid-199', 'tid-200', 'tid-201', 'tid-202', 'tid-203', 'tid-204', 'tid-205', 'tid-206', 'tid-207', 'tid-208', 'tid-209', 'tid-210', 'tid-211', 'tid-212', 'tid-213', 'tid-214', 'tid-215', 'tid-216', 'tid-217', 'tid-218', 'tid-219', 'tid-220', 'tid-221', 'tid-222', 'tid-223', 'tid-224', 'tid-225', 'tid-226', 'tid-227', 'tid-228', 'tid-229', 'tid-230', 'tid-231', 'tid-232', 'tid-233', 'tid-234', 'tid-235', 'tid-236', 'tid-237', 'tid-238', 'tid-239', 'tid-240', 'tid-241', 'tid-242', 'tid-243', 'tid-244', 'tid-245', 'tid-246', 'tid-247', 'tid-248', 'tid-249', 'tid-250', 'tid-251', 'tid-252', 'tid-253', 'tid-254', 'tid-255', 'tid-256', 'tid-257', 'tid-258', 'tid-259', 'tid-260', 'tid-261', 'tid-262', 'tid-263', 'tid-264', 'tid-265', 'tid-266', 'tid-267', 'tid-268', 'tid-269', 'tid-270', 'tid-271', 'tid-272', 'tid-273', 'tid-274', 'tid-275', 'tid-276', 'tid-277', 'tid-278', 'tid-279', 'tid-280', 'tid-281', 'tid-282', 'tid-283', 'tid-284', 'tid-285', 'tid-286', 'tid-287', 'tid-288', 'tid-289', 'tid-290', 'tid-291', 'tid-292', 'tid-293', 'tid-294', 'tid-295', 'tid-296', 'tid-297', 'tid-298', 'tid-299', 'tid-300', 'tid-301', 'tid-302', 'tid-303', 'tid-304', 'tid-305', 'tid-306', 'tid-307', 'tid-308', 'tid-309', 'tid-310', 'tid-311', 'tid-312', 'tid-313', 'tid-314', 'tid-315', 'tid-316', 'tid-317', 'tid-318', 'tid-319', 'tid-320', 'tid-321', 'tid-322', 'tid-323', 'tid-324', 'tid-325', 'tid-326', 'tid-327', 'tid-328', 'tid-329', 'tid-330', 'tid-331', 'tid-332', 'tid-333', 'tid-334', 'tid-335', 'tid-336', 'tid-337', 'tid-338', 'tid-339', 'tid-340', 'tid-341', 'tid-342', 'tid-343', 'tid-344', 'tid-345', 'tid-346', 'tid-347', 'tid-348', 'tid-349', 'tid-350', 'tid-351', 'tid-352', 'tid-353', 'tid-354', 'tid-355', 'tid-356', 'tid-357', 'tid-358', 'tid-359', 'tid-360', 'tid-361', 'tid-362', 'tid-363', 'tid-364', 'tid-365', 'tid-366', 'tid-367', 'tid-368', 'tid-369', 'tid-370', 'tid-371', 'tid-372', 'tid-373', 'tid-374', 'tid-375', 'tid-376', 'tid-377', 'tid-378', 'tid-379', 'tid-380', 'tid-381', 'tid-382', 'tid-383', 'tid-384', 'tid-385', 'tid-386', 'tid-387', 'tid-388', 'tid-389', 'tid-390', 'tid-391', 'tid-392', 'tid-393', 'tid-394', 'tid-395', 'tid-396', 'tid-397', 'tid-398', 'tid-399', 'tid-400', 'tid-401', 'tid-402', 'tid-403', 'tid-404', 'tid-405', 'tid-406', 'tid-407', 'tid-408', 'tid-409', 'tid-410', 'tid-411', 'tid-412', 'tid-413', 'tid-414', 'tid-415', 'tid-416', 'tid-417', 'tid-418', 'tid-419', 'tid-420', 'tid-421', 'tid-422', 'tid-423', 'tid-424', 'tid-425', 'tid-426', 'tid-427', 'tid-428', 'tid-429', 'tid-430', 'tid-431', 'tid-432', 'tid-433', 'tid-434', 'tid-435', 'tid-436', 'tid-437', 'tid-438', 'tid-439', 'tid-440', 'tid-441', 'tid-442', 'tid-443', 'tid-444', 'tid-445', 'tid-446', 'tid-447', 'tid-448', 'tid-449', 'tid-450', 'tid-451', 'tid-452', 'tid-453', 'tid-454', 'tid-455', 'tid-456', 'tid-457', 'tid-458', 'tid-459', 'tid-460', 'tid-461', 'tid-462', 'tid-463', 'tid-464', 'tid-465', 'tid-466', 'tid-467', 'tid-468', 'tid-469', 'tid-470', 'tid-471', 'tid-472', 'tid-473', 'tid-474', 'tid-475', 'tid-476', 'tid-477', 'tid-478', 'tid-479', 'tid-480', 'tid-481', 'tid-482', 'tid-483', 'tid-484', 'tid-485', 'tid-486', 'tid-487', 'tid-488', 'tid-489', 'tid-490', 'tid-491', 'tid-492', 'tid-493', 'tid-494', 'tid-495', 'tid-496', 'tid-497', 'tid-498', 'tid-499', 'tid-500']
+		- restler_static_string: ',\n    "name":'
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ',\n    "description":'
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix for request 2 with previous request 1
+	and re-using that VALID prefix
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2020-11-24 16:35:56.199: Request 2
+2020-11-24 16:35:56.199: Endpoint - /api/v1/Traditionals/{traditionalId}
+2020-11-24 16:35:56.199: Hex Def - 263953933d37ae8d1d684175612201a18da87ea1
+2020-11-24 16:35:56.199: Sequence length that satisfies dependencies: 2
+2020-11-24 16:35:56.208: Rendering INVALID
+2020-11-24 16:35:56.217: This request was never rendered because the sequence failed to re-render.
+Because of this, the request was set to INVALID.
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'Traditionals'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_v1_Traditionals_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix for request 3 with previous request 1
+	and re-using that VALID prefix
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2020-11-24 16:36:22.496: Request 3
+2020-11-24 16:36:22.496: Endpoint - /api/v1/Traditionals/{traditionalId}
+2020-11-24 16:36:22.496: Hex Def - 69c8e8e6a3bd7d25cd53af868d9755221a3684c3
+2020-11-24 16:36:22.496: Sequence length that satisfies dependencies: 2
+2020-11-24 16:36:22.506: Rendering INVALID
+2020-11-24 16:36:22.516: This request was never rendered because the sequence failed to re-render.
+Because of this, the request was set to INVALID.
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'Traditionals'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_v1_Traditionals_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		- restler_static_string: '"'
+		- restler_static_string: '_READER_DELIM_api_v1_Traditionals_post_id_READER_DELIM'
+		- restler_static_string: '",\n    "name":'
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ',\n    "description":'
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix for request 4 with previous request 1
+	and re-using that VALID prefix
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2020-11-24 16:36:48.719: Request 4
+2020-11-24 16:36:48.719: Endpoint - /api/v1/Traditionals/{traditionalId}
+2020-11-24 16:36:48.719: Hex Def - 6ea32ac1bdacc83d6b2278f82bee84a04dec9bba
+2020-11-24 16:36:48.719: Sequence length that satisfies dependencies: 2
+2020-11-24 16:36:48.727: Rendering INVALID
+2020-11-24 16:36:48.738: This request was never rendered because the sequence failed to re-render.
+Because of this, the request was set to INVALID.
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'Traditionals'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_v1_Traditionals_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: '\r\n'
+
+2020-11-24 16:36:48.960: Final Swagger spec coverage: 2 / 5
+2020-11-24 16:36:48.960: Rendered requests: 2 / 5
+2020-11-24 16:36:48.960: Rendered requests with "valid" status codes: 2 / 2
+2020-11-24 16:36:48.960: Num fully valid requests (no resource creation failures): 2
+2020-11-24 16:36:48.960: Num requests not rendered due to invalid sequence re-renders: 3
+2020-11-24 16:36:48.960: Num invalid requests caused by failed resource creations: 0
+2020-11-24 16:36:48.960: Total Creations of Dyn Objects: 1
+2020-11-24 16:36:48.960: Total Requests Sent: {'gc': 1, 'main_driver': 8}
+2020-11-24 16:36:48.960: Bug Buckets: {}

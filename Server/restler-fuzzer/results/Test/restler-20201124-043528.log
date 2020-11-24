@@ -1,0 +1,24 @@
+Restler Information: 0 : Log share was not specified.  Logs will not be uploaded.
+    DateTime=2020-11-24T21:35:28.5845553Z
+Restler Information: 0 : Starting task Test...
+    DateTime=2020-11-24T21:35:28.5915479Z
+Restler Information: 0 : Launching 'python -B C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../engine/restler.py --restler_grammar "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\grammar.py" --custom_mutations "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --set_version 7.1.0   --no_ssl --host localhost:5000  --settings C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\inputs\engine_settings.json   --target_ip localhost --target_port 5000 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2020-11-24T21:35:28.6748806Z
+Restler Information: 0 : Process execution terminated in 00:01:20.3199517 with exit code 0x0: 'python -B C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../engine/restler.py --restler_grammar "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\grammar.py" --custom_mutations "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --set_version 7.1.0   --no_ssl --host localhost:5000  --settings C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\inputs\engine_settings.json   --target_ip localhost --target_port 5000 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2020-11-24T21:36:49.0024254Z
+Restler Information: 0 : (42340) python -B C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../engine/restler.py --restler_grammar "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\grammar.py" --custom_mutations "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --set_version 7.1.0   --no_ssl --host localhost:5000  --settings C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\inputs\engine_settings.json   --target_ip localhost --target_port 5000 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test exited with code: 0
+    DateTime=2020-11-24T21:36:49.0085105Z
+Restler Information: 0 : Launching 'dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Test" --output_dir "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Test\ResponseBuckets" --dictionary_file "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --max_instances_per_bucket 10'
+    DateTime=2020-11-24T21:36:49.0234372Z
+Restler Information: 0 : Process execution terminated in 00:00:00.5888114 with exit code 0x0: 'dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Test" --output_dir "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Test\ResponseBuckets" --dictionary_file "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --max_instances_per_bucket 10'
+    DateTime=2020-11-24T21:36:49.6126196Z
+Restler Information: 0 : (36156) dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Test" --output_dir "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Test\ResponseBuckets" --dictionary_file "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --max_instances_per_bucket 10 exited with code: 0
+    DateTime=2020-11-24T21:36:49.6129876Z
+Restler Information: 0 : Request coverage (successful / total): 2 / 5
+    DateTime=2020-11-24T21:36:49.8333564Z
+Restler Information: 0 : No bugs were found.
+    DateTime=2020-11-24T21:36:49.8412481Z
+Restler Information: 0 : Task Test succeeded.
+    DateTime=2020-11-24T21:36:49.8547416Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2020-11-24T21:36:49.8666133Z

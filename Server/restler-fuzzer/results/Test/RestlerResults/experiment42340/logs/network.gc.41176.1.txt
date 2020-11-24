@@ -1,0 +1,4 @@
+2020-11-24 16:36:48.913: Sending: 'DELETE /api/v1/Traditionals/tid-1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-11-24 16:36:48.944: Received: 'HTTP/1.1 204 No Content\r\nDate: Tue, 24 Nov 2020 21:36:48 GMT\r\nServer: Kestrel\r\n\r\n'
+

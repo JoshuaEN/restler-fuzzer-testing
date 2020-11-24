@@ -29,7 +29,6 @@ namespace Server.Controllers
         /// <param name="traditional"></param>
         /// <returns></returns>
         [HttpPost]
-        [ResterAnnotationAttribute(producerResourceName: "restler_fuzzable_uuid4", consumerParam: "id")]
         public ActionResult<Traditional> Create([FromBody, BindRequired] Traditional traditional) => base._Create(traditional);
 
         /// <summary>
@@ -48,6 +47,7 @@ namespace Server.Controllers
         /// <param name="traditional"></param>
         /// <returns></returns>
         [HttpPut("{traditionalId}")]
+        [ResterAnnotation(producerEndpoint: "/api/v1/Traditionals", producerMethod: "POST", producerResourceName: "id", consumerParam: "id")]
         public ActionResult<Traditional> CreateOrUpdate([BindRequired] string traditionalId, [FromBody, BindRequired] Traditional traditional) => base._CreateOrUpdate(traditionalId, traditional);
 
         /// <summary>

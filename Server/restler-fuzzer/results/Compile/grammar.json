@@ -111,10 +111,12 @@
                         "LeafNode": {
                           "name": "id",
                           "payload": {
-                            "Fuzzable": [
-                              "String",
-                              "fuzzstring"
-                            ]
+                            "Custom": {
+                              "payloadType": "String",
+                              "primitiveType": "String",
+                              "payloadValue": "id",
+                              "isObject": false
+                            }
                           },
                           "isRequired": true,
                           "isReadOnly": false
@@ -305,10 +307,7 @@
                         "LeafNode": {
                           "name": "id",
                           "payload": {
-                            "Fuzzable": [
-                              "String",
-                              "fuzzstring"
-                            ]
+                            "DynamicObject": "_api_v1_Traditionals_post_id"
                           },
                           "isRequired": true,
                           "isReadOnly": false

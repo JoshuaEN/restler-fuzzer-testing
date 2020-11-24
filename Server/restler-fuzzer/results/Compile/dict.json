@@ -25,10 +25,13 @@
   "restler_fuzzable_object": [
     "{}"
   ],
-  "restler_custom_payload": {},
+  "restler_custom_payload": {
+    "id": [
+      "Placeholder"
+    ]
+  },
   "restler_custom_payload_unquoted": {},
   "restler_custom_payload_uuid4_suffix": {
-    "id": "id",
-    "traditionalId": "traditionalId"
+    "id": "id"
   }
 }
