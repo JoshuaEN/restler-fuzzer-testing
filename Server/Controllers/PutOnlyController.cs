@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Server.Models;
 using Server.Services;
+using Server.Utilities;
 
 namespace Server.Controllers
 {
@@ -15,7 +16,7 @@ namespace Server.Controllers
     [ApiController]
     public class PutOnlyController : BaseInMemoryController<PutOnlyController, string, PutOnly>
     {
-        public PutOnlyController(InMemoryStorageService<PutOnlyController, string, PutOnly> storageService) : base(storageService)
+        public PutOnlyController(InMemoryStorageService<PutOnlyController, string, PutOnly> storageService) : base(InMemoryStorageMode.MimicPrivateAPI, UniqueValueFunctions.GetUniqueString, storageService)
         {
         }
 

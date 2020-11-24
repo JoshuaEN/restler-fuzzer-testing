@@ -15,13 +15,13 @@
   </ItemGroup>
 
   <!-- For default dotnet run -->
-  <PropertyGroup Condition="'$(Configuration)'!='TRADITIONALS'and'$(Configuration)'!='PUT_ONLYS'and'$(Configuration)'!='POST_ON_RESOURCES'">
-    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES</DefineConstants>
+  <PropertyGroup Condition="'$(Configuration)'!='TRADITIONALS'and'$(Configuration)'!='PUT_ONLYS'and'$(Configuration)'!='POST_ON_RESOURCES'and'$(Configuration)'!='ENDPOINT_AS_EXPECTED'and'$(Configuration)'!='ENDPOINT_SMALL_RESPONSES'">
+    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED</DefineConstants>
   </PropertyGroup>
 
   <!-- For Visual Studio -->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES</DefineConstants>
+    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED</DefineConstants>
   </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)'=='TRADITIONALS'">
@@ -34,6 +34,14 @@
 
   <PropertyGroup Condition="'$(Configuration)'=='POST_ON_RESOURCES'">
     <DefineConstants>ENDPOINT_POST_ON_RESOURCES</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='AS_EXPECTED'">
+    <DefineConstants>ENDPOINT_AS_EXPECTED</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='SMALL_RESPONSES'">
+    <DefineConstants>ENDPOINT_SMALL_RESPONSES</DefineConstants>
   </PropertyGroup>
 
 </Project>

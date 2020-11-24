@@ -48,6 +48,9 @@ namespace Server
             #if ENDPOINT_TRADITIONALS
                 services.AddSingleton<InMemoryStorageService<TraditionalController, string, Traditional>>();
             #endif
+            #if ENDPOINT_AS_EXPECTED
+                services.AddSingleton<InMemoryStorageService<AsExpectController, string, AsExpect>>();
+            #endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

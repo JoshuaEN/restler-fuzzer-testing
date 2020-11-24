@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Server.Models;
 using Server.Services;
+using Server.Utilities;
 
 namespace Server.Controllers
 {
@@ -15,7 +16,7 @@ namespace Server.Controllers
     [ApiController]
     public class TraditionalController : BaseInMemoryController<TraditionalController, string, Traditional>
     {
-        public TraditionalController(InMemoryStorageService<TraditionalController, string, Traditional> storageService) : base(storageService)
+        public TraditionalController(InMemoryStorageService<TraditionalController, string, Traditional> storageService) : base(InMemoryStorageMode.MimicPrivateAPI, UniqueValueFunctions.GetUniqueString, storageService)
         {
         }
 
