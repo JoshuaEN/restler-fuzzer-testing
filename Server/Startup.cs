@@ -14,6 +14,7 @@ using Serilog;
 using Server.Controllers;
 using Server.Models;
 using Server.Services;
+using Server.OpenAPIFilters;
 
 namespace Server
 {
@@ -33,7 +34,9 @@ namespace Server
             services.AddMvc().AddJsonOptions(options => {
                 options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
             });
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c => {
+                c.OperationFilter<RestlerOperationFilter>();
+            });
             services.AddLogging();
 
             #if ENDPOINT_POST_ON_RESOURCES
