@@ -39,6 +39,23 @@ namespace Server.OpenAPIFilters
                     {
                         obj.Add("consumer_param", new Microsoft.OpenApi.Any.OpenApiString(data.ConsumerParam));
                     }
+
+                    if (string.IsNullOrWhiteSpace(data.ExceptMethod) != true || string.IsNullOrWhiteSpace(data.ExceptEndpoint) != true)
+                    {
+                        var exceptObj = new Microsoft.OpenApi.Any.OpenApiObject();
+
+                        if (data.ExceptEndpoint != null)
+                        {
+                            exceptObj.Add("consumer_endpoint", new Microsoft.OpenApi.Any.OpenApiString(data.ExceptEndpoint));
+                        }
+
+                        if (data.ExceptMethod != null)
+                        {
+                            exceptObj.Add("consumer_method", new Microsoft.OpenApi.Any.OpenApiString(data.ExceptMethod));
+                        }
+
+                        obj.Add("except", exceptObj);
+                    }
                     collection.Add(obj);
                 }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -20,6 +21,7 @@ namespace Server
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
+                .WriteTo.File($"./{DateTime.UtcNow:yyyy-MM-ddTHH-mm-ssZ}-server.log", fileSizeLimitBytes: null)
                 .CreateLogger();
 
             try

@@ -31,9 +31,15 @@ def download_spec(url, api_spec_path):
 
 def transform_template_config(output_config_path, inputs_path, results_path, compile_path):
     config = json.loads(inputs_path.joinpath('config.template.json').read_bytes())
-    config["SwaggerSpecFilePath"] = [str(results_path.joinpath('swagger.json'))]
-    config["GrammarOutputDirectoryPath"] = str(compile_path)
-    config["CustomDictionaryFilePath"] = str(inputs_path.joinpath('dict.json'))
+
+    if "SwaggerSpecFilePath" in config:
+        config["SwaggerSpecFilePath"] = [str(results_path.joinpath('swagger.json'))]
+    if "GrammarOutputDirectoryPath" in config:
+        config["GrammarOutputDirectoryPath"] = str(compile_path)
+    if "CustomDictionaryFilePath" in config:
+        config["CustomDictionaryFilePath"] = str(inputs_path.joinpath('dict.json'))
+    if "AnnotationFilePath" in config:
+        config["AnnotationFilePath"] = str(inputs_path.joinpath('annotations.json'))
 
     output_config_path.write_text(json.dumps(config,sort_keys=True, indent=4))
 
@@ -52,7 +58,7 @@ def compile_spec(config_path, results_path, restler_dll_path):
         print(f'> {command}')
         subprocess.run(command, shell=True, check=True)
 
-def test_spec(ip, port, host, use_ssl, results_path, compile_path, restler_dll_path):
+def test_spec(ip, port, host, use_ssl, inputs_path, results_path, compile_path, restler_dll_path):
     """ Runs RESTler's test mode on a specified Compile directory
     @param ip: The IP of the service to test
     @type  ip: Str
@@ -70,7 +76,7 @@ def test_spec(ip, port, host, use_ssl, results_path, compile_path, restler_dll_p
 
     command = (
         f"dotnet {restler_dll_path} test --grammar_file {compile_path.joinpath('grammar.py')} --dictionary_file {compile_path.joinpath('dict.json')}"
-        f" --settings {compile_path.joinpath('engine_settings.json')}"
+        f" --settings {inputs_path.joinpath('engine_settings.json')}"
     )
     if not use_ssl:
         command = f"{command} --no_ssl"
@@ -125,6 +131,6 @@ if __name__ == '__main__':
     compile_spec(output_config_path, results_path, restler_dll_path.absolute())
 
     # Test
-    test_spec(args.ip, args.port, args.host, args.use_ssl, results_path, compile_path, restler_dll_path.absolute())
+    test_spec(args.ip, args.port, args.host, args.use_ssl, inputs_path, results_path, compile_path, restler_dll_path.absolute())
 
     print(f"Test complete.\nSee {results_path} for results.")

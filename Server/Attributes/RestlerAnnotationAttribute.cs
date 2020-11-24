@@ -9,9 +9,9 @@ namespace Server.Attributes
     {
         private readonly Annotation data;
 
-        public ResterAnnotationAttribute(string producerEndpoint = "", string producerMethod = "", string producerResourceName = "", string consumerParam = "")
+        public ResterAnnotationAttribute(string producerEndpoint = "", string producerMethod = "", string producerResourceName = "", string consumerParam = "", string exceptEndpoint = "", string exceptMethod = "")
         {
-            data = new Annotation(producerEndpoint, producerMethod, producerResourceName, consumerParam);
+            data = new Annotation(producerEndpoint, producerMethod, producerResourceName, consumerParam, exceptEndpoint, exceptMethod);
         }
 
         public ResterAnnotationAttribute(Annotation annotation)
@@ -30,8 +30,10 @@ namespace Server.Attributes
             public readonly string ProducerMethod;
             public readonly string ProducerResourceName;
             public readonly string ConsumerParam;
+            public readonly string ExceptEndpoint;
+            public readonly string ExceptMethod;
 
-            public Annotation(string producerEndpoint = "", string producerMethod = "", string producerResourceName = "", string consumerParam = "")
+            public Annotation(string producerEndpoint = "", string producerMethod = "", string producerResourceName = "", string consumerParam = "", string exceptEndpoint = "", string exceptMethod = "")
             {
                 if (producerEndpoint == null)
                 {
@@ -54,6 +56,8 @@ namespace Server.Attributes
                 ProducerMethod = producerMethod;
                 ProducerResourceName = producerResourceName;
                 ConsumerParam = consumerParam;
+                ExceptEndpoint = exceptEndpoint;
+                ExceptMethod = exceptMethod;
             }
         }
     }
