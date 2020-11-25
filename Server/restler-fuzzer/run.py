@@ -26,7 +26,9 @@ def usedir(dir):
         os.chdir(curr)
 
 def download_spec(url, api_spec_path):
+    print(f'> Downloading OpenAPI Specification from {url!s}')
     swagger = requests.get(url)
+    print(f'> Saving OpenAPI Specification to {api_spec_path!s}')
     Path(api_spec_path).write_bytes(swagger.content)
 
 def transform_template_config(output_config_path, inputs_path, results_path, compile_path):
@@ -41,6 +43,7 @@ def transform_template_config(output_config_path, inputs_path, results_path, com
     if "AnnotationFilePath" in config:
         config["AnnotationFilePath"] = str(inputs_path.joinpath('annotations.json'))
 
+    print(f'> Writing config to {output_config_path!s}')
     output_config_path.write_text(json.dumps(config,sort_keys=True, indent=4))
 
 def compile_spec(config_path, results_path, restler_dll_path):
@@ -109,8 +112,28 @@ if __name__ == '__main__':
     parser.add_argument('--host',
                         help='The hostname of the service to test',
                         type=str, required=False, default='localhost:5000')
+    parser.add_argument('--skip_download',
+                        help='Skip downloading the OpenAPI Specification from the server',
+                        action='store_true')
+    parser.add_argument('--skip_transform_config',
+                        help='Skip transforming the config.template.json',
+                        action='store_true')
+    parser.add_argument('--skip_compile',
+                        help='Skip compiling the grammar',
+                        action='store_true')
+    parser.add_argument('--skip_fuzzing',
+                        help='Skip running the fuzzer',
+                        action='store_true')
+    parser.add_argument('--fuzz_only',
+                        help='Only run the fuzzer; skipping all other steps',
+                        action='store_true')
 
     args = parser.parse_args()
+
+    if args.fuzz_only is True:
+        if args.skip_fuzzing is True:
+            raise 'Both --fuzz_only and --skip_fuzzing cannot be set to True'
+        args.skip_download = args.skip_transform_config = args.skip_compile = True
 
     # Generate paths
     restler_dll_path = Path(os.path.abspath(args.restler_drop_dir)).joinpath('restler', 'Restler.dll')
@@ -122,15 +145,19 @@ if __name__ == '__main__':
     output_config_path = results_path.joinpath('config.json')
 
     # Get swagger.json
-    download_spec('http://localhost:5000/swagger/v1/swagger.json', api_spec_path)
+    if args.skip_download is not True:
+        download_spec('http://localhost:5000/swagger/v1/swagger.json', api_spec_path)
 
     # Get a config with the abs paths filled in
-    transform_template_config(output_config_path, inputs_path, results_path, compile_path)
+    if args.skip_transform_config is not True:
+        transform_template_config(output_config_path, inputs_path, results_path, compile_path)
 
     # Compile
-    compile_spec(output_config_path, results_path, restler_dll_path.absolute())
+    if args.skip_compile is not True:
+        compile_spec(output_config_path, results_path, restler_dll_path.absolute())
 
     # Test
-    test_spec(args.ip, args.port, args.host, args.use_ssl, inputs_path, results_path, compile_path, restler_dll_path.absolute())
+    if args.skip_fuzzing is not True:
+        test_spec(args.ip, args.port, args.host, args.use_ssl, inputs_path, results_path, compile_path, restler_dll_path.absolute())
 
-    print(f"Test complete.\nSee {results_path} for results.")
+    print(f"Run complete.\nSee {results_path} for results.")
