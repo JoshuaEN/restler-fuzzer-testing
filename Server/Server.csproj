@@ -22,13 +22,15 @@
     '$(Configuration)'!='ENDPOINT_AS_EXPECTED' and
     '$(Configuration)'!='ENDPOINT_SMALL_RESPONSES' and
     '$(Configuration)'!='RECURSIVE_MODELS' and
-    '$(Configuration)'!='NESTED_MODELS'">
-    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED</DefineConstants>
+    '$(Configuration)'!='NESTED_MODELS' and
+    '$(Configuration)'!='AS_EXPECT_PASCAL_CASES' and
+    '$(Configuration)'!='TEST_JSON_PASCAL_CASE'">
+    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES</DefineConstants>
   </PropertyGroup>
 
   <!-- For Visual Studio -->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED</DefineConstants>
+    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES</DefineConstants>
   </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)'=='TRADITIONALS'">
@@ -57,5 +59,13 @@
 
   <PropertyGroup Condition="'$(Configuration)'=='NESTED_MODELS'">
     <DefineConstants>ENDPOINT_NESTED_MODELS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='AS_EXPECT_PASCAL_CASES'">
+    <DefineConstants>ENDPOINT_AS_EXPECT_PASCAL_CASES</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='TEST_JSON_PASCAL_CASE'">
+    <DefineConstants>ENDPOINT_AS_EXPECT_PASCAL_CASES JSON_PASCAL_CASE</DefineConstants>
   </PropertyGroup>
 </Project>

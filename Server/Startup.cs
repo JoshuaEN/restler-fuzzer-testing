@@ -32,31 +32,38 @@ namespace Server
         {
             services.AddControllers();
             services.AddMvc().AddJsonOptions(options => {
+#if JSON_PASCAL_CASE
+                options.JsonSerializerOptions.PropertyNamingPolicy = null; // Pascal Case
+#else
                 options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+#endif
             });
             services.AddSwaggerGen(c => {
                 c.OperationFilter<RestlerOperationFilter>();
             });
             services.AddLogging();
 
-            #if ENDPOINT_POST_ON_RESOURCES
-                services.AddSingleton<InMemoryStorageService<PostOnResourceController, string, PostOnResource>>();
-            #endif
-            #if ENDPOINT_PUT_ONLYS
-                services.AddSingleton<InMemoryStorageService<PutOnlyController, string, PutOnly>>();
-            #endif
-            #if ENDPOINT_TRADITIONALS
-                services.AddSingleton<InMemoryStorageService<TraditionalController, string, Traditional>>();
-            #endif
-            #if ENDPOINT_AS_EXPECTED
-                services.AddSingleton<InMemoryStorageService<AsExpectController, string, AsExpect>>();
-            #endif
-            #if ENDPOINT_RECURSIVE_MODELS
-                services.AddSingleton<InMemoryStorageService<RecursiveModelController, string, RecursiveModel>>();
-            #endif
-            #if ENDPOINT_NESTED_MODELS
-                services.AddSingleton<InMemoryStorageService<NestedModelController, string, NestedModel>>();
-            #endif
+#if ENDPOINT_POST_ON_RESOURCES
+            services.AddSingleton<InMemoryStorageService<PostOnResourceController, string, PostOnResource>>();
+#endif
+#if ENDPOINT_PUT_ONLYS
+            services.AddSingleton<InMemoryStorageService<PutOnlyController, string, PutOnly>>();
+#endif
+#if ENDPOINT_TRADITIONALS
+            services.AddSingleton<InMemoryStorageService<TraditionalController, string, Traditional>>();
+#endif
+#if ENDPOINT_AS_EXPECTED
+            services.AddSingleton<InMemoryStorageService<AsExpectController, string, AsExpect>>();
+#endif
+#if ENDPOINT_RECURSIVE_MODELS
+            services.AddSingleton<InMemoryStorageService<RecursiveModelController, string, RecursiveModel>>();
+#endif
+#if ENDPOINT_NESTED_MODELS
+            services.AddSingleton<InMemoryStorageService<NestedModelController, string, NestedModel>>();
+#endif
+#if ENDPOINT_AS_EXPECT_PASCAL_CASES
+            services.AddSingleton<InMemoryStorageService<AsExpectPascalCaseController, string, AsExpectPascalCase>>();
+#endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
