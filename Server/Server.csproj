@@ -15,7 +15,14 @@
   </ItemGroup>
 
   <!-- For default dotnet run -->
-  <PropertyGroup Condition="'$(Configuration)'!='TRADITIONALS'and'$(Configuration)'!='PUT_ONLYS'and'$(Configuration)'!='POST_ON_RESOURCES'and'$(Configuration)'!='ENDPOINT_AS_EXPECTED'and'$(Configuration)'!='ENDPOINT_SMALL_RESPONSES'">
+  <PropertyGroup Condition="
+    '$(Configuration)'!='TRADITIONALS' and
+    '$(Configuration)'!='PUT_ONLYS' and
+    '$(Configuration)'!='POST_ON_RESOURCES' and
+    '$(Configuration)'!='ENDPOINT_AS_EXPECTED' and
+    '$(Configuration)'!='ENDPOINT_SMALL_RESPONSES' and
+    '$(Configuration)'!='RECURSIVE_MODELS' and
+    '$(Configuration)'!='NESTED_MODELS'">
     <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED</DefineConstants>
   </PropertyGroup>
 
@@ -44,4 +51,11 @@
     <DefineConstants>ENDPOINT_SMALL_RESPONSES</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)'=='RECURSIVE_MODELS'">
+    <DefineConstants>ENDPOINT_RECURSIVE_MODELS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='NESTED_MODELS'">
+    <DefineConstants>ENDPOINT_NESTED_MODELS</DefineConstants>
+  </PropertyGroup>
 </Project>

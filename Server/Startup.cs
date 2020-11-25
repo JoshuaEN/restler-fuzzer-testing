@@ -51,6 +51,12 @@ namespace Server
             #if ENDPOINT_AS_EXPECTED
                 services.AddSingleton<InMemoryStorageService<AsExpectController, string, AsExpect>>();
             #endif
+            #if ENDPOINT_RECURSIVE_MODELS
+                services.AddSingleton<InMemoryStorageService<RecursiveModelController, string, RecursiveModel>>();
+            #endif
+            #if ENDPOINT_NESTED_MODELS
+                services.AddSingleton<InMemoryStorageService<NestedModelController, string, NestedModel>>();
+            #endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

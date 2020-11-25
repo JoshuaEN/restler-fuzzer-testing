@@ -48,11 +48,17 @@ DELETE api/v1/postOnResources/{postOnResourceId}
 
 ## Subsets
 Several configurations are available to enable just specific controllers:
-    * `dotnet run -c TRADITIONALS` to enable just `api/v1/traditionals` endpoints
-    * `dotnet run -c PUT_ONLYS` to enable just `api/v1/putOnlys` endpoints
-    * `dotnet run -c POST_ON_RESOURCES` to enable just `api/v1/postOnResources` endpoints
+    * `dotnet run -c TRADITIONALS` to enable just `api/v1/Traditionals` endpoints
+    * `dotnet run -c PUT_ONLYS` to enable just `api/v1/PutOnlys` endpoints
+    * `dotnet run -c POST_ON_RESOURCES` to enable just `api/v1/PostOnResources` endpoints
+    * `dotnet run -c AS_EXPECTED` to enable just `api/v1/AsExpects` endpoints
+    * `dotnet run -c RECURSIVE_MODELS` to enable just `api/v1/RecursiveModels` endpoints
+    * `dotnet run -c NESTED_MODELS` to enable just `api/v1/NestedModels` endpoints
 
 More generally, controllers are enabled/disabled using preprocessor directives:
  * ENDPOINT_TRADITIONALS
  * ENDPOINT_PUT_ONLYS
  * ENDPOINT_POST_ON_RESOURCES
+ * ENDPOINT_AS_EXPECTED
+ * ENDPOINT_RECURSIVE_MODELS
+ * ENDPOINT_NESTED_MODELS
