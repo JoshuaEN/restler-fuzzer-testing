@@ -21,7 +21,7 @@ namespace Server
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
-                .WriteTo.File($"./{DateTime.UtcNow:yyyy-MM-ddTHH-mm-ssZ}-server.log", fileSizeLimitBytes: null)
+                .WriteTo.File($"./logs/{DateTime.UtcNow:yyyy-MM-ddTHH-mm-ssZ}-server.log", fileSizeLimitBytes: null)
                 .CreateLogger();
 
             try
