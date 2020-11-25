@@ -56,7 +56,10 @@ namespace Server.Controllers
                 throw new ArgumentNullException(nameof(value.Id));
             }
 
-            value.Id = this.getUniqueKeyValue();
+            if (mode == InMemoryStorageMode.MimicExpectedByRESTler)
+            {
+                value.Id = this.getUniqueKeyValue();
+            }
 
 
             if (this.store.TryAdd(value.Id, value))
