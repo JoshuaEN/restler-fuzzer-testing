@@ -14,5 +14,8 @@ namespace Server.Models
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }
+
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string InternalIdentifier { get => Id; set => Id = value; }
     }
 }

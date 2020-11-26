@@ -24,11 +24,15 @@ namespace Server.Controllers
 
     public abstract class BaseInMemoryController<TController, TKey, TValue> : ControllerBase where TController : BaseInMemoryController<TController, TKey, TValue> where TValue : IInMemoryModel<TKey>
     {
-        private readonly ConcurrentDictionary<TKey, TValue> store = new ConcurrentDictionary<TKey, TValue>();
+        protected readonly ConcurrentDictionary<TKey, TValue> store = new ConcurrentDictionary<TKey, TValue>();
         private readonly InMemoryStorageMode mode;
-        private readonly Func<TKey> getUniqueKeyValue;
+        private readonly Func<TKey, TKey> getUniqueKeyValue;
 
-        protected BaseInMemoryController(InMemoryStorageMode mode, Func<TKey> getUniqueKeyValue, InMemoryStorageService<TController, TKey, TValue> storageService)
+        protected BaseInMemoryController(InMemoryStorageMode mode, Func<TKey> getUniqueKeyValue, InMemoryStorageService<TController, TKey, TValue> storageService) : this(mode, (key) => getUniqueKeyValue(), storageService)
+        {
+        }
+
+        protected BaseInMemoryController(InMemoryStorageMode mode, Func<TKey, TKey> getUniqueKeyValue, InMemoryStorageService<TController, TKey, TValue> storageService)
         {
             if (storageService == null)
             {
@@ -51,18 +55,18 @@ namespace Server.Controllers
             {
                 throw new ArgumentNullException(nameof(value));
             }
-            if (value.Id == null && mode == InMemoryStorageMode.MimicPrivateAPI)
+            if (value.InternalIdentifier == null && mode == InMemoryStorageMode.MimicPrivateAPI)
             {
-                throw new ArgumentNullException(nameof(value.Id));
+                throw new ArgumentNullException(nameof(value.InternalIdentifier));
             }
 
             if (mode == InMemoryStorageMode.MimicExpectedByRESTler)
             {
-                value.Id = this.getUniqueKeyValue();
+                value.InternalIdentifier = this.getUniqueKeyValue(value.InternalIdentifier);
             }
 
 
-            if (this.store.TryAdd(value.Id, value))
+            if (this.store.TryAdd(value.InternalIdentifier, value))
             {
                 return Ok(value);
             }
@@ -71,11 +75,11 @@ namespace Server.Controllers
                 return Conflict();
             }
 
-            if (this.store.TryGetValue(value.Id, out TValue existingValue))
+            if (this.store.TryGetValue(value.InternalIdentifier, out TValue existingValue))
             {
                 return Ok(existingValue);
             }
-            throw new Exception($"Failed to create resource with ID {value.Id} because resource appeared to exist but then could not be found");
+            throw new Exception($"Failed to create resource with ID {value.InternalIdentifier} because resource appeared to exist but then could not be found");
         }
 
         protected ActionResult<TValue> _GetOrCreate(TKey key, TValue value)
@@ -89,7 +93,7 @@ namespace Server.Controllers
                 }
             }
 
-            value.Id = key;
+            value.InternalIdentifier = key;
 
             // Note: In the real implementation, this would be comparing the existing TValue and the new value to ensure they were completely equal.
             return Ok(this.store.GetOrAdd(key, value));
@@ -106,7 +110,7 @@ namespace Server.Controllers
                 }
             }
 
-            value.Id = key;
+            value.InternalIdentifier = key;
 
             return Ok(this.store.AddOrUpdate(key, value, (key, oldValue) => value));
         }
@@ -115,7 +119,7 @@ namespace Server.Controllers
         {
             if (this.store.TryGetValue(key, out TValue value))
             {
-                return value;
+                return (TValue)Convert.ChangeType(value, typeof(TValue));
             }
             return NotFound();
         }
@@ -131,9 +135,9 @@ namespace Server.Controllers
 
         private ActionResult<TValue> CheckPair(TKey key, TValue value)
         {
-            if (EqualityComparer<TKey>.Default.Equals(key, value.Id) != true)
+            if (EqualityComparer<TKey>.Default.Equals(key, value.InternalIdentifier) != true)
             {
-                return BadRequest(new { error = $"Expected Id {key} from URL to match Id {value.Id} in body" });
+                return BadRequest(new { error = $"Expected Id {key} from URL to match Id {value.InternalIdentifier} in body" });
             }
             return null;
         }

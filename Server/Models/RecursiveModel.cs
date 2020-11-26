@@ -15,5 +15,8 @@ namespace Server.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public RecursiveModel ParentRecursiveModel { get; set; }
+
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string InternalIdentifier { get => Id; set => Id = value; }
     }
 }

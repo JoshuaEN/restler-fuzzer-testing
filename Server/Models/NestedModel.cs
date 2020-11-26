@@ -15,6 +15,9 @@ namespace Server.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public NestedModelItem NestedModelItem { get; set; }
+
+        [System.Text.Json.Serialization.JsonIgnore]
+        public string InternalIdentifier { get => Id; set => Id = value; }
     }
 
     public class NestedModelItem
