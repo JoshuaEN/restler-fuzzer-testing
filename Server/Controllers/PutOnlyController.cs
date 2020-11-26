@@ -44,7 +44,6 @@ namespace Server.Controllers
         /// 
         /// </summary>
         /// <param name="putOnlyId" example="default"></param>
-        /// <param name="putOnly"></param>
         /// <returns></returns>
         [HttpDelete("{putOnlyId}")]
         public ActionResult Delete([BindRequired] string putOnlyId) => base._Delete(putOnlyId);

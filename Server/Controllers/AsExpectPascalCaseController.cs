@@ -54,7 +54,6 @@ namespace Server.Controllers
         /// 
         /// </summary>
         /// <param name="AsExpectPascalCaseId" example="default"></param>
-        /// <param name="AsExpectPascalCase"></param>
         /// <returns></returns>
         [HttpDelete("{AsExpectPascalCaseId}")]
         // [ResterAnnotation(producerEndpoint: "/Api/V1/AsExpectPascalCases", producerMethod: "POST", producerResourceName: "Id", consumerParam: "AsExpectPascalCaseId")]

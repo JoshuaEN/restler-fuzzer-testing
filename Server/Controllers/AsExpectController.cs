@@ -52,7 +52,6 @@ namespace Server.Controllers
         /// 
         /// </summary>
         /// <param name="asExpectId" example="default"></param>
-        /// <param name="asExpect"></param>
         /// <returns></returns>
         [HttpDelete("{asExpectId}")]
         public ActionResult Delete([BindRequired] string asExpectId) => base._Delete(asExpectId);

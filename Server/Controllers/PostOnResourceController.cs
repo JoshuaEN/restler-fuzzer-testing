@@ -36,7 +36,6 @@ namespace Server.Controllers
         /// 
         /// </summary>
         /// <param name="postOnResourceId" example="default"></param>
-        /// <param name="postOnResource"></param>
         /// <returns></returns>
         [HttpGet("{postOnResourceId}")]
         public ActionResult<PostOnResource> Get([BindRequired] string postOnResourceId) => base._Get(postOnResourceId);
@@ -54,7 +53,6 @@ namespace Server.Controllers
         /// 
         /// </summary>
         /// <param name="postOnResourceId" example="default"></param>
-        /// <param name="postOnResource"></param>
         /// <returns></returns>
         [HttpDelete("{postOnResourceId}")]
         public ActionResult Delete([BindRequired] string postOnResourceId) => base._Delete(postOnResourceId);

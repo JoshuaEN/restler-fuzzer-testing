@@ -35,7 +35,6 @@ namespace Server.Controllers
         /// 
         /// </summary>
         /// <param name="traditionalId" example="default"></param>
-        /// <param name="traditional"></param>
         /// <returns></returns>
         [HttpGet("{traditionalId}")]
         public ActionResult<Traditional> Get([BindRequired] string traditionalId) => base._Get(traditionalId);
@@ -53,7 +52,6 @@ namespace Server.Controllers
         /// 
         /// </summary>
         /// <param name="traditionalId" example="default"></param>
-        /// <param name="traditional"></param>
         /// <returns></returns>
         [HttpDelete("{traditionalId}")]
         public ActionResult Delete([BindRequired] string traditionalId) => base._Delete(traditionalId);
