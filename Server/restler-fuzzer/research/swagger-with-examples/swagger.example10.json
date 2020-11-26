@@ -1,0 +1,8 @@
+{
+    "summary": "Test",
+    "parameters": {
+        "id":"default","name":"Example Name","description":null,"parentRecursiveModel":{"id":"Existing","name":"Some existing name","description":null,"parentRecursiveModel":null},
+        "recursiveModel": { "id":"default","name":"Example Name","description":null,"parentRecursiveModel":{"id":"Existing","name":"Some existing name","description":null,"parentRecursiveModel":null} },
+        "body": { "id":"default","name":"Example Name","description":null,"parentRecursiveModel":{"id":"Existing","name":"Some existing name","description":null,"parentRecursiveModel":null} }
+    }
+}
