@@ -39,6 +39,9 @@ namespace Server
 #endif
             });
             services.AddSwaggerGen(c => {
+                var filePath = System.IO.Path.Combine(System.AppContext.BaseDirectory, "Server.xml");
+                c.IncludeXmlComments(filePath);
+
                 c.OperationFilter<RestlerOperationFilter>();
             });
             services.AddLogging();
@@ -63,6 +66,10 @@ namespace Server
 #endif
 #if ENDPOINT_AS_EXPECT_PASCAL_CASES
             services.AddSingleton<InMemoryStorageService<AsExpectPascalCaseController, string, AsExpectPascalCase>>();
+#endif
+#if ENDPOINT_NESTED
+            services.AddSingleton<InMemoryStorageService<NestedResourceController, (string asExpectId, string nestedResourceId), NestedResource>>();
+            services.AddSingleton<InMemoryStorageService<NestedResourceAdjacentController, (string asExpectId, string nestedResourceAdjacentId), NestedResourceAdjacent>>();
 #endif
         }
 

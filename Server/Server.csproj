@@ -1,7 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DocumentationFile>.\Server.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn> <!-- Missing XML Comments warnings -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,22 +17,13 @@
   </ItemGroup>
 
   <!-- For default dotnet run -->
-  <PropertyGroup Condition="
-    '$(Configuration)'!='TRADITIONALS' and
-    '$(Configuration)'!='PUT_ONLYS' and
-    '$(Configuration)'!='POST_ON_RESOURCES' and
-    '$(Configuration)'!='ENDPOINT_AS_EXPECTED' and
-    '$(Configuration)'!='ENDPOINT_SMALL_RESPONSES' and
-    '$(Configuration)'!='RECURSIVE_MODELS' and
-    '$(Configuration)'!='NESTED_MODELS' and
-    '$(Configuration)'!='AS_EXPECT_PASCAL_CASES' and
-    '$(Configuration)'!='TEST_JSON_PASCAL_CASE'">
-    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES</DefineConstants>
+  <PropertyGroup Condition=" '$(Configuration)'!='TRADITIONALS' and '$(Configuration)'!='PUT_ONLYS' and '$(Configuration)'!='POST_ON_RESOURCES' and '$(Configuration)'!='ENDPOINT_AS_EXPECTED' and '$(Configuration)'!='ENDPOINT_SMALL_RESPONSES' and '$(Configuration)'!='RECURSIVE_MODELS' and '$(Configuration)'!='NESTED_MODELS' and '$(Configuration)'!='AS_EXPECT_PASCAL_CASES' and '$(Configuration)'!='TEST_JSON_PASCAL_CASE' and '$(Configuration)'!='NESTED'">
+    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_RECURSIVE_MODELS ENDPOINT_NESTED_MODELS ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES ENDPOINT_NESTED</DefineConstants>
   </PropertyGroup>
 
   <!-- For Visual Studio -->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES</DefineConstants>
+    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_RECURSIVE_MODELS ENDPOINT_NESTED_MODELS ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES ENDPOINT_NESTED</DefineConstants>
   </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)'=='TRADITIONALS'">
@@ -67,5 +60,9 @@
 
   <PropertyGroup Condition="'$(Configuration)'=='TEST_JSON_PASCAL_CASE'">
     <DefineConstants>ENDPOINT_AS_EXPECT_PASCAL_CASES JSON_PASCAL_CASE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='NESTED'">
+    <DefineConstants>ENDPOINT_AS_EXPECTED ENDPOINT_NESTED</DefineConstants>
   </PropertyGroup>
 </Project>
