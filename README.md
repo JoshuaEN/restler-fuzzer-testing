@@ -12,39 +12,74 @@
 ## Controllers
 There are three controllers designed to test three cases:
 
-### api/v1/traditionals
+### api/v1/Traditionals
 Represents a normal or traditional REST API, with:
 ```
-   GET api/v1/traditionals
-  POST api/v1/traditionals
-   GET api/v1/traditionals/{traditionalId}
-   PUT api/v1/traditionals/{traditionalId}
-DELETE api/v1/traditionals/{traditionalId}
+   GET api/v1/Traditionals
+  POST api/v1/Traditionals
+   GET api/v1/Traditionals/{traditionalId}
+   PUT api/v1/Traditionals/{traditionalId}
+DELETE api/v1/Traditionals/{traditionalId}
 ```
 
-### api/v1/putOnlys
+### api/v1/PutOnlys
 Represents a REST API that does not have a POST on the resource root to create. Rather, PUT on a specific resource is used to both create and update.
 Note that this API example requires the PUT resource ID in the URL must match the resource ID provided in the body of the request for both create and update.
 Endpoints are:
 ```
-   GET api/v1/putOnlys
-  POST api/v1/putOnlys
-   GET api/v1/putOnlys/{putOnlyId}
-   PUT api/v1/putOnlys/{putOnlyId}
-DELETE api/v1/putOnlys/{putOnlyId}
+   GET api/v1/PutOnlys
+  POST api/v1/PutOnlys
+   GET api/v1/PutOnlys/{putOnlyId}
+   PUT api/v1/PutOnlys/{putOnlyId}
+DELETE api/v1/PutOnlys/{putOnlyId}
 ```
 
-### api/v1/postOnResources
+### api/v1/PostOnResources
 Represents a REST API that does not have a POST on the resource root to create. Rather, POST on a specific resource is used to create (PUT is still available to create or update as well).
 Note that this API example requires the POST resource ID in the URL must match the resource ID provided in the body of the request for create.
 Endpoints are:
 ```
-   GET api/v1/postOnResources
-  POST api/v1/postOnResources
-   GET api/v1/postOnResources/{postOnResourceId}
-   PUT api/v1/postOnResources/{postOnResourceId}
-DELETE api/v1/postOnResources/{postOnResourceId}
+   GET api/v1/PostOnResources
+  POST api/v1/PostOnResources
+   GET api/v1/PostOnResources/{postOnResourceId}
+   PUT api/v1/PostOnResources/{postOnResourceId}
+DELETE api/v1/PostOnResources/{postOnResourceId}
 ```
+
+### api/v1/AsExpects
+Represents a traditional REST API, but follows the rules that RESTler expects. RESTler is able to automatically test all endpoints.
+Endpoints are:
+```
+   GET api/v1/AsExpects
+  POST api/v1/AsExpects
+   GET api/v1/AsExpects/{asExpectId}
+   PUT api/v1/AsExpects/{asExpectId}
+DELETE api/v1/AsExpects/{asExpectId}
+```
+
+### api/v1/AsExpects/{asExpectId}/NestedResources
+Represents a traditional REST API that follows most of the rules that RESTler expects (it wants the `asExpectId` passed to the body for creation requests, which RESTler does not currently do automatically).
+Endpoints are:
+```
+   GET api/v1/AsExpects/{asExpectId}/NestedResources
+  POST api/v1/AsExpects/{asExpectId}/NestedResources
+   GET api/v1/AsExpects/{asExpectId}/NestedResources/{nestedResourceId}
+   PUT api/v1/AsExpects/{asExpectId}/NestedResources/{nestedResourceId}
+DELETE api/v1/AsExpects/{asExpectId}/NestedResources/{nestedResourceId}
+```
+
+### api/v1/AsExpects/{asExpectId}/NestedResourceAdjacents
+Represents a traditional REST API that follows most of the rules that RESTler expects, and has a dependency on its nested peer (NestedResources).
+This API wants the `asExpectId` AND `nestedResourceId` passed to the body for creation requests, which RESTler does not currently do automatically.
+Endpoints are:
+```
+   GET api/v1/AsExpects/{asExpectId}/NestedResourceAdjacents
+  POST api/v1/AsExpects/{asExpectId}/NestedResourceAdjacents
+   GET api/v1/AsExpects/{asExpectId}/NestedResourceAdjacents/{nestedResourceAdjacentId}
+   PUT api/v1/AsExpects/{asExpectId}/NestedResourceAdjacents/{nestedResourceAdjacentId}
+DELETE api/v1/AsExpects/{asExpectId}/NestedResourceAdjacents/{nestedResourceAdjacentId}
+```
+
 
 ## Subsets
 Several configurations are available to enable just specific controllers:
@@ -54,6 +89,10 @@ Several configurations are available to enable just specific controllers:
     * `dotnet run -c AS_EXPECTED` to enable just `api/v1/AsExpects` endpoints
     * `dotnet run -c RECURSIVE_MODELS` to enable just `api/v1/RecursiveModels` endpoints
     * `dotnet run -c NESTED_MODELS` to enable just `api/v1/NestedModels` endpoints
+    * `dotnet run -c NESTED` to enable the following endpoints:
+      + `api/v1/AsExpects`
+      + `api/v1/AsExpects/{asExpectId}/NestedResources`
+      + `api/v1/AsExpects/{asExpectId}/NestedResourceAdjacent`
 
 More generally, controllers are enabled/disabled using preprocessor directives:
  * ENDPOINT_TRADITIONALS
@@ -62,3 +101,4 @@ More generally, controllers are enabled/disabled using preprocessor directives:
  * ENDPOINT_AS_EXPECTED
  * ENDPOINT_RECURSIVE_MODELS
  * ENDPOINT_NESTED_MODELS
+ * ENDPOINT_NESTED
