@@ -23,6 +23,15 @@ namespace Server.Controllers
         [HttpGet]
         public IList<PostOnResource> Index() => base._Index();
 
+        // Uncommenting this will cause the correct relationships to be created.
+        // /// <summary>
+        // /// 
+        // /// </summary>
+        // /// <param name="postOnResource"></param>
+        // /// <returns></returns>
+        // [HttpPost]
+        // public ActionResult<PostOnResource> Create([FromBody, BindRequired] PostOnResource postOnResource) => base._Create(postOnResource);
+
         /// <summary>
         /// 
         /// </summary>
