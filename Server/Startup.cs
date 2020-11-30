@@ -15,6 +15,7 @@ using Server.Controllers;
 using Server.Models;
 using Server.Services;
 using Server.OpenAPIFilters;
+using Server.Authentication;
 
 namespace Server
 {
@@ -45,6 +46,16 @@ namespace Server
                 c.OperationFilter<RestlerOperationFilter>();
             });
             services.AddLogging();
+
+#if ENDPOINT_AUTHN
+            services.AddAuthentication(c =>
+            {
+                c.AddScheme<TimestampAuthenticationHandler>(TimestampAuthenticationHandler.AuthenticationScheme, TimestampAuthenticationHandler.AuthenticationScheme);
+                c.DefaultScheme = TimestampAuthenticationHandler.AuthenticationScheme;
+            });
+
+            services.AddSingleton<InMemoryStorageService<AuthRequiredResourceController, string, AuthRequiredResource>>();
+#endif
 
 #if ENDPOINT_POST_ON_RESOURCES
             services.AddSingleton<InMemoryStorageService<PostOnResourceController, string, PostOnResource>>();

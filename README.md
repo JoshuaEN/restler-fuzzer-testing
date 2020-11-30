@@ -80,6 +80,18 @@ Endpoints are:
 DELETE api/v1/AsExpects/{asExpectId}/NestedResourceAdjacents/{nestedResourceAdjacentId}
 ```
 
+### api/v1/AsExpects/{asExpectId}/AuthRequiredResources
+Represents a traditional REST API that follows most of the rules that RESTler expects, and required a valid authentication token (from POST /api/v1/authenticate, provided via the `Authentication` header with the schema `Timestamp`).
+
+Endpoints are:
+```
+   GET api/v1/AuthRequiredResources
+  POST api/v1/AuthRequiredResources
+   GET api/v1/AuthRequiredResources/{authRequiredResourceId}
+   PUT api/v1/AuthRequiredResources/{authRequiredResourceId}
+DELETE api/v1/AuthRequiredResources/{authRequiredResourceId}
+```
+
 
 ## Subsets
 Several configurations are available to enable just specific controllers:
@@ -89,6 +101,7 @@ Several configurations are available to enable just specific controllers:
     * `dotnet run -c AS_EXPECTED` to enable just `api/v1/AsExpects` endpoints
     * `dotnet run -c RECURSIVE_MODELS` to enable just `api/v1/RecursiveModels` endpoints
     * `dotnet run -c NESTED_MODELS` to enable just `api/v1/NestedModels` endpoints
+    * `dotnet run -c AUTHN` to enable just `api/v1/AuthRequiredResources` endpoints
     * `dotnet run -c NESTED` to enable the following endpoints:
       + `api/v1/AsExpects`
       + `api/v1/AsExpects/{asExpectId}/NestedResources`
@@ -102,3 +115,4 @@ More generally, controllers are enabled/disabled using preprocessor directives:
  * ENDPOINT_RECURSIVE_MODELS
  * ENDPOINT_NESTED_MODELS
  * ENDPOINT_NESTED
+ * ENDPOINT_AUTHN
