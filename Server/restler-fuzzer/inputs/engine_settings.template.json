@@ -1,0 +1,6 @@
+{
+    "fuzzing_mode": "bfs",
+    "time_budget": 0.25,
+    "token_refresh_cmd": "will-be-overwritten-by-run.py",
+    "token_refresh_interval": 150
+}

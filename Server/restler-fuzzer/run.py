@@ -8,6 +8,8 @@ import os
 import subprocess
 import requests
 import json
+import time
+import shutil
 from pathlib import Path
 
 RESTLER_TEMP_DIR = 'restler_working_dir'
@@ -42,9 +44,34 @@ def transform_template_config(output_config_path, inputs_path, results_path, com
         config["CustomDictionaryFilePath"] = str(inputs_path.joinpath('dict.json'))
     if "AnnotationFilePath" in config:
         config["AnnotationFilePath"] = str(inputs_path.joinpath('annotations.json'))
+    if "EngineSettingsFilePath" in config:
+        config["EngineSettingsFilePath"] = str(results_path.joinpath('engine_settings.json'))
 
     print(f'> Writing config to {output_config_path!s}')
     output_config_path.write_text(json.dumps(config,sort_keys=True, indent=4))
+
+def transform_template_engine_settings(output_engine_settings_path, inputs_path, results_path):
+    settings = json.loads(inputs_path.joinpath('engine_settings.template.json').read_bytes())
+
+    if "per_resource_settings" in settings:
+        for path in settings["per_resource_settings"]:
+            resource_settings = settings["per_resource_settings"][path]
+
+            if "custom_dictionary" in resource_settings:
+                relative_custom_dictionary_path = resource_settings["custom_dictionary"]
+                current_path = inputs_path.joinpath(relative_custom_dictionary_path).resolve()
+                dest_path = results_path.joinpath(relative_custom_dictionary_path).resolve()
+
+                shutil.copyfile(current_path, dest_path)
+
+                resource_settings["custom_dictionary"] = str(dest_path)
+
+    if "token_refresh_cmd" in settings:
+        token_cmd_path = str(inputs_path.joinpath("..", "gettoken.py"))
+        settings["token_refresh_cmd"] = f"python {token_cmd_path} --token_url http://localhost:5000/api/v1/authenticate"
+
+    print(f'> Writing engine settings to {output_engine_settings_path!s}')
+    output_engine_settings_path.write_text(json.dumps(settings,sort_keys=True, indent=4))
 
 def compile_spec(config_path, results_path, restler_dll_path):
     """ Compiles a specified api spec
@@ -79,7 +106,7 @@ def test_spec(ip, port, host, use_ssl, inputs_path, results_path, compile_path, 
 
     command = (
         f"dotnet {restler_dll_path} test --grammar_file {compile_path.joinpath('grammar.py')} --dictionary_file {compile_path.joinpath('dict.json')}"
-        f" --settings {inputs_path.joinpath('engine_settings.json')}"
+        f" --settings {compile_path.joinpath('engine_settings.json')}"
     )
     if not use_ssl:
         command = f"{command} --no_ssl"
@@ -139,10 +166,14 @@ if __name__ == '__main__':
     restler_dll_path = Path(os.path.abspath(args.restler_drop_dir)).joinpath('restler', 'Restler.dll')
     base_path = Path(os.path.abspath(os.path.dirname(__file__)))
     inputs_path = base_path.joinpath('inputs')
-    results_path = base_path.joinpath('results')
+    results_path = base_path.joinpath('results') #, time.strftime("%Y-%m-%d-%H-%M-%S"))
     api_spec_path = results_path.joinpath('swagger.json')
     compile_path = results_path.joinpath('Compile')
     output_config_path = results_path.joinpath('config.json')
+    output_engine_settings_path = results_path.joinpath('engine_settings.json')
+
+    if not os.path.exists(results_path):
+        os.makedirs(results_path)
 
     # Get swagger.json
     if args.skip_download is not True:
@@ -151,6 +182,7 @@ if __name__ == '__main__':
     # Get a config with the abs paths filled in
     if args.skip_transform_config is not True:
         transform_template_config(output_config_path, inputs_path, results_path, compile_path)
+        transform_template_engine_settings(output_engine_settings_path, inputs_path, results_path)
 
     # Compile
     if args.skip_compile is not True:
