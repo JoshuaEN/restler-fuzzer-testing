@@ -1,0 +1,14 @@
+{
+    "parameters": {
+        "body": {
+            "id": "ignored",
+            "name": "Example%20name",
+            "description": "anything",
+            "canFly": false,
+            "canSwim": true,
+            "maxDepth": 25
+        }
+    },
+    "responses": {
+    }
+}
