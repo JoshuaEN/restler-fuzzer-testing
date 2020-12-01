@@ -1,3 +1,20 @@
+# Problem - Falsy PayloadBodyChecker settings are ignored when the default is Truthy
+Note how `size_dep_budget` is set to false in [Server\restler-fuzzer\inputs\engine_settings.template.json](Server\restler-fuzzer\inputs\engine_settings.template.json), it is loaded and reported as True in [PayloadBodyChecker.22992.txt](Server\restler-fuzzer\results\Fuzz\RestlerResults\experiment40856\logs\PayloadBodyChecker.22992.txt).
+
+I think this is because the loaded setting is `or`ed with the default ([e.g.](https://github.com/microsoft/restler-fuzzer/blob/main/restler/checkers/payload_body_checker.py#L73)). Thus, for values that default to `true`, it is impossible to set them to false.
+
+Note: I also verified that the settings were actually being loaded by changing the defaults for `_fuzz_valid` and `_fuzz_invalid` to `False`, in the configuration setting `fuzz_valid` to `true`, and then confirming that the log reported `fuzzing valid True` and `fuzzing invalid False`.
+
+## This run can be reproduced by:
+1. Get [RESTler-fuzzer](https://github.com/microsoft/restler-fuzzer) and [build it](https://github.com/microsoft/restler-fuzzer#build-instructions)
+1. Run `dotnet run` the Server project or use the UI of your choice
+1. Once the server has started and is accepting requests, run `python Server/restler-fuzzer/run.py --restler_drop_dir {{path-to-restler-fuzzer-bin}} --fuzz --fuzz_args "--enable_checkers 
+PayloadBody"`, which will:
+    1. Download the swagger.json from the local server
+    1. Insert absolute paths into the [config.template.json](Server\restler-fuzzer\inputs\config.template.json) (note: logic is currently hard-coded of what paths to insert and where)
+    1. Run restler compile with the [config.json](Server\restler-fuzzer\results\config.json) created in the last step
+    1. Run restler test with the result of the compilation
+
 # Simple demo project to test various RESTler-fuzzer features
 
 ## Running Server + RESTler-fuzzer

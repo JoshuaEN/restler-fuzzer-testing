@@ -1,0 +1,9 @@
+
+2020-12-01 15:18:18.249: Generation-0
+2020-12-01 15:18:18.249: 	Rendered requests: 1 / 1
+2020-12-01 15:18:18.249: 	Rendered requests with "valid" status codes: 1 / 1
+2020-12-01 15:18:18.249: 	Rendered requests determined to be fully valid (no resource creation failures): 1 / 1
+
+2020-12-01 15:18:18.258: 	Never Rendered requests:
+-------------------------
+

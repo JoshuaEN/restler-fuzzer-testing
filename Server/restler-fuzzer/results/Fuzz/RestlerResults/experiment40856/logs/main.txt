@@ -1,0 +1,45 @@
+2020-12-01 15:18:06.129: Going to fuzz a set with 1 requests
+2020-12-01 15:18:06.129: Request-0: Value Combinations: 1
+2020-12-01 15:18:06.129: Avg. Value Combinations per Request: 1
+2020-12-01 15:18:06.129: Median Value Combinations per Request: 1
+2020-12-01 15:18:06.129: Min Value Combinations per Request: 1
+2020-12-01 15:18:06.129: Max Value Combinations per Request: 1
+2020-12-01 15:18:06.129: Total dependencies: 0
+
+2020-12-01 15:18:06.821: Starting directed-smoke-test
+
+2020-12-01 15:18:06.834: Will attempt to render 1 requests found
+
+Rendering request 0 from scratch
+
+2020-12-01 15:18:18.096: Request 0
+2020-12-01 15:18:18.096: Endpoint - /api/v1/Payloads
+2020-12-01 15:18:18.096: Hex Def - 530721315dbb34cd994ddc1368f27f8e92daa1ce
+2020-12-01 15:18:18.096: Sequence length that satisfies dependencies: 1
+2020-12-01 15:18:18.104: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'Payloads'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: {'token_refresh_cmd': 'python C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\gettoken.py --token_url http://localhost:5000/api/v1/authenticate', 'token_refresh_interval': 150}
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2020-12-01 15:18:18.260: Final Swagger spec coverage: 1 / 1
+2020-12-01 15:18:18.260: Rendered requests: 1 / 1
+2020-12-01 15:18:18.260: Rendered requests with "valid" status codes: 1 / 1
+2020-12-01 15:18:18.260: Num fully valid requests (no resource creation failures): 1
+2020-12-01 15:18:18.260: Num requests not rendered due to invalid sequence re-renders: 0
+2020-12-01 15:18:18.260: Num invalid requests caused by failed resource creations: 0
+2020-12-01 15:18:18.260: Total Creations of Dyn Objects: 0
+2020-12-01 15:18:18.260: Total Requests Sent: {'gc': 0, 'main_driver': 1, 'PayloadBodyChecker': 57}
+2020-12-01 15:18:18.260: Bug Buckets: {}

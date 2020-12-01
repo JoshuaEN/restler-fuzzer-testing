@@ -1,0 +1,15 @@
+{
+  "requestsCount": 36,
+  "sequencesCount": 0,
+  "bugCount": 0,
+  "codeCounts": {
+    "400": 36
+  },
+  "errorBuckets": {
+    "(400, 4e62064d-92a8-4808-bddc-b56f84ed138f)": 8,
+    "(400, ac1e5273-5378-4ce6-a2d5-c2ac76fd4e87)": 8,
+    "(400, da8a5fd4-bec0-4b1b-97ca-a7efba6cbe22)": 4,
+    "(400, eade7ed4-23ab-46e3-97e1-4ec762dd14dd)": 8,
+    "(400, fb0a2ba3-7948-4720-a73d-3687ed83c045)": 8
+  }
+}

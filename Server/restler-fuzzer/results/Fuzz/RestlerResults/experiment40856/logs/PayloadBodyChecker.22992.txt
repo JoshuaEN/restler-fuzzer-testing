@@ -1,0 +1,31 @@
+fuzzing valid True
+fuzzing invalid True
+start with examples True
+size dep budget True
+use feedback True
+recipe None
+Start fuzzing request: GET /api/v1/Payloads
+#node: 9
+Fuzz using dynamic feedback
+#N: 9, #max: 200, #width: 20
+Task begin Invalid-JSON
+Tracker begin (Invalid-JSON):
+    Valid: 10
+    Invalid: 0
+Tracker end
+Task end Invalid-JSON
+
+Task begin Structure
+Tracker begin (Structure):
+    Valid: 10
+    Invalid: 0
+Tracker end
+Task end Structure
+
+Task begin Type
+Tracker begin (Type):
+    Valid: 1
+    Invalid: 36
+    misc: 27 (36: 1 1 1 2 2 1 1 1 2 1 1 1 1 1 1 5 3 1 1 1 1 1 1 1 1 1 1)
+Tracker end
+Task end Type

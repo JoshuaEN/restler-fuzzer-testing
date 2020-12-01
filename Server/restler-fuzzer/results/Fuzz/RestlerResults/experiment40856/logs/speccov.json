@@ -1,0 +1,17 @@
+{
+    "530721315dbb34cd994ddc1368f27f8e92daa1ce": {
+        "verb": "GET",
+        "endpoint": "/api/v1/Payloads",
+        "verb_endpoint": "GET /api/v1/Payloads",
+        "valid": 1,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 0
+    }
+}
