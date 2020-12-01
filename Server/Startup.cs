@@ -44,6 +44,7 @@ namespace Server
                 c.IncludeXmlComments(filePath);
 
                 c.OperationFilter<RestlerOperationFilter>();
+                c.OperationFilter<RestlerExampleFilter>();
             });
             services.AddLogging();
 
@@ -96,6 +97,7 @@ namespace Server
             }
 
             app.UseSerilogRequestLogging();
+            app.UseMiddleware<RequestLoggingMiddleware>();
 
             app.UseRouting();
 
