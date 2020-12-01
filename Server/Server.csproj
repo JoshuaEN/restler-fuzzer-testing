@@ -69,4 +69,8 @@
   <PropertyGroup Condition="'$(Configuration)'=='AUTHN'">
     <DefineConstants>ENDPOINT_AUTHN</DefineConstants>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='INCOMPAT_PARAMS'">
+    <DefineConstants>ENDPOINT_INCOMPAT_PARAMS</DefineConstants>
+  </PropertyGroup>
 </Project>

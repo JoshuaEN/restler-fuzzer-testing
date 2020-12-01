@@ -82,6 +82,9 @@ namespace Server
             services.AddSingleton<InMemoryStorageService<NestedResourceController, (string asExpectId, string nestedResourceId), NestedResource>>();
             services.AddSingleton<InMemoryStorageService<NestedResourceAdjacentController, (string asExpectId, string nestedResourceAdjacentId), NestedResourceAdjacent>>();
 #endif
+#if ENDPOINT_INCOMPAT_PARAMS
+            services.AddSingleton<InMemoryStorageService<IncompatibleParamController, string, IncompatibleParam>>();
+#endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -103,7 +106,10 @@ namespace Server
                 endpoints.MapControllers();
             });
 
-            app.UseSwagger();
+            app.UseSwagger(c =>
+            {
+                c.SerializeAsV2 = false;
+            });
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
