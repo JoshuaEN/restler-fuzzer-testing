@@ -46,11 +46,13 @@ def transform_template_config(output_config_path, inputs_path, results_path, com
         config["AnnotationFilePath"] = str(inputs_path.joinpath('annotations.json'))
     if "EngineSettingsFilePath" in config:
         config["EngineSettingsFilePath"] = str(results_path.joinpath('engine_settings.json'))
+    if "GrammarInputFilePath" in config:
+        config["GrammarInputFilePath"] = str(inputs_path.joinpath('grammar.json'))
 
     print(f'> Writing config to {output_config_path!s}')
     output_config_path.write_text(json.dumps(config,sort_keys=True, indent=4))
 
-def transform_template_engine_settings(output_engine_settings_path, inputs_path, results_path):
+def transform_template_engine_settings(fuzz, output_engine_settings_path, inputs_path, results_path):
     settings = json.loads(inputs_path.joinpath('engine_settings.template.json').read_bytes())
 
     if "per_resource_settings" in settings:
@@ -67,8 +69,14 @@ def transform_template_engine_settings(output_engine_settings_path, inputs_path,
                 resource_settings["custom_dictionary"] = str(dest_path)
 
     if "token_refresh_cmd" in settings:
-        token_cmd_path = str(inputs_path.joinpath("..", "gettoken.py"))
+        token_cmd_path = str(inputs_path.joinpath("..", "gettoken.py").resolve())
         settings["token_refresh_cmd"] = f"python {token_cmd_path} --token_url http://localhost:5000/api/v1/authenticate"
+
+    if "fuzzing_mode" in settings:
+        if settings["fuzzing_mode"] == "directed-smoke-test" and fuzz:
+            settings.pop("fuzzing_mode")
+        if not fuzz:
+            settings["fuzzing_mode"] = "directed-smoke-test"
 
     print(f'> Writing engine settings to {output_engine_settings_path!s}')
     output_engine_settings_path.write_text(json.dumps(settings,sort_keys=True, indent=4))
@@ -88,7 +96,7 @@ def compile_spec(config_path, results_path, restler_dll_path):
         print(f'> {command}')
         subprocess.run(command, shell=True, check=True)
 
-def test_spec(ip, port, host, use_ssl, inputs_path, results_path, compile_path, restler_dll_path):
+def test_spec(fuzz, ip, port, host, use_ssl, inputs_path, results_path, compile_path, restler_dll_path):
     """ Runs RESTler's test mode on a specified Compile directory
     @param ip: The IP of the service to test
     @type  ip: Str
@@ -105,7 +113,7 @@ def test_spec(ip, port, host, use_ssl, inputs_path, results_path, compile_path, 
     """
 
     command = (
-        f"dotnet {restler_dll_path} test --grammar_file {compile_path.joinpath('grammar.py')} --dictionary_file {compile_path.joinpath('dict.json')}"
+        f"dotnet {restler_dll_path} {'fuzz' if fuzz else 'test'} --grammar_file {compile_path.joinpath('grammar.py')} --dictionary_file {inputs_path.joinpath('dict.json')}"
         f" --settings {compile_path.joinpath('engine_settings.json')}"
     )
     if not use_ssl:
@@ -148,6 +156,9 @@ if __name__ == '__main__':
     parser.add_argument('--skip_compile',
                         help='Skip compiling the grammar',
                         action='store_true')
+    parser.add_argument('--fuzz',
+                        help='Enables fuzzing (vs. testing)',
+                        action='store_true')
     parser.add_argument('--skip_fuzzing',
                         help='Skip running the fuzzer',
                         action='store_true')
@@ -182,7 +193,7 @@ if __name__ == '__main__':
     # Get a config with the abs paths filled in
     if args.skip_transform_config is not True:
         transform_template_config(output_config_path, inputs_path, results_path, compile_path)
-        transform_template_engine_settings(output_engine_settings_path, inputs_path, results_path)
+        transform_template_engine_settings(args.fuzz, output_engine_settings_path, inputs_path, results_path)
 
     # Compile
     if args.skip_compile is not True:
@@ -190,6 +201,6 @@ if __name__ == '__main__':
 
     # Test
     if args.skip_fuzzing is not True:
-        test_spec(args.ip, args.port, args.host, args.use_ssl, inputs_path, results_path, compile_path, restler_dll_path.absolute())
+        test_spec(args.fuzz, args.ip, args.port, args.host, args.use_ssl, inputs_path, results_path, compile_path, restler_dll_path.absolute())
 
     print(f"Run complete.\nSee {results_path} for results.")
