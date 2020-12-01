@@ -16,6 +16,7 @@ using Server.Models;
 using Server.Services;
 using Server.OpenAPIFilters;
 using Server.Authentication;
+using Server.Middleware;
 
 namespace Server
 {
@@ -85,6 +86,9 @@ namespace Server
 #endif
 #if ENDPOINT_INCOMPAT_PARAMS
             services.AddSingleton<InMemoryStorageService<IncompatibleParamController, string, IncompatibleParam>>();
+#endif
+#if ENDPOINT_PAYLOADS
+            services.AddSingleton<InMemoryStorageService<PayloadController, string, Payload>>();
 #endif
         }
 
