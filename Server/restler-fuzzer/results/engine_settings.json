@@ -1,0 +1,30 @@
+{
+    "fuzzing_mode": "directed-smoke-test",
+    "time_budget": 0.5,
+    "token_refresh_cmd": "python C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\gettoken.py --token_url http://localhost:5000/api/v1/authenticate",
+    "token_refresh_interval": 150,
+    "x-checkers": {
+        "examples": {
+            "mode": "exhaustive"
+        },
+        "invaliddynamicobject": {
+            "mode": "exhaustive"
+        },
+        "leakage_rule": {
+            "mode": "exhaustive"
+        },
+        "payloadbody": {
+            "fixed_budget_max_combination": 10000,
+            "fixed_budget_pipeline_width": 1000,
+            "mode": "exhaustive",
+            "recipe_file": "C:/Users/Joshua/source/repos/restler-fuzzer-testing/Server/restler-fuzzer/inputs/payload_body_recipe.json",
+            "size_dep_budget": false
+        },
+        "resourcehierarchy": {
+            "mode": "exhaustive"
+        },
+        "useafterfree": {
+            "mode": "exhaustive"
+        }
+    }
+}

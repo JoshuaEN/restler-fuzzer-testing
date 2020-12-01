@@ -1,0 +1,698 @@
+{
+  "400": {
+    "15d68778-555d-4ed9-b3a1-1eb093d15f13": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "[]"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "126\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708853-4284e69bd3430ef0.\",\"errors\":{\"$\":[\"The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 1.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "0"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "126\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708851-4284e69bd3430ef0.\",\"errors\":{\"$\":[\"The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 1.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "\"fuzzstring\""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "127\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708850-4284e69bd3430ef0.\",\"errors\":{\"$\":[\"The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 12.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "false"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "126\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708847-4284e69bd3430ef0.\",\"errors\":{\"$\":[\"The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 5.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "acc48bd2-679b-49e7-93f4-f02921679b66": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":[],\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708867-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 80.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":0,\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708861-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 80.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":false,\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708860-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 84.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueB\":false}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70885c-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 19.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueB\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70885b-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueB\":[]}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70885a-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":{ \"fuzz\" : false },\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70884c-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 80.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueB\":{ \"fuzz\" : false }}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70884a-4284e69bd3430ef0.\",\"errors\":{\"$.testValueB\":[\"The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "b29903d0-05a2-4293-aebe-4b58fd35b463": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":0,\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70886a-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 54.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":[],\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708864-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 54.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":false,\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708863-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 58.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueA\":false}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708859-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 19.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueA\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708858-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueA\":[]}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708857-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":{ \"fuzz\" : false },\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70884d-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 54.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueA\":{ \"fuzz\" : false }}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708849-4284e69bd3430ef0.\",\"errors\":{\"$.testValueA\":[\"The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "b5cc351e-3c22-4050-9a8b-b251cd4f00c6": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":0,\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "136\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708868-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 106.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":[],\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "136\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708865-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 106.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":false,\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "136\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708862-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 110.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueC\":false}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708856-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 19.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueC\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708855-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueC\":[]}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708854-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":\"fuzzstring\",\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":{ \"fuzz\" : false },\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "136\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70884f-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 106.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testValueC\":{ \"fuzz\" : false }}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708848-4284e69bd3430ef0.\",\"errors\":{\"$.testValueC\":[\"The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "b93e9fe4-0940-4170-8d74-aa140f018159": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":0,\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70886b-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 28.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":false,\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708869-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 32.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":[],\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d708866-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 28.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testString\":false}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70885f-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 19.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testString\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70885e-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testString\":[]}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70885d-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testType\":0,\"testString\":{ \"fuzz\" : false },\"testValueA\":\"fuzzstring\",\"testValueB\":\"fuzzstring\",\"testValueC\":\"fuzzstring\",\"letter\":0,\"season\":0,\"weather\":0}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70884e-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 28.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/v1/Payloads",
+            "query": "",
+            "body": "{\"testString\":{ \"fuzz\" : false }}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 400,
+            "codeDescription": "Bad Request",
+            "content": "135\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\"title\":\"One or more validation errors occurred.\",\"status\":400,\"traceId\":\"|d70884b-4284e69bd3430ef0.\",\"errors\":{\"$.testString\":[\"The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 15.\"]}}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  }
+}

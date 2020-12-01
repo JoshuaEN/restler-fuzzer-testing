@@ -1,0 +1,19 @@
+{
+  "SwaggerSpecFilePath": [
+    "C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\results\\swagger.json"
+  ],
+  "GrammarOutputDirectoryPath": "C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\results\\Compile",
+  "CustomDictionaryFilePath": "C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\inputs\\dict.json",
+  "EngineSettingsFilePath": "C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\results\\engine_settings.json",
+  "IncludeOptionalParameters": true,
+  "UseQueryExamples": true,
+  "UseBodyExamples": true,
+  "DiscoverExamples": true,
+  "ExamplesDirectory": "",
+  "DataFuzzing": true,
+  "ReadOnlyFuzz": false,
+  "ResolveQueryDependencies": true,
+  "ResolveBodyDependencies": true,
+  "UseRefreshableToken": true,
+  "AllowGetProducers": false
+}

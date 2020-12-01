@@ -1,0 +1,290 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "letter",
+            "fullPath": {
+              "path": [
+                "letter"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "letter",
+        "AccessPathParts": {
+          "path": [
+            "letter"
+          ]
+        },
+        "ResourceName": "letter",
+        "ProducerParameterName": "letter",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "season",
+            "fullPath": {
+              "path": [
+                "season"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "season",
+        "AccessPathParts": {
+          "path": [
+            "season"
+          ]
+        },
+        "ResourceName": "season",
+        "ProducerParameterName": "season",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "testString",
+            "fullPath": {
+              "path": [
+                "testString"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "testString",
+        "AccessPathParts": {
+          "path": [
+            "testString"
+          ]
+        },
+        "ResourceName": "testString",
+        "ProducerParameterName": "string",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "testType",
+            "fullPath": {
+              "path": [
+                "testType"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "testType",
+        "AccessPathParts": {
+          "path": [
+            "testType"
+          ]
+        },
+        "ResourceName": "testType",
+        "ProducerParameterName": "type",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "testValueA",
+            "fullPath": {
+              "path": [
+                "testValueA"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "testValueA",
+        "AccessPathParts": {
+          "path": [
+            "testValueA"
+          ]
+        },
+        "ResourceName": "testValueA",
+        "ProducerParameterName": "a",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "testValueB",
+            "fullPath": {
+              "path": [
+                "testValueB"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "testValueB",
+        "AccessPathParts": {
+          "path": [
+            "testValueB"
+          ]
+        },
+        "ResourceName": "testValueB",
+        "ProducerParameterName": "b",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "testValueC",
+            "fullPath": {
+              "path": [
+                "testValueC"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "testValueC",
+        "AccessPathParts": {
+          "path": [
+            "testValueC"
+          ]
+        },
+        "ResourceName": "testValueC",
+        "ProducerParameterName": "c",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "weather",
+            "fullPath": {
+              "path": [
+                "weather"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "weather",
+        "AccessPathParts": {
+          "path": [
+            "weather"
+          ]
+        },
+        "ResourceName": "weather",
+        "ProducerParameterName": "weather",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  }
+]

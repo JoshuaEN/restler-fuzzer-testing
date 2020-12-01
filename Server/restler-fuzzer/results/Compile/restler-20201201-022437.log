@@ -1,0 +1,14 @@
+Restler Information: 0 : Log share was not specified.  Logs will not be uploaded.
+    DateTime=2020-12-01T19:24:37.6181342Z
+Restler Information: 0 : Starting task Compile...
+    DateTime=2020-12-01T19:24:37.6269280Z
+Restler Information: 0 : Launching 'dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../compiler/Restler.CompilerExe.dll" "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\config.json"'
+    DateTime=2020-12-01T19:24:37.7756257Z
+Restler Information: 0 : Process execution terminated in 00:00:01.7536286 with exit code 0x0: 'dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../compiler/Restler.CompilerExe.dll" "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\config.json"'
+    DateTime=2020-12-01T19:24:39.5373026Z
+Restler Information: 0 : (12872) dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../compiler/Restler.CompilerExe.dll" "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\config.json" exited with code: 0
+    DateTime=2020-12-01T19:24:39.5460262Z
+Restler Information: 0 : Task Compile succeeded.
+    DateTime=2020-12-01T19:24:39.5826512Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2020-12-01T19:24:39.5977621Z

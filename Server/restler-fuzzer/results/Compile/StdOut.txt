@@ -1,0 +1,25 @@
+[12/1/2020 2:24:38 PM] Generating grammar...
+[12/1/2020 2:24:38 PM] Getting requests...
+[12/1/2020 2:24:39 PM] Getting dependencies...
+[12/1/2020 2:24:39 PM] Get consumers.
+[12/1/2020 2:24:39 PM] Get producers.
+[12/1/2020 2:24:39 PM] Done processing producers
+[12/1/2020 2:24:39 PM] Compute dependencies
+[12/1/2020 2:24:39 PM] [12/1/2020 2:24:39 PM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Get }
+Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Get }
+[12/1/2020 2:24:39 PM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Get }
+[12/1/2020 2:24:39 PM[] Done dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Get }12/1/2020 2:24:39 PM] Done dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Get }
+
+[12/1/2020 2:24:39 PM] Done dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Get }
+[12/1/2020 2:24:39 PM] Dependency analysis completed.
+[12/1/2020 2:24:39 PM] Generating request primitives...
+Writing new dictionary to C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json
+[12/1/2020 2:24:39 PM] Generating python grammar...
+[12/1/2020 2:24:39 PM] Done generating python grammar.
+Workflow completed.  See C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile for REST-ler grammar.

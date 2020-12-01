@@ -1,3 +1,18 @@
+# Example - PayloadBodyChecker default settings
+This example/test is around the PayloadBodyChecker's default settings. Here the [Payload type](Server\Models\Payload.cs) has around 33,000 unique valid combinations (assuming a non-null value is provided for every parameter and the parameter order irrelevant). However, in the run, the /api/v1/Payloads endpoint was only called 58 times, and none of the enum values (`testType`, `letter`, `season`, `weather`) were ever included in the body of a request with a value aside from `0`. This was checked by searching the [server log](Server\logs\2020-12-01T19-21-29Z-server.log).
+
+
+## This run can be reproduced by:
+1. Get [RESTler-fuzzer](https://github.com/microsoft/restler-fuzzer) and [build it](https://github.com/microsoft/restler-fuzzer#build-instructions)
+1. Run `dotnet run` the Server project or use the UI of your choice
+1. Once the server has started and is accepting requests, run `python Server/restler-fuzzer/run.py --restler_drop_dir {{path-to-restler-fuzzer-bin}} --fuzz --fuzz_args "--enable_checkers 
+PayloadBody"`, which will:
+    1. Download the swagger.json from the local server
+    1. Insert absolute paths into the [config.template.json](Server\restler-fuzzer\inputs\config.template.json) (note: logic is currently hard-coded of what paths to insert and where)
+    1. Run restler compile with the [config.json](Server\restler-fuzzer\results\config.json) created in the last step
+    1. Run restler test with the result of the compilation
+
+
 # Simple demo project to test various RESTler-fuzzer features
 
 ## Running Server + RESTler-fuzzer

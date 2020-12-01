@@ -1,0 +1,291 @@
+2020-12-01 14:24:41.461: Will refresh token: python C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\gettoken.py --token_url http://localhost:5000/api/v1/authenticate
+2020-12-01 14:24:42.199: New value: {"app1": {}}
+_OMITTED_AUTH_TOKEN_
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'Payloads'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2020-12-01 14:24:42.579: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 4\r\nUser-Agent: restler/7.1.0\r\n\r\n{}\r\n'
+
+2020-12-01 14:24:42.743: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:42 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:42.762: Checker: PayloadBodyChecker kicks in
+
+2020-12-01 14:24:42.781: PayloadBodyChecker fuzzing valid True
+2020-12-01 14:24:42.806: PayloadBodyChecker fuzzing invalid True
+2020-12-01 14:24:42.827: PayloadBodyChecker start with examples True
+2020-12-01 14:24:42.849: PayloadBodyChecker size dep budget True
+2020-12-01 14:24:42.868: PayloadBodyChecker use feedback True
+2020-12-01 14:24:42.897: PayloadBodyChecker recipe None
+2020-12-01 14:24:42.916: PayloadBodyChecker Start fuzzing request: GET /api/v1/Payloads
+2020-12-01 14:24:42.940: PayloadBodyChecker #node: 9
+2020-12-01 14:24:42.959: PayloadBodyChecker Fuzz using dynamic feedback
+2020-12-01 14:24:42.978: PayloadBodyChecker #N: 9, #max: 200, #width: 20
+2020-12-01 14:24:43.001: PayloadBodyChecker Task begin Invalid-JSON
+2020-12-01 14:24:43.019: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 2\r\nUser-Agent: restler/7.1.0\r\n\r\n{}'
+
+2020-12-01 14:24:43.199: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:43 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:43.222: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 152\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:43.420: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:43 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:43.436: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 165\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:43.596: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:43 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:43.618: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 178\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testString":"fuzzstring","testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:43.840: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:43 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:43.863: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 178\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueA":"fuzzstring","testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:44.017: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:43 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:44.036: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 178\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueB":"fuzzstring","testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:44.221: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:44 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:44.239: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 178\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueC":"fuzzstring","testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:44.379: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:44 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:44.395: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 163\r\nUser-Agent: restler/7.1.0\r\n\r\n{"letter":0,"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:44.511: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:44 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:44.527: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 163\r\nUser-Agent: restler/7.1.0\r\n\r\n{"season":0,"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:44.647: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:44 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:44.664: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 164\r\nUser-Agent: restler/7.1.0\r\n\r\n{"weather":0,"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:44.797: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:44 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:44.824: PayloadBodyChecker Tracker begin (Invalid-JSON):
+2020-12-01 14:24:44.844: PayloadBodyChecker     Valid: 10
+2020-12-01 14:24:44.861: PayloadBodyChecker     Invalid: 0
+2020-12-01 14:24:44.878: PayloadBodyChecker Tracker end
+2020-12-01 14:24:44.896: PayloadBodyChecker Task end Invalid-JSON
+
+2020-12-01 14:24:44.912: PayloadBodyChecker Task begin Structure
+2020-12-01 14:24:44.928: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 2\r\nUser-Agent: restler/7.1.0\r\n\r\n{}'
+
+2020-12-01 14:24:45.060: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:44 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.079: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 12\r\nUser-Agent: restler/7.1.0\r\n\r\n{"season":0}'
+
+2020-12-01 14:24:45.194: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.211: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 27\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueC":"fuzzstring"}'
+
+2020-12-01 14:24:45.349: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.365: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 14\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0}'
+
+2020-12-01 14:24:45.464: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.484: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 27\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueA":"fuzzstring"}'
+
+2020-12-01 14:24:45.594: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.620: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 27\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueB":"fuzzstring"}'
+
+2020-12-01 14:24:45.732: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.752: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 27\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testString":"fuzzstring"}'
+
+2020-12-01 14:24:45.851: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.871: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 152\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:45.978: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:45.995: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 13\r\nUser-Agent: restler/7.1.0\r\n\r\n{"weather":0}'
+
+2020-12-01 14:24:46.097: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:45 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:46.114: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 12\r\nUser-Agent: restler/7.1.0\r\n\r\n{"letter":0}'
+
+2020-12-01 14:24:46.217: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:46 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:46.243: PayloadBodyChecker Tracker begin (Structure):
+2020-12-01 14:24:46.266: PayloadBodyChecker     Valid: 10
+2020-12-01 14:24:46.291: PayloadBodyChecker     Invalid: 0
+2020-12-01 14:24:46.308: PayloadBodyChecker Tracker end
+2020-12-01 14:24:46.325: PayloadBodyChecker Task end Structure
+
+2020-12-01 14:24:46.349: PayloadBodyChecker Task begin Type
+2020-12-01 14:24:46.366: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 5\r\nUser-Agent: restler/7.1.0\r\n\r\nfalse'
+
+2020-12-01 14:24:46.452: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:46 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n126\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708847-4284e69bd3430ef0.","errors":{"$":["The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 5."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:46.471: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 33\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueC":{ "fuzz" : false }}'
+
+2020-12-01 14:24:46.581: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:46 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708848-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:46.598: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 33\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueA":{ "fuzz" : false }}'
+
+2020-12-01 14:24:46.703: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:46 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708849-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:46.722: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 33\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueB":{ "fuzz" : false }}'
+
+2020-12-01 14:24:46.849: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:46 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70884a-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:46.870: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 33\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testString":{ "fuzz" : false }}'
+
+2020-12-01 14:24:47.013: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:46 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70884b-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:47.031: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 158\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":{ "fuzz" : false },"testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:47.154: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70884c-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 80."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:47.172: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 158\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":{ "fuzz" : false },"testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:47.315: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70884d-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 54."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:47.336: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 158\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":{ "fuzz" : false },"testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:47.435: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70884e-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 28."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:47.453: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 158\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":{ "fuzz" : false },"letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:47.585: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n136\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70884f-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 106."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:47.604: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 12\r\nUser-Agent: restler/7.1.0\r\n\r\n"fuzzstring"'
+
+2020-12-01 14:24:47.718: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n127\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708850-4284e69bd3430ef0.","errors":{"$":["The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 12."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:47.735: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 1\r\nUser-Agent: restler/7.1.0\r\n\r\n0'
+
+2020-12-01 14:24:47.835: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n126\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708851-4284e69bd3430ef0.","errors":{"$":["The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 1."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:47.857: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 18\r\nUser-Agent: restler/7.1.0\r\n\r\n{ "fuzz" : false }'
+
+2020-12-01 14:24:47.989: Received: 'HTTP/1.1 200 OK\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+2020-12-01 14:24:48.006: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 2\r\nUser-Agent: restler/7.1.0\r\n\r\n[]'
+
+2020-12-01 14:24:48.123: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:47 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n126\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708853-4284e69bd3430ef0.","errors":{"$":["The JSON value could not be converted to Server.Models.Payload. Path: $ | LineNumber: 0 | BytePositionInLine: 1."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:48.142: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 17\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueC":[]}'
+
+2020-12-01 14:24:48.292: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:48 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708854-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:48.310: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 16\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueC":0}'
+
+2020-12-01 14:24:48.460: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:48 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708855-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:48.477: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 20\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueC":false}'
+
+2020-12-01 14:24:48.608: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:48 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708856-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 19."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:48.630: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 17\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueA":[]}'
+
+2020-12-01 14:24:48.788: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:48 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708857-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:48.806: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 16\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueA":0}'
+
+2020-12-01 14:24:48.925: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:48 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708858-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:48.942: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 20\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueA":false}'
+
+2020-12-01 14:24:49.089: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:48 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708859-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 19."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:49.112: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 17\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueB":[]}'
+
+2020-12-01 14:24:49.237: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:49 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70885a-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:49.257: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 16\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueB":0}'
+
+2020-12-01 14:24:49.417: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:49 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70885b-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:49.436: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 20\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testValueB":false}'
+
+2020-12-01 14:24:49.604: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:49 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70885c-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 19."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:49.624: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 17\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testString":[]}'
+
+2020-12-01 14:24:49.722: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:49 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70885d-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:49.740: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 16\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testString":0}'
+
+2020-12-01 14:24:49.907: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:49 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70885e-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 15."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:49.926: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 20\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testString":false}'
+
+2020-12-01 14:24:50.043: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:49 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70885f-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 19."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:50.064: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 145\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":false,"testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:50.227: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:50 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708860-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 84."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:50.247: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 141\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":0,"testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:50.410: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:50 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708861-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 80."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:50.431: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 145\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":false,"letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:50.571: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:50 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n136\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708862-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 110."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:50.600: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 145\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":false,"testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:50.735: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:50 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708863-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 58."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:50.752: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 142\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":[],"testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:50.870: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:50 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708864-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 54."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:50.890: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 142\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":[],"letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:51.031: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:50 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n136\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708865-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 106."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:51.050: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 142\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":[],"testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:51.177: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:51 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708866-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 28."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:51.195: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 142\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":[],"testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:51.318: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:51 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708867-4284e69bd3430ef0.","errors":{"$.testValueB":["The JSON value could not be converted to System.String. Path: $.testValueB | LineNumber: 0 | BytePositionInLine: 80."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:51.337: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 141\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":0,"letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:51.474: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:51 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n136\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708868-4284e69bd3430ef0.","errors":{"$.testValueC":["The JSON value could not be converted to System.String. Path: $.testValueC | LineNumber: 0 | BytePositionInLine: 106."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:51.491: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 145\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":false,"testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:51.607: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:51 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d708869-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 32."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:51.628: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 141\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":"fuzzstring","testValueA":0,"testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:51.746: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:51 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70886a-4284e69bd3430ef0.","errors":{"$.testValueA":["The JSON value could not be converted to System.String. Path: $.testValueA | LineNumber: 0 | BytePositionInLine: 54."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:51.764: Sending: 'GET /api/v1/Payloads HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 141\r\nUser-Agent: restler/7.1.0\r\n\r\n{"testType":0,"testString":0,"testValueA":"fuzzstring","testValueB":"fuzzstring","testValueC":"fuzzstring","letter":0,"season":0,"weather":0}'
+
+2020-12-01 14:24:51.911: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Tue, 01 Dec 2020 19:24:51 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n135\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|d70886b-4284e69bd3430ef0.","errors":{"$.testString":["The JSON value could not be converted to System.String. Path: $.testString | LineNumber: 0 | BytePositionInLine: 28."]}}\r\n0\r\n\r\n'
+
+2020-12-01 14:24:51.930: PayloadBodyChecker Tracker begin (Type):
+2020-12-01 14:24:51.946: PayloadBodyChecker     Valid: 1
+2020-12-01 14:24:51.963: PayloadBodyChecker     Invalid: 36
+2020-12-01 14:24:51.983: PayloadBodyChecker     misc: 17 (36: 3 4 6 2 2 2 1 2 1 1 1 1 1 3 3 2 1)
+2020-12-01 14:24:52.008: PayloadBodyChecker Tracker end
+2020-12-01 14:24:52.036: PayloadBodyChecker Task end Type
+2020-12-01 14:24:52.054: Checker: PayloadBodyChecker kicks out
+
