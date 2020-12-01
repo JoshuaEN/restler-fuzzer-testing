@@ -1,6 +1,7 @@
 {
     "restler_fuzzable_string": [
-      "fuzzstring"
+      "fuzzstring",
+      ""
     ],
     "restler_fuzzable_string_unquoted": [],
     "restler_fuzzable_datetime": [
@@ -13,7 +14,8 @@
     "restler_fuzzable_uuid4_unquoted": [],
     "restler_fuzzable_int": [
       "0",
-      "1"
+      "1",
+      "559012"
     ],
     "restler_fuzzable_number": [
       "0.1",

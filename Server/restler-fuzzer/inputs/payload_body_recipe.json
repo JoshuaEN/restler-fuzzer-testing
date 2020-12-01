@@ -1,0 +1,55 @@
+{
+    "fuzz_valid": true,
+    "fuzz_invalid": true,
+    "refresh_response": true,
+    "accumulate_response": true,
+    "greedy_response": true,
+    "keyword_response": true,
+    "size_dep_budget": false,
+    "global_bound": -1,
+    "default": {
+        "structure_propagate_strategy": "linear_bias",
+        "structure_max_combination": 500,
+        "structure_max_propagation": 500,
+        "structure_shuffle_combination": false,
+        "structure_shuffle_propagate": false,
+        "pipeline_max_combination": 500,
+        "pipeline_max_propagation": 500,
+        "pipeline_propagation_strategy": "RD",
+        "pipeline_fair_propagation": false,
+        "value_search_strategy": "linear_bias",
+        "value_max_combination": 500,
+        "value_use_examples_for_default": true,
+        "value_use_response_for_default": true,
+        "value_use_embedded_for_fuzzable": true,
+        "value_use_wordbook_for_fuzzable": true
+    },
+    "pipelines": [
+        {
+            "name": "Pipeline??",
+            "rules": [
+                "SingleDrop",
+                "SingleSelect",
+                "SingleType",
+                "SingleDuplicate",
+                "PathDrop",
+                "PathSelect",
+                "PathType",
+                "PathDuplicate",
+                "AllDrop",
+                "AllSelect",
+                "AllType",
+                "AllDuplicate",
+                "TypeCheap",
+                "TypeInternal",
+                "TypeLeaf",
+                "DuplicateObject",
+                "DuplicateArray",
+                "DROP",
+                "SELECT",
+                "TYPE",
+                "DUPLICATE"
+            ]
+        }
+    ]
+}
