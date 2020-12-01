@@ -22,7 +22,8 @@ namespace Server.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult<string> GetAutenticationTokenValue()
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public ActionResult<string> GetAuthenticationTokenValue()
         {
             var formattedTimestamp = DateTime.UtcNow.AddMinutes(5).ToString(TimestampAuthenticationHandler.TimestampFormat, TimestampAuthenticationHandler.TimestampFormatProvider);
             var base64Encoded = Convert.ToBase64String(Encoding.UTF8.GetBytes(formattedTimestamp));
