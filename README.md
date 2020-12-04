@@ -1,3 +1,13 @@
+# Example - Deterministic Fuzz Value Selection
+This shows how RESTler selects fuzzing values in a deterministic way, going through each in sequence.
+
+E.g. "alphabet"'s value is enumerated up to max_combinations (set in [engine_settings.json](Server\restler-fuzzer\inputs\engine_settings.template.json)), from 0 to 4.
+
+## Running Server + RESTler-fuzzer
+1. Get [RESTler-fuzzer](https://github.com/microsoft/restler-fuzzer) and [build it](https://github.com/microsoft/restler-fuzzer#build-instructions)
+1. Run `dotnet run -c PAYLOADS` the Server project or use the UI of your choice
+1. Once the server has started and is accepting requests, run `python Server/restler-fuzzer/run.py --restler_drop_dir {{path-to-restler-fuzzer-bin}} --fuzz`
+
 # Simple demo project to test various RESTler-fuzzer features
 
 ## Running Server + RESTler-fuzzer

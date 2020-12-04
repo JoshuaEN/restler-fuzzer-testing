@@ -1,0 +1,5 @@
+{
+    "fuzzing_mode": "bfs",
+    "max_combinations": 5,
+    "time_budget": 0.05
+}

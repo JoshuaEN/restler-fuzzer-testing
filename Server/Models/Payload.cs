@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace Server.Models
 {
-    public enum PayloadEnum {
-        Apple,
-        Orange,
-        Lemon,
-        Lime
-    }
-    public enum PayloadEnum2
+    public enum AlphabetEnum
     {
         A,
         B,
@@ -42,35 +36,7 @@ namespace Server.Models
         Z
     }
 
-    public enum PayloadEnum3
-    {
-        Spring,
-        Summer,
-        Fall,
-        Winter
-    }
-    public enum PayloadEnum4
-    {
-        Sunny,
-        Rain,
-        Thunderstorms,
-        Windy,
-        Snow,
-    }
-
-    public class Payload : IInMemoryModel<string> {
-        public PayloadEnum TestType { get; set; }
-        public string TestString {get; set;}
-        public string TestValueA { get; set; }
-        public string TestValueB { get; set; }
-        public string TestValueC { get; set; }
-
-        public PayloadEnum2 Letter { get; set; }
-
-        public PayloadEnum3 Season { get; set; }
-        public PayloadEnum4 Weather { get; set; }
-
-        [System.Text.Json.Serialization.JsonIgnore]
-        public string InternalIdentifier { get; set; }
+    public class AlphabetBody {
+        public AlphabetEnum Alphabet { get; set; }
     }
 }

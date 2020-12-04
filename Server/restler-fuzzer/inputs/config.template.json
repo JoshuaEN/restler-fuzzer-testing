@@ -3,17 +3,5 @@
       "will/be/overwritten/by/run.py/swagger.json"
     ],
     "GrammarOutputDirectoryPath": "will/be/overwritten/by/run.py/Compile",
-    "CustomDictionaryFilePath": "will/be/overwritten/by/run.py/dict.json",
-    "EngineSettingsFilePath": "will/be/overwritten/by/run.py/engine_settings.json",
-    "IncludeOptionalParameters": true,
-    "UseQueryExamples": true,
-    "UseBodyExamples": true,
-    "DiscoverExamples": true,
-    "ExamplesDirectory": "",
-    "DataFuzzing": true,
-    "ReadOnlyFuzz": false,
-    "ResolveQueryDependencies": true,
-    "ResolveBodyDependencies": true,
-    "UseRefreshableToken": true,
-    "AllowGetProducers": false
+    "EngineSettingsFilePath": "will/be/overwritten/by/run.py/engine_settings.json"
   }

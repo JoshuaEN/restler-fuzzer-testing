@@ -87,9 +87,6 @@ namespace Server
 #if ENDPOINT_INCOMPAT_PARAMS
             services.AddSingleton<InMemoryStorageService<IncompatibleParamController, string, IncompatibleParam>>();
 #endif
-#if ENDPOINT_PAYLOADS
-            services.AddSingleton<InMemoryStorageService<PayloadController, string, Payload>>();
-#endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

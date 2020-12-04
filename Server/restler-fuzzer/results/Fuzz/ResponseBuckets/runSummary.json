@@ -1,0 +1,11 @@
+{
+  "requestsCount": 4,
+  "sequencesCount": 0,
+  "bugCount": 0,
+  "codeCounts": {
+    "400": 4
+  },
+  "errorBuckets": {
+    "(400, 7ac5b2d4-8061-4969-a035-8f99d3070305)": 4
+  }
+}

@@ -1,0 +1,175 @@
+fuzzing valid True
+fuzzing invalid True
+start with examples True
+size dep budget True
+use feedback True
+recipe None
+Start fuzzing request: POST /api/v1/Payloads
+#node: 2
+Fuzz using dynamic feedback
+#N: 2, #max: 200, #width: 20
+Task begin Invalid-JSON
+Tracker begin (Invalid-JSON):
+    Valid: 2
+    Invalid: 0
+Tracker end
+Task end Invalid-JSON
+
+Task begin Structure
+Tracker begin (Structure):
+    Valid: 1
+    Invalid: 0
+Tracker end
+Task end Structure
+
+Task begin Type
+Tracker begin (Type):
+    Valid: 1
+    Invalid: 4
+    misc: 1 (4: 4)
+Tracker end
+Task end Type
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads
+Skip visited request /api/v1/Payloads

@@ -9,22 +9,31 @@
     "global_bound": -1,
     "default": {
         "structure_propagate_strategy": "linear_bias",
-        "structure_max_combination": 500,
-        "structure_max_propagation": 500,
+        "structure_max_combination": 5000,
+        "structure_max_propagation": 50,
         "structure_shuffle_combination": false,
         "structure_shuffle_propagate": false,
-        "pipeline_max_combination": 500,
-        "pipeline_max_propagation": 500,
+        "pipeline_max_combination": 5000,
+        "pipeline_max_propagation": 50,
         "pipeline_propagation_strategy": "RD",
         "pipeline_fair_propagation": false,
-        "value_search_strategy": "linear_bias",
-        "value_max_combination": 500,
-        "value_use_examples_for_default": true,
+        "value_search_strategy": "D1",
+        "value_max_combination": 1,
+        "value_use_examples_for_default": false,
         "value_use_response_for_default": true,
         "value_use_embedded_for_fuzzable": true,
-        "value_use_wordbook_for_fuzzable": true
+        "value_use_wordbook_for_fuzzable": true,
+        "random_seed": 5598
     },
     "pipelines": [
+        {
+            "name": "Select",
+            "rules": [
+                "SingleSelect"
+            ]
+        }
+    ],
+    "x-pipelines": [
         {
             "name": "Pipeline??",
             "rules": [

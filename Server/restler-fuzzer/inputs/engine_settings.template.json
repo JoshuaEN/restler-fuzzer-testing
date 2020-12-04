@@ -1,20 +1,5 @@
 {
-    "fuzzing_mode": "directed-smoke-test",
-    "time_budget": 0.5,
-    "token_refresh_cmd": "will-be-overwritten-by-run.py",
-    "token_refresh_interval": 150,
-    "x-checkers": {
-        "leakage_rule": { "mode": "exhaustive" },
-        "resourcehierarchy": { "mode": "exhaustive" },
-        "useafterfree": { "mode": "exhaustive" },
-        "invaliddynamicobject": { "mode": "exhaustive" },
-        "payloadbody": {
-            "mode": "exhaustive",
-            "size_dep_budget": false,
-            "fixed_budget_max_combination": 10000,
-            "fixed_budget_pipeline_width": 1000,
-            "recipe_file": "C:/Users/Joshua/source/repos/restler-fuzzer-testing/Server/restler-fuzzer/inputs/payload_body_recipe.json"
-        },
-        "examples": { "mode": "exhaustive" }
-    }
+    "time_budget": 0.05,
+    "fuzzing_mode": "bfs",
+    "max_combinations": 5
 }
