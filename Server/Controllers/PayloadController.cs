@@ -16,27 +16,10 @@ namespace Server.Controllers
 
     [Route("api/v1/Payloads")]
     [ApiController]
-    public class PayloadController : BaseInMemoryController<PayloadController, string, Payload>
+    public class PayloadController : ControllerBase
     {
-        public PayloadController(InMemoryStorageService<PayloadController, string, Payload> storageService) : base(InMemoryStorageMode.MimicExpectedByRESTler, UniqueValueFunctions.GetUniqueString, storageService)
-        {
-        }
-
-        [HttpGet]
-        [RestlerExample(title: "Test", nameof(IndexExample))]
-        public IList<Payload> Index([FromBody] Payload payload) => base._Index();
-
-        private static object IndexExample()
-        {
-            return new
-            {
-                body = new
-                {
-                    TestString = "Hello",
-                    TestType = PayloadEnum.Orange
-                }
-            };
-        }
+        [HttpPost]
+        public ActionResult Index([FromBody] Payload payload) => NoContent();
     }
 #endif
 }

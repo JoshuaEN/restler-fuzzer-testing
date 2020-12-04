@@ -1,0 +1,14 @@
+Sending examples for request: 
+/api/v1/PayloadWithExamples
+Previous attempt was valid.
+Sending example request: 
+[('restler_static_string', 'POST ', False), ('restler_static_string', '/', False), ('restler_static_string', 'api', False), ('restler_static_string', '/', False), ('restler_static_string', 'v1', False), ('restler_static_string', '/', False), ('restler_static_string', 'PayloadWithExamples', False), ('restler_static_string', ' HTTP/1.1\r\n', False), ('restler_static_string', 'Accept: application/json\r\n', False), ('restler_static_string', 'Host: localhost:5000\r\n', False), ('restler_static_string', 'Content-Type: application/json\r\n', False), ('restler_static_string', '\r\n', False), ('restler_static_string', '{', False), ('restler_static_string', '"testType":', False), ('restler_static_string', '1', False), ('restler_static_string', '}', False)]
+Status Code: 204
+Sending example request: 
+[('restler_static_string', 'POST ', False), ('restler_static_string', '/', False), ('restler_static_string', 'api', False), ('restler_static_string', '/', False), ('restler_static_string', 'v1', False), ('restler_static_string', '/', False), ('restler_static_string', 'PayloadWithExamples', False), ('restler_static_string', ' HTTP/1.1\r\n', False), ('restler_static_string', 'Accept: application/json\r\n', False), ('restler_static_string', 'Host: localhost:5000\r\n', False), ('restler_static_string', 'Content-Type: application/json\r\n', False), ('restler_static_string', '\r\n', False), ('restler_static_string', '{', False), ('restler_static_string', '"testType":', False), ('restler_static_string', '2', False), ('restler_static_string', '}', False)]
+Status Code: 204
+Failed to substitute query
+Results:
+204: 2
+
+

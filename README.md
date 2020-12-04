@@ -1,3 +1,13 @@
+# Example - Providing Examples
+This is an example of providing examples, and how when this is done RESTler does not attempt to fuzz through valid values.
+
+In this example, there are two endpoints api/v1/Payloads and api/v1/PayloadWithExamples. Payloads has its parameters fuzzed, whereas with examples only the example values are sent (aside from the PayloadBodyChecker, which sends the default values [e.g. 0]).
+
+## Running Server + RESTler-fuzzer
+1. Get [RESTler-fuzzer](https://github.com/microsoft/restler-fuzzer) and [build it](https://github.com/microsoft/restler-fuzzer#build-instructions)
+1. Run `dotnet run -c PAYLOADS` the Server project or use the UI of your choice
+1. Once the server has started and is accepting requests, run `python Server/restler-fuzzer/run.py --restler_drop_dir {{path-to-restler-fuzzer-bin}} --fuzz`
+
 # Simple demo project to test various RESTler-fuzzer features
 
 ## Running Server + RESTler-fuzzer

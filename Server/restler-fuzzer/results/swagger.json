@@ -1,0 +1,188 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Server",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/Payloads": {
+      "post": {
+        "tags": [
+          "Payload"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payload"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payload"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payload"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/v1/PayloadWithExamples": {
+      "post": {
+        "tags": [
+          "PayloadWithExample"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payload"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payload"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Payload"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "x-ms-examples": {
+          "Test": {
+            "parameters": {
+              "body": {
+                "testType": 1
+              }
+            }
+          },
+          "Test 2": {
+            "parameters": {
+              "body": {
+                "testType": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PayloadEnum": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PayloadEnum2": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PayloadEnum3": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PayloadEnum4": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Payload": {
+        "type": "object",
+        "properties": {
+          "testType": {
+            "$ref": "#/components/schemas/PayloadEnum"
+          },
+          "testString": {
+            "type": "string",
+            "nullable": true
+          },
+          "testValueA": {
+            "type": "string",
+            "nullable": true
+          },
+          "testValueB": {
+            "type": "string",
+            "nullable": true
+          },
+          "testValueC": {
+            "type": "string",
+            "nullable": true
+          },
+          "letter": {
+            "$ref": "#/components/schemas/PayloadEnum2"
+          },
+          "season": {
+            "$ref": "#/components/schemas/PayloadEnum3"
+          },
+          "weather": {
+            "$ref": "#/components/schemas/PayloadEnum4"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

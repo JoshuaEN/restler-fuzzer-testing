@@ -1,0 +1,37 @@
+[12/4/2020 11:39:01 AM] Generating grammar...
+[12/4/2020 11:39:02 AM] Getting requests...
+[12/4/2020 11:39:02 AM] Getting dependencies...
+[12/4/2020 11:39:02 AM] Get consumers.
+[12/4/2020 11:39:02 AM] Get producers.
+[12/4/2020 11:39:02 AM] Done processing producers
+[12/4/2020 11:39:02 AM] Compute dependencies
+[12/4/2020 11:39:02 AM] Second pass dependencies for request { endpoint = "/api/v1/PayloadWithExamples"
+  method = Post }[12/4/2020 11:39:02 AM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }[12/4/2020 11:39:02 AM[12/4/2020 11:39:02 AM] [12/4/2020 11:39:02 AM[] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }
+
+
+] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }Second pass dependencies for request { endpoint = "/api/v1/PayloadWithExamples"
+  method = Post }
+12/4/2020 11:39:02 AM] Second pass dependencies for request { endpoint = "/api/v1/PayloadWithExamples"
+  method = Post }
+
+[12/4/2020 11:39:02 AM] Done dependencies for request { endpoint = "/api/v1/PayloadWithExamples"
+  method = Post }
+[12/4/2020 11:39:02 AM] Done dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }
+[12/4/2020 11:39:02 AM] Done dependencies for request { endpoint = "/api/v1/PayloadWithExamples"
+  method = Post }
+[12/4/2020 11:39:02 AM] Done dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }
+[12/4/2020 11:39:02 AM] Done dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }
+[12/4/2020 11:39:02 AM] Done dependencies for request { endpoint = "/api/v1/PayloadWithExamples"
+  method = Post }
+[12/4/2020 11:39:02 AM] Dependency analysis completed.
+[12/4/2020 11:39:02 AM] Generating request primitives...
+Writing new dictionary to C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json
+[12/4/2020 11:39:02 AM] Generating python grammar...
+[12/4/2020 11:39:02 AM] Done generating python grammar.
+Workflow completed.  See C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile for REST-ler grammar.
