@@ -1,7 +1,7 @@
 Initializing: Garbage collection every 30 seconds.
 No checkpoints used at this phase
-2020-12-04 10:40:37.986: Generation: 1 
-2020-12-04 10:40:43.800: Generation: 2 
-2020-12-04 10:41:09.619: Generation: 3 
+2020-12-04 12:05:27.511: Generation: 1 
+2020-12-04 12:05:32.724: Generation: 2 
+2020-12-04 12:05:57.854: Generation: 3 
 Terminating garbage collection. Waiting for max 300 seconds.
 Done.

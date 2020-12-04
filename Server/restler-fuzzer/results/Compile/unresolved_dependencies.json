@@ -1,1 +1,14 @@
-{}
+{
+  "/api/v1/Payloads": {
+    "POST": {
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "alphabet"
+        }
+      ]
+    }
+  }
+}

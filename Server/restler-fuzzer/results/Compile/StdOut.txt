@@ -1,25 +1,25 @@
-[12/4/2020 10:40:35 AM] Generating grammar...
-[12/4/2020 10:40:35 AM] Getting requests...
-[12/4/2020 10:40:35 AM] Getting dependencies...
-[12/4/2020 10:40:35 AM] Get consumers.
-[12/4/2020 10:40:35 AM] Get producers.
-[12/4/2020 10:40:35 AM] Done processing producers
-[12/4/2020 10:40:35 AM] Compute dependencies
-[12/4/2020 10:40:35 AM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+[12/4/2020 12:05:24 PM] Generating grammar...
+[12/4/2020 12:05:25 PM] Getting requests...
+[12/4/2020 12:05:25 PM] Getting dependencies...
+[12/4/2020 12:05:25 PM] Get consumers.
+[12/4/2020 12:05:25 PM] Get producers.
+[12/4/2020 12:05:25 PM] Done processing producers
+[12/4/2020 12:05:25 PM] Compute dependencies
+[12/4/2020 12:05:25 PM[[12/4/2020 12:05:25 PM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }12/4/2020 12:05:25 PM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
   method = Post }
-[12/4/2020 10:40:35 AM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
-  method = Post }[12/4/2020 10:40:35 AM] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
+] Second pass dependencies for request { endpoint = "/api/v1/Payloads"
   method = Post }
 
-[12/4/2020 10:40:35 AM[12/4/2020 10:40:35 AM] Done dependencies for request { endpoint = "/api/v1/Payloads"
+[12/4/2020 12:05:25 PM] Done dependencies for request { endpoint = "/api/v1/Payloads"
+  method = Post }[12/4/2020 12:05:25 PM] 
+Done dependencies for request { endpoint = "/api/v1/Payloads"
   method = Post }
-] Done dependencies for request { endpoint = "/api/v1/Payloads"
+[12/4/2020 12:05:25 PM] Done dependencies for request { endpoint = "/api/v1/Payloads"
   method = Post }
-[12/4/2020 10:40:35 AM] Done dependencies for request { endpoint = "/api/v1/Payloads"
-  method = Post }
-[12/4/2020 10:40:35 AM] Dependency analysis completed.
-[12/4/2020 10:40:35 AM] Generating request primitives...
+[12/4/2020 12:05:25 PM] Dependency analysis completed.
+[12/4/2020 12:05:25 PM] Generating request primitives...
 Writing new dictionary to C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json
-[12/4/2020 10:40:36 AM] Generating python grammar...
-[12/4/2020 10:40:36 AM] Done generating python grammar.
+[12/4/2020 12:05:25 PM] Generating python grammar...
+[12/4/2020 12:05:25 PM] Done generating python grammar.
 Workflow completed.  See C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile for REST-ler grammar.

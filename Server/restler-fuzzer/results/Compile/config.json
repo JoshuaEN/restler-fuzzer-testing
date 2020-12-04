@@ -8,10 +8,10 @@
   "IncludeOptionalParameters": true,
   "UseQueryExamples": true,
   "UseBodyExamples": true,
-  "DiscoverExamples": false,
-  "DataFuzzing": false,
+  "DiscoverExamples": true,
+  "DataFuzzing": true,
   "ReadOnlyFuzz": false,
-  "ResolveQueryDependencies": false,
-  "ResolveBodyDependencies": false,
+  "ResolveQueryDependencies": true,
+  "ResolveBodyDependencies": true,
   "AllowGetProducers": false
 }

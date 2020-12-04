@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/Payloads",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "alphabet",
+            "fullPath": {
+              "path": [
+                "alphabet"
+              ]
+            }
+          }
+        },
+        "ContainerName": "Payloads",
+        "PathContainerName": "Payloads",
+        "CandidateTypeNames": [
+          "payload"
+        ],
+        "AccessPath": "alphabet",
+        "AccessPathParts": {
+          "path": [
+            "alphabet"
+          ]
+        },
+        "ResourceName": "alphabet",
+        "ProducerParameterName": "alphabet",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  }
+]

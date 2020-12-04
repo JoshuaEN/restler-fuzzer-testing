@@ -1,0 +1,53 @@
+Setting fuzzing schemes: bfs
+2020-12-04 12:05:27.503: Going to fuzz a set with 1 requests
+2020-12-04 12:05:27.503: Request-0: Value Combinations: 5
+2020-12-04 12:05:27.503: Avg. Value Combinations per Request: 5
+2020-12-04 12:05:27.503: Median Value Combinations per Request: 5
+2020-12-04 12:05:27.503: Min Value Combinations per Request: 5
+2020-12-04 12:05:27.503: Max Value Combinations per Request: 5
+2020-12-04 12:05:27.503: Total dependencies: 0
+2020-12-04 12:05:27.512: Generation: 1 / Sequences Collection Size: 1 (After bfs Extend)
+2020-12-04 12:05:32.704: Generation: 1 / Sequences Collection Size: 5 (After bfs Render)
+2020-12-04 12:05:32.712: Final Swagger spec coverage: 1 / 1
+2020-12-04 12:05:32.712: Rendered requests: 1 / 1
+2020-12-04 12:05:32.712: Rendered requests with "valid" status codes: 1 / 1
+2020-12-04 12:05:32.712: Num fully valid requests (no resource creation failures): 1
+2020-12-04 12:05:32.712: Num requests not rendered due to invalid sequence re-renders: 0
+2020-12-04 12:05:32.712: Num invalid requests caused by failed resource creations: 0
+2020-12-04 12:05:32.712: Total Creations of Dyn Objects: 0
+2020-12-04 12:05:32.712: Total Requests Sent: {'gc': 0, 'main_driver': 5, 'LeakageRuleChecker': 0, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 0, 'InvalidDynamicObjectChecker': 0, 'PayloadBodyChecker': 8, 'ExamplesChecker': 0}
+2020-12-04 12:05:32.712: Bug Buckets: {}
+2020-12-04 12:05:32.724: Generation: 2 / Sequences Collection Size: 5 (After bfs Extend)
+2020-12-04 12:05:57.828: Generation: 2 / Sequences Collection Size: 25 (After bfs Render)
+2020-12-04 12:05:57.836: Final Swagger spec coverage: 1 / 1
+2020-12-04 12:05:57.836: Rendered requests: 1 / 1
+2020-12-04 12:05:57.836: Rendered requests with "valid" status codes: 1 / 1
+2020-12-04 12:05:57.836: Num fully valid requests (no resource creation failures): 1
+2020-12-04 12:05:57.836: Num requests not rendered due to invalid sequence re-renders: 0
+2020-12-04 12:05:57.836: Num invalid requests caused by failed resource creations: 0
+2020-12-04 12:05:57.836: Total Creations of Dyn Objects: 0
+2020-12-04 12:05:57.836: Total Requests Sent: {'gc': 0, 'main_driver': 55, 'LeakageRuleChecker': 0, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 0, 'InvalidDynamicObjectChecker': 0, 'PayloadBodyChecker': 8, 'ExamplesChecker': 0}
+2020-12-04 12:05:57.836: Bug Buckets: {}
+2020-12-04 12:05:57.854: Generation: 3 / Sequences Collection Size: 25 (After bfs Extend)
+Timed out...
+2020-12-04 12:08:28.346: Generation: 3 / Sequences Collection Size: 130 (After bfs Render)
+2020-12-04 12:08:28.355: Final Swagger spec coverage: 1 / 1
+2020-12-04 12:08:28.355: Rendered requests: 1 / 1
+2020-12-04 12:08:28.355: Rendered requests with "valid" status codes: 1 / 1
+2020-12-04 12:08:28.355: Num fully valid requests (no resource creation failures): 1
+2020-12-04 12:08:28.355: Num requests not rendered due to invalid sequence re-renders: 0
+2020-12-04 12:08:28.355: Num invalid requests caused by failed resource creations: 0
+2020-12-04 12:08:28.355: Total Creations of Dyn Objects: 0
+2020-12-04 12:08:28.355: Total Requests Sent: {'gc': 0, 'main_driver': 376, 'LeakageRuleChecker': 0, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 0, 'InvalidDynamicObjectChecker': 0, 'PayloadBodyChecker': 8, 'ExamplesChecker': 0}
+2020-12-04 12:08:28.355: Bug Buckets: {}
+--
+
+2020-12-04 12:08:28.392: Final Swagger spec coverage: 1 / 1
+2020-12-04 12:08:28.392: Rendered requests: 1 / 1
+2020-12-04 12:08:28.392: Rendered requests with "valid" status codes: 1 / 1
+2020-12-04 12:08:28.392: Num fully valid requests (no resource creation failures): 1
+2020-12-04 12:08:28.392: Num requests not rendered due to invalid sequence re-renders: 0
+2020-12-04 12:08:28.392: Num invalid requests caused by failed resource creations: 0
+2020-12-04 12:08:28.392: Total Creations of Dyn Objects: 0
+2020-12-04 12:08:28.392: Total Requests Sent: {'gc': 0, 'main_driver': 376, 'LeakageRuleChecker': 0, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 0, 'InvalidDynamicObjectChecker': 0, 'PayloadBodyChecker': 8, 'ExamplesChecker': 0}
+2020-12-04 12:08:28.392: Bug Buckets: {}

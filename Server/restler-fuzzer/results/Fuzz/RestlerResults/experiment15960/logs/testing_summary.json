@@ -8,7 +8,7 @@
     "total_object_creations": 0,
     "total_requests_sent": {
         "gc": 0,
-        "main_driver": 403,
+        "main_driver": 376,
         "LeakageRuleChecker": 0,
         "ResourceHierarchyChecker": 0,
         "UseAfterFreeChecker": 0,

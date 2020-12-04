@@ -3,5 +3,14 @@
       "will/be/overwritten/by/run.py/swagger.json"
     ],
     "GrammarOutputDirectoryPath": "will/be/overwritten/by/run.py/Compile",
-    "EngineSettingsFilePath": "will/be/overwritten/by/run.py/engine_settings.json"
+    "EngineSettingsFilePath": "will/be/overwritten/by/run.py/engine_settings.json",
+    "IncludeOptionalParameters": true,
+    "UseQueryExamples": true,
+    "UseBodyExamples": true,
+    "DiscoverExamples": true,
+    "DataFuzzing": true,
+    "ReadOnlyFuzz": false,
+    "ResolveQueryDependencies": true,
+    "ResolveBodyDependencies": true,
+    "AllowGetProducers": false
   }

@@ -1,0 +1,19 @@
+
+2020-12-04 12:05:32.723: Generation-1
+2020-12-04 12:05:32.723: 	Rendered requests: 1 / 1
+2020-12-04 12:05:32.723: 	Rendered requests with "valid" status codes: 1 / 1
+2020-12-04 12:05:32.723: 	Rendered requests determined to be fully valid (no resource creation failures): 1 / 1
+
+2020-12-04 12:05:57.845: Generation-2
+2020-12-04 12:05:57.845: 	Rendered requests: 1 / 1
+2020-12-04 12:05:57.845: 	Rendered requests with "valid" status codes: 1 / 1
+2020-12-04 12:05:57.845: 	Rendered requests determined to be fully valid (no resource creation failures): 1 / 1
+
+2020-12-04 12:08:28.365: Generation-3
+2020-12-04 12:08:28.365: 	Rendered requests: 1 / 1
+2020-12-04 12:08:28.365: 	Rendered requests with "valid" status codes: 1 / 1
+2020-12-04 12:08:28.365: 	Rendered requests determined to be fully valid (no resource creation failures): 1 / 1
+
+2020-12-04 12:08:28.391: 	Never Rendered requests:
+-------------------------
+
