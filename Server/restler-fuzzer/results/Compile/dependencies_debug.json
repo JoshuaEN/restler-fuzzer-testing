@@ -1,0 +1,379 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreateSubResources/{webId}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "webId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "PreCreateSubResources"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "PreCreateSubResources",
+        "PathContainerName": "PreCreateSubResources",
+        "CandidateTypeNames": [
+          "pre__create__sub__resource"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "webId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path",
+      "annotation": {
+        "producerId": {
+          "requestId": {
+            "endpoint": "/api/1/PreCreates/{webId}",
+            "method": "Post"
+          },
+          "resourceName": "id"
+        },
+        "producerParameter": {
+          "ResourceName": "id"
+        },
+        "consumerParameter": {
+          "ResourceName": "webId"
+        }
+      }
+    },
+    "producer": {
+      "DictionaryPayload": [
+        "String",
+        "String",
+        "webId",
+        false
+      ]
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreateSubResources/{webId}",
+          "method": "Delete"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "webId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "PreCreateSubResources"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "PreCreateSubResources",
+        "PathContainerName": "PreCreateSubResources",
+        "CandidateTypeNames": [
+          "pre__create__sub__resource"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "webId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path",
+      "annotation": {
+        "producerId": {
+          "requestId": {
+            "endpoint": "/api/v1/PreCreates/{webId}",
+            "method": "Post"
+          },
+          "resourceName": "id"
+        },
+        "producerParameter": {
+          "ResourceName": "id"
+        },
+        "consumerParameter": {
+          "ResourceName": "webId"
+        }
+      }
+    },
+    "producer": {
+      "ResponseObject": {
+        "id": {
+          "RequestId": {
+            "endpoint": "/api/v1/PreCreates/{webId}",
+            "method": "Post"
+          },
+          "ResourceReference": {
+            "BodyResource": {
+              "name": "id",
+              "fullPath": {
+                "path": [
+                  "id"
+                ]
+              }
+            }
+          },
+          "ContainerName": "PreCreates",
+          "PathContainerName": "PreCreates",
+          "CandidateTypeNames": [
+            "pre__create"
+          ],
+          "AccessPath": "id",
+          "AccessPathParts": {
+            "path": [
+              "id"
+            ]
+          },
+          "ResourceName": "id",
+          "ProducerParameterName": "id",
+          "IsNestedBodyResource": false,
+          "PrimitiveType": "String"
+        }
+      }
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreates/{webId}",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "webId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "PreCreates"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "PreCreates",
+        "PathContainerName": "PreCreates",
+        "CandidateTypeNames": [
+          "pre__create"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "webId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "DictionaryPayload": [
+        "String",
+        "String",
+        "webId",
+        false
+      ]
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreates/{webId}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "PathResource": {
+            "name": "webId",
+            "pathToParameter": [
+              "api",
+              "v1",
+              "PreCreates"
+            ],
+            "responsePath": {
+              "path": []
+            }
+          }
+        },
+        "ContainerName": "PreCreates",
+        "PathContainerName": "PreCreates",
+        "CandidateTypeNames": [
+          "pre__create"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "webId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Path"
+    },
+    "producer": {
+      "DictionaryPayload": [
+        "String",
+        "String",
+        "webId",
+        false
+      ]
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreates/{webId}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "description",
+            "fullPath": {
+              "path": [
+                "description"
+              ]
+            }
+          }
+        },
+        "ContainerName": "PreCreates",
+        "PathContainerName": "PreCreates",
+        "CandidateTypeNames": [
+          "pre__create"
+        ],
+        "AccessPath": "description",
+        "AccessPathParts": {
+          "path": [
+            "description"
+          ]
+        },
+        "ResourceName": "description",
+        "ProducerParameterName": "description",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreates/{webId}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "PreCreates",
+        "PathContainerName": "PreCreates",
+        "CandidateTypeNames": [
+          "pre__create"
+        ],
+        "AccessPath": "id",
+        "AccessPathParts": {
+          "path": [
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreates/{webId}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "name",
+            "fullPath": {
+              "path": [
+                "name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "PreCreates",
+        "PathContainerName": "PreCreates",
+        "CandidateTypeNames": [
+          "pre__create"
+        ],
+        "AccessPath": "name",
+        "AccessPathParts": {
+          "path": [
+            "name"
+          ]
+        },
+        "ResourceName": "name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/api/v1/PreCreates/{webId}",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "preCreateId",
+            "fullPath": {
+              "path": [
+                "preCreateId"
+              ]
+            }
+          }
+        },
+        "ContainerName": "PreCreates",
+        "PathContainerName": "PreCreates",
+        "CandidateTypeNames": [
+          "pre__create"
+        ],
+        "AccessPath": "preCreateId",
+        "AccessPathParts": {
+          "path": [
+            "preCreateId"
+          ]
+        },
+        "ResourceName": "preCreateId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  }
+]

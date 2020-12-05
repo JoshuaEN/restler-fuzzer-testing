@@ -1,0 +1,80 @@
+{
+    "0e153f7b303b4f0f1572a7d65e41ca70e2cdbbd9": {
+        "verb": "GET",
+        "endpoint": "/api/v1/PreCreates",
+        "verb_endpoint": "GET /api/v1/PreCreates",
+        "valid": 1,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 0
+    },
+    "43f57f25995c467dfb8c579cd9c2810e27342d93": {
+        "verb": "GET",
+        "endpoint": "/api/v1/PreCreates/{webId}",
+        "verb_endpoint": "GET /api/v1/PreCreates/{webId}",
+        "valid": 1,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 1
+    },
+    "4e14ebbd41298f61d4aa3ba8b255cf722e584e8e": {
+        "verb": "GET",
+        "endpoint": "/api/v1/PreCreateSubResources/{webId}",
+        "verb_endpoint": "GET /api/v1/PreCreateSubResources/{webId}",
+        "valid": 0,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "404",
+        "status_text": "Not Found",
+        "error_message": "85\r\n{\"type\":\"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\"title\":\"Not Found\",\"status\":404,\"traceId\":\"|fac9ce19-41999982d9c2d559.\"}\r\n0",
+        "request_order": 2
+    },
+    "8bea414d02ce49e64d203a30bf6d5a84700d5940": {
+        "verb": "POST",
+        "endpoint": "/api/v1/PreCreates/{webId}",
+        "verb_endpoint": "POST /api/v1/PreCreates/{webId}",
+        "valid": 1,
+        "matching_prefix": "None",
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 3
+    },
+    "a79bf19c765bf467c1d0cf47ff2a5958afa70a99": {
+        "verb": "DELETE",
+        "endpoint": "/api/v1/PreCreateSubResources/{webId}",
+        "verb_endpoint": "DELETE /api/v1/PreCreateSubResources/{webId}",
+        "valid": 1,
+        "matching_prefix": {
+            "id": "8bea414d02ce49e64d203a30bf6d5a84700d5940",
+            "valid": 1
+        },
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "No Content",
+        "error_message": null,
+        "request_order": 4
+    }
+}

@@ -1,0 +1,7 @@
+
+Sending invalid request(s):
+'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a?? HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a/a5b98f4e-6517-4d71-9ead-87ea86d98f9a HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+'DELETE /api/v1/PreCreateSubResources/{} HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'

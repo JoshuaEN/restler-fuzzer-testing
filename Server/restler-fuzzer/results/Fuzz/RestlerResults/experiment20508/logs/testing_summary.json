@@ -1,0 +1,20 @@
+{
+    "final_spec_coverage": "4 / 5",
+    "rendered_requests": "5 / 5",
+    "rendered_requests_valid_status": "4 / 5",
+    "num_fully_valid": 4,
+    "num_sequence_failures": 0,
+    "num_invalid_by_failed_resource_creations": 0,
+    "total_object_creations": 3,
+    "total_requests_sent": {
+        "gc": 3,
+        "main_driver": 6,
+        "LeakageRuleChecker": 0,
+        "ResourceHierarchyChecker": 0,
+        "UseAfterFreeChecker": 0,
+        "InvalidDynamicObjectChecker": 6,
+        "PayloadBodyChecker": 43,
+        "ExamplesChecker": 0
+    },
+    "bug_buckets": {}
+}

@@ -1,0 +1,12 @@
+2020-12-05 14:11:16.382: Sending: 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:16.495: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:15 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce4e-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:16.514: Sending: 'DELETE /api/v1/PreCreateSubResources/8dfa0242-f0ec-4883-92f5-13642eab6dd4 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:16.647: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:15 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce4f-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:16.662: Sending: 'DELETE /api/v1/PreCreateSubResources/e29feab6-3c1d-4032-a49f-29986e2a2cc3 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:16.780: Received: 'HTTP/1.1 204 No Content\r\nDate: Sat, 05 Dec 2020 19:11:16 GMT\r\nServer: Kestrel\r\n\r\n'
+

@@ -1,0 +1,146 @@
+2020-12-05 14:11:02.087: Going to fuzz a set with 5 requests
+2020-12-05 14:11:02.087: Request-0: Value Combinations: 1
+2020-12-05 14:11:02.087: Request-1: Value Combinations: 1
+2020-12-05 14:11:02.087: Request-2: Value Combinations: 16
+2020-12-05 14:11:02.087: Request-3: Value Combinations: 1
+2020-12-05 14:11:02.087: Request-4: Value Combinations: 1
+2020-12-05 14:11:02.087: Avg. Value Combinations per Request: 4
+2020-12-05 14:11:02.087: Median Value Combinations per Request: 1
+2020-12-05 14:11:02.087: Min Value Combinations per Request: 1
+2020-12-05 14:11:02.087: Max Value Combinations per Request: 16
+2020-12-05 14:11:02.087: Total dependencies: 2
+
+2020-12-05 14:11:02.683: Starting directed-smoke-test
+
+2020-12-05 14:11:02.695: Will attempt to render 5 requests found
+
+Rendering request 0 from scratch
+
+2020-12-05 14:11:03.826: Request 0
+2020-12-05 14:11:03.826: Endpoint - /api/v1/PreCreates
+2020-12-05 14:11:03.826: Hex Def - 0e153f7b303b4f0f1572a7d65e41ca70e2cdbbd9
+2020-12-05 14:11:03.826: Sequence length that satisfies dependencies: 1
+2020-12-05 14:11:03.835: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreates'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: {'token_refresh_cmd': 'python C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\gettoken.py --token_url http://localhost:5000/api/v1/authenticate', 'token_refresh_interval': 150}
+		- restler_static_string: '\r\n'
+
+Rendering request 1 from scratch
+
+2020-12-05 14:11:04.740: Request 1
+2020-12-05 14:11:04.740: Endpoint - /api/v1/PreCreates/{webId}
+2020-12-05 14:11:04.740: Hex Def - 43f57f25995c467dfb8c579cd9c2810e27342d93
+2020-12-05 14:11:04.740: Sequence length that satisfies dependencies: 1
+2020-12-05 14:11:04.749: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreates'
+		- restler_static_string: '/'
+		- restler_custom_payload: 'exist1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_refreshable_authentication_token: 'authentication_token_tag'
+		- restler_static_string: '\r\n'
+
+Rendering request 2 from scratch
+
+2020-12-05 14:11:05.634: Request 2
+2020-12-05 14:11:05.634: Endpoint - /api/v1/PreCreateSubResources/{webId}
+2020-12-05 14:11:05.634: Hex Def - 4e14ebbd41298f61d4aa3ba8b255cf722e584e8e
+2020-12-05 14:11:05.634: Sequence length that satisfies dependencies: 1
+2020-12-05 14:11:05.643: Rendering INVALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreateSubResources'
+		- restler_static_string: '/'
+		- restler_custom_payload: 'x'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: {'token_refresh_cmd': 'python C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\gettoken.py --token_url http://localhost:5000/api/v1/authenticate', 'token_refresh_interval': 150}
+		- restler_static_string: '\r\n'
+
+Rendering request 3 from scratch
+
+2020-12-05 14:11:13.722: Request 3
+2020-12-05 14:11:13.722: Endpoint - /api/v1/PreCreates/{webId}
+2020-12-05 14:11:13.722: Hex Def - 8bea414d02ce49e64d203a30bf6d5a84700d5940
+2020-12-05 14:11:13.722: Sequence length that satisfies dependencies: 1
+2020-12-05 14:11:13.730: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreates'
+		- restler_static_string: '/'
+		- restler_custom_payload: 'exist1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		- restler_refreshable_authentication_token: 'authentication_token_tag'
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_fuzzable_string: ['fuzzstring', '']
+		- restler_static_string: ',\n    "preCreateId":'
+		+ restler_fuzzable_string: ['fuzzstring', '']
+		- restler_static_string: ',\n    "name":'
+		+ restler_fuzzable_string: ['fuzzstring', '']
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ['fuzzstring', '']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix for request 4 with previous request 3
+	and re-using that VALID prefix
+
+2020-12-05 14:11:16.211: Request 4
+2020-12-05 14:11:16.211: Endpoint - /api/v1/PreCreateSubResources/{webId}
+2020-12-05 14:11:16.211: Hex Def - a79bf19c765bf467c1d0cf47ff2a5958afa70a99
+2020-12-05 14:11:16.211: Sequence length that satisfies dependencies: 2
+2020-12-05 14:11:16.220: Rendering VALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreateSubResources'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_v1_PreCreates__webId__post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: {'token_refresh_cmd': 'python C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\gettoken.py --token_url http://localhost:5000/api/v1/authenticate', 'token_refresh_interval': 150}
+		- restler_static_string: '\r\n'
+
+2020-12-05 14:11:16.797: Final Swagger spec coverage: 4 / 5
+2020-12-05 14:11:16.797: Rendered requests: 5 / 5
+2020-12-05 14:11:16.797: Rendered requests with "valid" status codes: 4 / 5
+2020-12-05 14:11:16.797: Num fully valid requests (no resource creation failures): 4
+2020-12-05 14:11:16.797: Num requests not rendered due to invalid sequence re-renders: 0
+2020-12-05 14:11:16.797: Num invalid requests caused by failed resource creations: 0
+2020-12-05 14:11:16.797: Total Creations of Dyn Objects: 3
+2020-12-05 14:11:16.797: Total Requests Sent: {'gc': 3, 'main_driver': 6, 'LeakageRuleChecker': 0, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 0, 'InvalidDynamicObjectChecker': 6, 'PayloadBodyChecker': 43, 'ExamplesChecker': 0}
+2020-12-05 14:11:16.797: Bug Buckets: {}

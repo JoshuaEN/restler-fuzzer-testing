@@ -1,0 +1,44 @@
+
+2020-12-05 14:11:03.956: Generation-0
+2020-12-05 14:11:03.956: 	Rendered requests: 5 / 5
+2020-12-05 14:11:03.956: 	Rendered requests with "valid" status codes: 1 / 5
+2020-12-05 14:11:03.956: 	Rendered requests determined to be fully valid (no resource creation failures): 1 / 5
+2020-12-05 14:11:03.956: List of failing requests:
+-------------------------
+
+
+2020-12-05 14:11:04.902: Generation-0
+2020-12-05 14:11:04.902: 	Rendered requests: 5 / 5
+2020-12-05 14:11:04.902: 	Rendered requests with "valid" status codes: 2 / 5
+2020-12-05 14:11:04.902: 	Rendered requests determined to be fully valid (no resource creation failures): 2 / 5
+2020-12-05 14:11:04.902: List of failing requests:
+-------------------------
+
+
+2020-12-05 14:11:05.775: Generation-0
+2020-12-05 14:11:05.775: 	Rendered requests: 5 / 5
+2020-12-05 14:11:05.775: 	Rendered requests with "valid" status codes: 2 / 5
+2020-12-05 14:11:05.775: 	Rendered requests determined to be fully valid (no resource creation failures): 2 / 5
+2020-12-05 14:11:05.775: List of failing requests:
+-------------------------
+
+
+2020-12-05 14:11:13.966: Generation-0
+2020-12-05 14:11:13.966: 	Rendered requests: 5 / 5
+2020-12-05 14:11:13.966: 	Rendered requests with "valid" status codes: 3 / 5
+2020-12-05 14:11:13.966: 	Rendered requests determined to be fully valid (no resource creation failures): 3 / 5
+2020-12-05 14:11:13.966: List of failing requests:
+-------------------------
+
+
+2020-12-05 14:11:16.356: Generation-0
+2020-12-05 14:11:16.356: 	Rendered requests: 5 / 5
+2020-12-05 14:11:16.356: 	Rendered requests with "valid" status codes: 4 / 5
+2020-12-05 14:11:16.356: 	Rendered requests determined to be fully valid (no resource creation failures): 4 / 5
+2020-12-05 14:11:16.356: List of failing requests:
+-------------------------
+
+
+2020-12-05 14:11:16.371: 	Never Rendered requests:
+-------------------------
+

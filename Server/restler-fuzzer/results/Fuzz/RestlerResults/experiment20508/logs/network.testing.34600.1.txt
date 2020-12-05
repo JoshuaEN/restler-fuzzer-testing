@@ -1,0 +1,589 @@
+2020-12-05 14:11:02.087: Will refresh token: python C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\gettoken.py --token_url http://localhost:5000/api/v1/authenticate
+2020-12-05 14:11:02.664: New value: {"app1": {}}
+_OMITTED_AUTH_TOKEN_
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreates'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+2020-12-05 14:11:02.990: Sending: 'GET /api/v1/PreCreates HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:03.531: Received: 'HTTP/1.1 200 OK\r\nDate: Sat, 05 Dec 2020 19:11:02 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n41\r\n[{"id":"exist1","name":"Pre-existing Item 1","description":null}]\r\n0\r\n\r\n'
+
+2020-12-05 14:11:03.546: Checker: LeakageRuleChecker kicks in
+
+2020-12-05 14:11:03.562: Checker: LeakageRuleChecker kicks out
+
+2020-12-05 14:11:03.576: Checker: ResourceHierarchyChecker kicks in
+
+2020-12-05 14:11:03.589: Checker: ResourceHierarchyChecker kicks out
+
+2020-12-05 14:11:03.603: Checker: UseAfterFreeChecker kicks in
+
+2020-12-05 14:11:03.616: Checker: UseAfterFreeChecker kicks out
+
+2020-12-05 14:11:03.629: Checker: InvalidDynamicObjectChecker kicks in
+
+2020-12-05 14:11:03.642: Checker: InvalidDynamicObjectChecker kicks out
+
+2020-12-05 14:11:03.654: Checker: PayloadBodyChecker kicks in
+
+2020-12-05 14:11:03.669: PayloadBodyChecker fuzzing valid True
+2020-12-05 14:11:03.689: PayloadBodyChecker fuzzing invalid True
+2020-12-05 14:11:03.706: PayloadBodyChecker start with examples True
+2020-12-05 14:11:03.726: PayloadBodyChecker size dep budget True
+2020-12-05 14:11:03.748: PayloadBodyChecker use feedback True
+2020-12-05 14:11:03.768: PayloadBodyChecker recipe None
+2020-12-05 14:11:03.784: Checker: PayloadBodyChecker kicks out
+
+2020-12-05 14:11:03.798: Checker: ExamplesChecker kicks in
+
+2020-12-05 14:11:03.811: Checker: ExamplesChecker kicks out
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreates'
+		- restler_static_string: '/'
+		- restler_custom_payload: 'exist1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_refreshable_authentication_token: 'authentication_token_tag'
+		- restler_static_string: '\r\n'
+
+2020-12-05 14:11:04.235: Sending: 'GET /api/v1/PreCreates/exist1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:04.538: Received: 'HTTP/1.1 200 OK\r\nDate: Sat, 05 Dec 2020 19:11:03 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n3f\r\n{"id":"exist1","name":"Pre-existing Item 1","description":null}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:04.556: Checker: LeakageRuleChecker kicks in
+
+2020-12-05 14:11:04.573: Checker: LeakageRuleChecker kicks out
+
+2020-12-05 14:11:04.592: Checker: ResourceHierarchyChecker kicks in
+
+2020-12-05 14:11:04.607: Checker: ResourceHierarchyChecker kicks out
+
+2020-12-05 14:11:04.623: Checker: UseAfterFreeChecker kicks in
+
+2020-12-05 14:11:04.639: Checker: UseAfterFreeChecker kicks out
+
+2020-12-05 14:11:04.653: Checker: InvalidDynamicObjectChecker kicks in
+
+2020-12-05 14:11:04.668: Checker: InvalidDynamicObjectChecker kicks out
+
+2020-12-05 14:11:04.683: Checker: PayloadBodyChecker kicks in
+
+2020-12-05 14:11:04.697: Checker: PayloadBodyChecker kicks out
+
+2020-12-05 14:11:04.712: Checker: ExamplesChecker kicks in
+
+2020-12-05 14:11:04.727: Checker: ExamplesChecker kicks out
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+		- restler_static_string: 'GET '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreateSubResources'
+		- restler_static_string: '/'
+		- restler_custom_payload: 'x'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+2020-12-05 14:11:05.165: Sending: 'GET /api/v1/PreCreateSubResources/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:05.286: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:04 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce19-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:05.301: Checker: LeakageRuleChecker kicks in
+
+2020-12-05 14:11:05.315: Checker: LeakageRuleChecker kicks out
+
+2020-12-05 14:11:05.329: Checker: ResourceHierarchyChecker kicks in
+
+2020-12-05 14:11:05.342: Checker: ResourceHierarchyChecker kicks out
+
+2020-12-05 14:11:05.355: Checker: UseAfterFreeChecker kicks in
+
+2020-12-05 14:11:05.367: Checker: UseAfterFreeChecker kicks out
+
+2020-12-05 14:11:05.381: Checker: InvalidDynamicObjectChecker kicks in
+
+2020-12-05 14:11:05.396: Checker: InvalidDynamicObjectChecker kicks out
+
+2020-12-05 14:11:05.409: Checker: PayloadBodyChecker kicks in
+
+2020-12-05 14:11:05.422: Checker: PayloadBodyChecker kicks out
+
+2020-12-05 14:11:05.436: Checker: ExamplesChecker kicks in
+
+2020-12-05 14:11:05.451: Checker: ExamplesChecker kicks out
+
+2020-12-05 14:11:05.465: Checker: LeakageRuleChecker kicks in
+
+2020-12-05 14:11:05.479: Checker: LeakageRuleChecker kicks out
+
+2020-12-05 14:11:05.492: Checker: ResourceHierarchyChecker kicks in
+
+2020-12-05 14:11:05.506: Checker: ResourceHierarchyChecker kicks out
+
+2020-12-05 14:11:05.519: Checker: UseAfterFreeChecker kicks in
+
+2020-12-05 14:11:05.537: Checker: UseAfterFreeChecker kicks out
+
+2020-12-05 14:11:05.552: Checker: InvalidDynamicObjectChecker kicks in
+
+2020-12-05 14:11:05.566: Checker: InvalidDynamicObjectChecker kicks out
+
+2020-12-05 14:11:05.579: Checker: PayloadBodyChecker kicks in
+
+2020-12-05 14:11:05.593: Checker: PayloadBodyChecker kicks out
+
+2020-12-05 14:11:05.607: Checker: ExamplesChecker kicks in
+
+2020-12-05 14:11:05.620: Checker: ExamplesChecker kicks out
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreates'
+		- restler_static_string: '/'
+		- restler_custom_payload: 'exist1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		- restler_refreshable_authentication_token: 'authentication_token_tag'
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: ',\n    "preCreateId":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: ',\n    "name":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2020-12-05 14:11:06.192: Sending: 'POST /api/v1/PreCreates/exist1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 115\r\nUser-Agent: restler/7.1.0\r\n\r\n{\n    "id":"fuzzstring",\n    "preCreateId":"fuzzstring",\n    "name":"fuzzstring",\n    "description":"fuzzstring"}\r\n'
+
+2020-12-05 14:11:06.336: Received: 'HTTP/1.1 200 OK\r\nDate: Sat, 05 Dec 2020 19:11:05 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n73\r\n{"id":"e29feab6-3c1d-4032-a49f-29986e2a2cc3","preCreateId":"exist1","name":"fuzzstring","description":"fuzzstring"}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:06.352: Checker: LeakageRuleChecker kicks in
+
+2020-12-05 14:11:06.366: Checker: LeakageRuleChecker kicks out
+
+2020-12-05 14:11:06.380: Checker: ResourceHierarchyChecker kicks in
+
+2020-12-05 14:11:06.393: Checker: ResourceHierarchyChecker kicks out
+
+2020-12-05 14:11:06.406: Checker: UseAfterFreeChecker kicks in
+
+2020-12-05 14:11:06.419: Checker: UseAfterFreeChecker kicks out
+
+2020-12-05 14:11:06.433: Checker: InvalidDynamicObjectChecker kicks in
+
+2020-12-05 14:11:06.448: Checker: InvalidDynamicObjectChecker kicks out
+
+2020-12-05 14:11:06.461: Checker: PayloadBodyChecker kicks in
+
+2020-12-05 14:11:06.482: PayloadBodyChecker Start fuzzing request: POST /api/v1/PreCreates/{webId}
+2020-12-05 14:11:06.501: PayloadBodyChecker #node: 5
+2020-12-05 14:11:06.523: PayloadBodyChecker Fuzz using dynamic feedback
+2020-12-05 14:11:06.544: PayloadBodyChecker #N: 5, #max: 200, #width: 20
+2020-12-05 14:11:06.568: PayloadBodyChecker Task begin Invalid-JSON
+2020-12-05 14:11:06.582: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 93\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:06.707: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:06 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce1b-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:06.722: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:06.738: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 111\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:06.859: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:06 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce1c-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:06.874: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:06.889: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 120\r\nUser-Agent: restler/7.1.0\r\n\r\n{"preCreateId":"fuzzstring","id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:07.009: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:06 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce1d-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:07.024: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:07.041: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 113\r\nUser-Agent: restler/7.1.0\r\n\r\n{"name":"fuzzstring","id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:07.159: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:06 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce1e-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:07.174: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:07.191: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 120\r\nUser-Agent: restler/7.1.0\r\n\r\n{"description":"fuzzstring","id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:07.290: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:06 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce1f-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:07.306: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:07.323: PayloadBodyChecker Tracker begin (Invalid-JSON):
+2020-12-05 14:11:07.344: PayloadBodyChecker     Valid: 0
+2020-12-05 14:11:07.365: PayloadBodyChecker     Invalid: 5
+2020-12-05 14:11:07.386: PayloadBodyChecker     misc: 5 (5: 1 1 1 1 1)
+2020-12-05 14:11:07.401: PayloadBodyChecker Tracker end
+2020-12-05 14:11:07.421: PayloadBodyChecker Task end Invalid-JSON
+
+2020-12-05 14:11:07.445: PayloadBodyChecker Task begin Structure
+2020-12-05 14:11:07.461: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 28\r\nUser-Agent: restler/7.1.0\r\n\r\n{"preCreateId":"fuzzstring"}'
+
+2020-12-05 14:11:07.582: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:06 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\nf8\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce20-41999982d9c2d559.","errors":{"Id":["The Id field is required."],"Name":["The Name field is required."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:07.596: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:07.612: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 19\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring"}'
+
+2020-12-05 14:11:07.709: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:07 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\nd5\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce21-41999982d9c2d559.","errors":{"Name":["The Name field is required."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:07.728: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:07.745: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 93\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:07.857: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:07 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce22-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:07.875: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:07.892: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 28\r\nUser-Agent: restler/7.1.0\r\n\r\n{"description":"fuzzstring"}'
+
+2020-12-05 14:11:07.993: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:07 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\nf8\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce23-41999982d9c2d559.","errors":{"Id":["The Id field is required."],"Name":["The Name field is required."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:08.010: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:08.026: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 21\r\nUser-Agent: restler/7.1.0\r\n\r\n{"name":"fuzzstring"}'
+
+2020-12-05 14:11:08.150: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:07 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\nd1\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce24-41999982d9c2d559.","errors":{"Id":["The Id field is required."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:08.165: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:08.183: PayloadBodyChecker Tracker begin (Structure):
+2020-12-05 14:11:08.205: PayloadBodyChecker     Valid: 0
+2020-12-05 14:11:08.228: PayloadBodyChecker     Invalid: 5
+2020-12-05 14:11:08.243: PayloadBodyChecker     misc: 4 (5: 2 1 1 1)
+2020-12-05 14:11:08.264: PayloadBodyChecker Tracker end
+2020-12-05 14:11:08.286: PayloadBodyChecker Task end Structure
+
+2020-12-05 14:11:08.303: PayloadBodyChecker Task begin Type
+2020-12-05 14:11:08.318: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 34\r\nUser-Agent: restler/7.1.0\r\n\r\n{"preCreateId":{ "fuzz" : false }}'
+
+2020-12-05 14:11:08.421: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:07 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce25-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 16."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:08.437: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:08.455: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 5\r\nUser-Agent: restler/7.1.0\r\n\r\nfalse'
+
+2020-12-05 14:11:08.794: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:08 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n19e\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce26-41999982d9c2d559.","errors":{"$":["The JSON value could not be converted to Server.Models.PreCreateSubResource. Path: $ | LineNumber: 0 | BytePositionInLine: 5."],"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:08.808: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:08.826: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 25\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":{ "fuzz" : false }}'
+
+2020-12-05 14:11:08.944: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:08 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n18f\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce27-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 7."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:08.959: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:08.975: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 99\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":{ "fuzz" : false },"description":"fuzzstring"}'
+
+2020-12-05 14:11:09.113: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:08 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n194\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce28-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 54."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:09.128: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:09.145: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 99\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":{ "fuzz" : false },"name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:09.280: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:08 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce29-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 34."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:09.295: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:09.313: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 99\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":{ "fuzz" : false },"preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:09.430: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:08 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n18f\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce2a-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 7."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:09.445: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:09.461: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 99\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":{ "fuzz" : false }}'
+
+2020-12-05 14:11:09.645: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:08 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce2b-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.description":["The JSON value could not be converted to System.String. Path: $.description | LineNumber: 0 | BytePositionInLine: 81."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:09.660: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:09.677: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 27\r\nUser-Agent: restler/7.1.0\r\n\r\n{"name":{ "fuzz" : false }}'
+
+2020-12-05 14:11:09.816: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:09 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n193\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce2c-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 9."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:09.830: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:09.847: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 2\r\nUser-Agent: restler/7.1.0\r\n\r\n[]'
+
+2020-12-05 14:11:09.979: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:09 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n19e\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce2d-41999982d9c2d559.","errors":{"$":["The JSON value could not be converted to Server.Models.PreCreateSubResource. Path: $ | LineNumber: 0 | BytePositionInLine: 1."],"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:09.993: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:10.012: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 1\r\nUser-Agent: restler/7.1.0\r\n\r\n0'
+
+2020-12-05 14:11:10.148: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:09 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n19e\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce2e-41999982d9c2d559.","errors":{"$":["The JSON value could not be converted to Server.Models.PreCreateSubResource. Path: $ | LineNumber: 0 | BytePositionInLine: 1."],"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:10.165: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:10.183: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 18\r\nUser-Agent: restler/7.1.0\r\n\r\n{"preCreateId":[]}'
+
+2020-12-05 14:11:10.300: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:09 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce2f-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 16."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:10.316: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:10.333: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 17\r\nUser-Agent: restler/7.1.0\r\n\r\n{"preCreateId":0}'
+
+2020-12-05 14:11:10.464: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:09 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce30-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 16."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:10.481: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:10.500: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 21\r\nUser-Agent: restler/7.1.0\r\n\r\n{"preCreateId":false}'
+
+2020-12-05 14:11:10.600: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:09 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce31-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 20."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:10.618: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:10.636: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 18\r\nUser-Agent: restler/7.1.0\r\n\r\n{ "fuzz" : false }'
+
+2020-12-05 14:11:10.750: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:10 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\nf8\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce32-41999982d9c2d559.","errors":{"Id":["The Id field is required."],"Name":["The Name field is required."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:10.765: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:10.783: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 12\r\nUser-Agent: restler/7.1.0\r\n\r\n"fuzzstring"'
+
+2020-12-05 14:11:10.882: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:10 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n19f\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce33-41999982d9c2d559.","errors":{"$":["The JSON value could not be converted to Server.Models.PreCreateSubResource. Path: $ | LineNumber: 0 | BytePositionInLine: 12."],"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:10.898: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:10.922: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 9\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":[]}'
+
+2020-12-05 14:11:11.018: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:10 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n18f\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce34-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 7."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:11.034: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:11.051: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 8\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":0}'
+
+2020-12-05 14:11:11.166: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:10 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n18f\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce35-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 7."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:11.180: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:11.196: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 12\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":false}'
+
+2020-12-05 14:11:11.300: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:10 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n190\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce36-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 11."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:11.317: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:11.336: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 86\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":false,"description":"fuzzstring"}'
+
+2020-12-05 14:11:11.467: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:10 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n194\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce37-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 58."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:11.483: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:11.501: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 82\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":0,"description":"fuzzstring"}'
+
+2020-12-05 14:11:11.636: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:10 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n194\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce38-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 54."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:11.651: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:11.668: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 86\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":false}'
+
+2020-12-05 14:11:11.786: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:11 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce39-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.description":["The JSON value could not be converted to System.String. Path: $.description | LineNumber: 0 | BytePositionInLine: 85."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:11.802: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:11.822: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 86\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":false,"name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:11.935: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:11 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce3a-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 38."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:11.952: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:11.968: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 83\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":[],"name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:12.068: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:11 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce3b-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 34."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:12.082: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:12.103: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 83\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":[]}'
+
+2020-12-05 14:11:12.220: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:11 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce3c-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.description":["The JSON value could not be converted to System.String. Path: $.description | LineNumber: 0 | BytePositionInLine: 81."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:12.235: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:12.256: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 83\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":[],"preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:12.387: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:11 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n18f\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce3d-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 7."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:12.402: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:12.418: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 83\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":[],"description":"fuzzstring"}'
+
+2020-12-05 14:11:12.505: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:11 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n194\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce3e-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 54."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:12.520: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:12.537: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 82\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":"fuzzstring","name":"fuzzstring","description":0}'
+
+2020-12-05 14:11:12.636: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:11 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce3f-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.description":["The JSON value could not be converted to System.String. Path: $.description | LineNumber: 0 | BytePositionInLine: 81."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:12.650: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:12.667: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 86\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":false,"preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:12.788: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:12 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n190\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce40-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 11."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:12.803: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:12.820: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 82\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":"fuzzstring","preCreateId":0,"name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:12.935: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:12 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n1a2\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce41-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.preCreateId":["The JSON value could not be converted to System.String. Path: $.preCreateId | LineNumber: 0 | BytePositionInLine: 34."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:12.953: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:12.970: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 82\r\nUser-Agent: restler/7.1.0\r\n\r\n{"id":0,"preCreateId":"fuzzstring","name":"fuzzstring","description":"fuzzstring"}'
+
+2020-12-05 14:11:13.087: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:12 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n18f\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce42-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.id":["The JSON value could not be converted to System.String. Path: $.id | LineNumber: 0 | BytePositionInLine: 7."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:13.104: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:13.122: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 11\r\nUser-Agent: restler/7.1.0\r\n\r\n{"name":[]}'
+
+2020-12-05 14:11:13.217: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:12 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n193\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce43-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 9."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:13.230: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:13.247: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 10\r\nUser-Agent: restler/7.1.0\r\n\r\n{"name":0}'
+
+2020-12-05 14:11:13.389: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:12 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n193\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce44-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 9."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:13.405: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:13.423: Sending: 'POST /api/v1/PreCreates/x HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 14\r\nUser-Agent: restler/7.1.0\r\n\r\n{"name":false}'
+
+2020-12-05 14:11:13.537: Received: 'HTTP/1.1 400 Bad Request\r\nDate: Sat, 05 Dec 2020 19:11:12 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n194\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"|fac9ce45-41999982d9c2d559.","errors":{"preCreateSubResource":["A value for the \'preCreateSubResource\' parameter or property was not provided."],"$.name":["The JSON value could not be converted to System.String. Path: $.name | LineNumber: 0 | BytePositionInLine: 13."]}}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:13.552: 'Error: all of the expected dynamic objects were not present in the response.'
+2020-12-05 14:11:13.575: PayloadBodyChecker Tracker begin (Type):
+2020-12-05 14:11:13.597: PayloadBodyChecker     Valid: 0
+2020-12-05 14:11:13.613: PayloadBodyChecker     Invalid: 33
+2020-12-05 14:11:13.627: PayloadBodyChecker     misc: 21 (33: 5 1 4 4 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 2)
+2020-12-05 14:11:13.648: PayloadBodyChecker Tracker end
+2020-12-05 14:11:13.668: PayloadBodyChecker Task end Type
+2020-12-05 14:11:13.682: Checker: PayloadBodyChecker kicks out
+
+2020-12-05 14:11:13.695: Checker: ExamplesChecker kicks in
+
+2020-12-05 14:11:13.709: Checker: ExamplesChecker kicks out
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreates'
+		- restler_static_string: '/'
+		- restler_custom_payload: 'exist1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: application/json\r\n'
+		- restler_refreshable_authentication_token: 'authentication_token_tag'
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: ',\n    "preCreateId":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: ',\n    "name":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ['"fuzzstring"', '""']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 1)
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'PreCreateSubResources'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_v1_PreCreates__webId__post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: ['token_refresh_cmd', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+2020-12-05 14:11:14.615: Sending: 'POST /api/v1/PreCreates/exist1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 115\r\nUser-Agent: restler/7.1.0\r\n\r\n{\n    "id":"fuzzstring",\n    "preCreateId":"fuzzstring",\n    "name":"fuzzstring",\n    "description":"fuzzstring"}\r\n'
+
+2020-12-05 14:11:14.740: Received: 'HTTP/1.1 200 OK\r\nDate: Sat, 05 Dec 2020 19:11:14 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n73\r\n{"id":"8dfa0242-f0ec-4883-92f5-13642eab6dd4","preCreateId":"exist1","name":"fuzzstring","description":"fuzzstring"}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:14.761: Sending: 'DELETE /api/v1/PreCreateSubResources/8dfa0242-f0ec-4883-92f5-13642eab6dd4 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:14.905: Received: 'HTTP/1.1 204 No Content\r\nDate: Sat, 05 Dec 2020 19:11:14 GMT\r\nServer: Kestrel\r\n\r\n'
+
+2020-12-05 14:11:14.921: Checker: LeakageRuleChecker kicks in
+
+2020-12-05 14:11:14.938: Checker: LeakageRuleChecker kicks out
+
+2020-12-05 14:11:14.955: Checker: ResourceHierarchyChecker kicks in
+
+2020-12-05 14:11:14.970: Checker: ResourceHierarchyChecker kicks out
+
+2020-12-05 14:11:14.984: Checker: UseAfterFreeChecker kicks in
+
+2020-12-05 14:11:15.000: UseAfterFreeChecker 
+Target types: {'_api_v1_PreCreates__webId__post_id'}
+2020-12-05 14:11:15.024: UseAfterFreeChecker Clean tlb: {'_api_v1_PreCreates__webId__post_id': '8dfa0242-f0ec-4883-92f5-13642eab6dd4'}
+2020-12-05 14:11:15.048: UseAfterFreeChecker Found * 0 * consumers.
+2020-12-05 14:11:15.063: Checker: UseAfterFreeChecker kicks out
+
+2020-12-05 14:11:15.076: Checker: InvalidDynamicObjectChecker kicks in
+
+2020-12-05 14:11:15.089: Re-rendering and sending start of sequence
+2020-12-05 14:11:15.108: Sending: 'POST /api/v1/PreCreates/exist1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 115\r\nUser-Agent: restler/7.1.0\r\n\r\n{\n    "id":"fuzzstring",\n    "preCreateId":"fuzzstring",\n    "name":"fuzzstring",\n    "description":"fuzzstring"}\r\n'
+
+2020-12-05 14:11:15.314: Received: 'HTTP/1.1 200 OK\r\nDate: Sat, 05 Dec 2020 19:11:14 GMT\r\nContent-Type: application/json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n73\r\n{"id":"a5b98f4e-6517-4d71-9ead-87ea86d98f9a","preCreateId":"exist1","name":"fuzzstring","description":"fuzzstring"}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:15.331: InvalidDynamicObjectChecker 
+Sending invalid request(s):
+2020-12-05 14:11:15.346: Preparing requests with invalid objects
+2020-12-05 14:11:15.370: InvalidDynamicObjectChecker 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+2020-12-05 14:11:15.388: Sending: 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:15.509: Received: 'HTTP/1.1 204 No Content\r\nDate: Sat, 05 Dec 2020 19:11:14 GMT\r\nServer: Kestrel\r\n\r\n'
+
+2020-12-05 14:11:15.536: InvalidDynamicObjectChecker 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+2020-12-05 14:11:15.553: Sending: 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:15.710: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:15 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce4a-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:15.737: InvalidDynamicObjectChecker 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a?? HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+2020-12-05 14:11:15.756: Sending: 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a?? HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:15.897: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:15 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce4b-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:15.923: InvalidDynamicObjectChecker 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a/a5b98f4e-6517-4d71-9ead-87ea86d98f9a HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+2020-12-05 14:11:15.943: Sending: 'DELETE /api/v1/PreCreateSubResources/a5b98f4e-6517-4d71-9ead-87ea86d98f9a/a5b98f4e-6517-4d71-9ead-87ea86d98f9a HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:15.995: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:15 GMT\r\nServer: Kestrel\r\nContent-Length: 0\r\n\r\n'
+
+2020-12-05 14:11:16.023: InvalidDynamicObjectChecker 'DELETE /api/v1/PreCreateSubResources/{} HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\n\r\n'
+2020-12-05 14:11:16.039: Sending: 'DELETE /api/v1/PreCreateSubResources/{} HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/7.1.0\r\n\r\n'
+
+2020-12-05 14:11:16.126: Received: 'HTTP/1.1 404 Not Found\r\nDate: Sat, 05 Dec 2020 19:11:15 GMT\r\nContent-Type: application/problem+json; charset=utf-8\r\nServer: Kestrel\r\nTransfer-Encoding: chunked\r\n\r\n85\r\n{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"|fac9ce4d-41999982d9c2d559."}\r\n0\r\n\r\n'
+
+2020-12-05 14:11:16.140: Checker: InvalidDynamicObjectChecker kicks out
+
+2020-12-05 14:11:16.154: Checker: PayloadBodyChecker kicks in
+
+2020-12-05 14:11:16.168: Checker: PayloadBodyChecker kicks out
+
+2020-12-05 14:11:16.182: Checker: ExamplesChecker kicks in
+
+2020-12-05 14:11:16.196: Checker: ExamplesChecker kicks out
+

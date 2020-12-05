@@ -1,0 +1,408 @@
+{
+  "Requests": [
+    {
+      "id": {
+        "endpoint": "/api/v1/PreCreates",
+        "method": "Get"
+      },
+      "method": "Get",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "PreCreates"
+          ]
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "token": "Refreshable",
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/PreCreates/{webId}",
+        "method": "Get"
+      },
+      "method": "Get",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "PreCreates"
+          ]
+        },
+        {
+          "Custom": {
+            "payloadType": "String",
+            "primitiveType": "String",
+            "payloadValue": "webId",
+            "isObject": false
+          }
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "token": "Refreshable",
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/PreCreates/{webId}",
+        "method": "Post"
+      },
+      "method": "Post",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "PreCreates"
+          ]
+        },
+        {
+          "Custom": {
+            "payloadType": "String",
+            "primitiveType": "String",
+            "payloadValue": "webId",
+            "isObject": false
+          }
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": [
+              [
+                "body",
+                {
+                  "InternalNode": [
+                    {
+                      "name": "",
+                      "propertyType": "Object",
+                      "isRequired": true,
+                      "isReadOnly": false
+                    },
+                    [
+                      {
+                        "LeafNode": {
+                          "name": "id",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": true,
+                          "isReadOnly": false
+                        }
+                      },
+                      {
+                        "LeafNode": {
+                          "name": "preCreateId",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": false,
+                          "isReadOnly": false
+                        }
+                      },
+                      {
+                        "LeafNode": {
+                          "name": "name",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": true,
+                          "isReadOnly": false
+                        }
+                      },
+                      {
+                        "LeafNode": {
+                          "name": "description",
+                          "payload": {
+                            "Fuzzable": [
+                              "String",
+                              "fuzzstring"
+                            ]
+                          },
+                          "isRequired": false,
+                          "isReadOnly": false
+                        }
+                      }
+                    ]
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      ],
+      "token": "Refreshable",
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ],
+        [
+          "Content-Type",
+          "application/json"
+        ]
+      ],
+      "httpVersion": "1.1",
+      "responseParser": {
+        "writerVariables": [
+          {
+            "requestId": {
+              "endpoint": "/api/v1/PreCreates/{webId}",
+              "method": "Post"
+            },
+            "accessPathParts": {
+              "path": [
+                "id"
+              ]
+            }
+          }
+        ]
+      },
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/PreCreateSubResources/{webId}",
+        "method": "Get"
+      },
+      "method": "Get",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "PreCreateSubResources"
+          ]
+        },
+        {
+          "Custom": {
+            "payloadType": "String",
+            "primitiveType": "String",
+            "payloadValue": "webId",
+            "isObject": false
+          }
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "token": "Refreshable",
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    },
+    {
+      "id": {
+        "endpoint": "/api/v1/PreCreateSubResources/{webId}",
+        "method": "Delete"
+      },
+      "method": "Delete",
+      "path": [
+        {
+          "Constant": [
+            "String",
+            "api"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "v1"
+          ]
+        },
+        {
+          "Constant": [
+            "String",
+            "PreCreateSubResources"
+          ]
+        },
+        {
+          "DynamicObject": "_api_v1_PreCreates__webId__post_id"
+        }
+      ],
+      "queryParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "bodyParameters": [
+        [
+          "Schema",
+          {
+            "ParameterList": []
+          }
+        ]
+      ],
+      "token": "Refreshable",
+      "headers": [
+        [
+          "Accept",
+          "application/json"
+        ],
+        [
+          "Host",
+          null
+        ]
+      ],
+      "httpVersion": "1.1",
+      "requestMetadata": {
+        "isLongRunningOperation": false
+      }
+    }
+  ]
+}

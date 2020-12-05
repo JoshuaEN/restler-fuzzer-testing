@@ -1,0 +1,26 @@
+Restler Information: 0 : Log share was not specified.  Logs will not be uploaded.
+    DateTime=2020-12-05T19:11:01.5879440Z
+Restler Information: 0 : Starting task Fuzz...
+    DateTime=2020-12-05T19:11:01.5960858Z
+Restler Information: 0 : Launching 'python -B C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../engine/restler.py --restler_grammar "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\grammar.py" --custom_mutations "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --set_version 7.1.0   --no_ssl --host localhost:5000  --settings C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\engine_settings.json --enable_checkers * --disable_checkers namespacerule --time_budget 1.000000 --target_ip localhost --target_port 5000 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode bfs-cheap'
+    DateTime=2020-12-05T19:11:01.6972902Z
+Restler Information: 0 : Process execution terminated in 00:00:15.1287912 with exit code 0x0: 'python -B C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../engine/restler.py --restler_grammar "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\grammar.py" --custom_mutations "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --set_version 7.1.0   --no_ssl --host localhost:5000  --settings C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\engine_settings.json --enable_checkers * --disable_checkers namespacerule --time_budget 1.000000 --target_ip localhost --target_port 5000 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode bfs-cheap'
+    DateTime=2020-12-05T19:11:16.8346211Z
+Restler Information: 0 : (20508) python -B C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../engine/restler.py --restler_grammar "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\grammar.py" --custom_mutations "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --set_version 7.1.0   --no_ssl --host localhost:5000  --settings C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\engine_settings.json --enable_checkers * --disable_checkers namespacerule --time_budget 1.000000 --target_ip localhost --target_port 5000 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode bfs-cheap exited with code: 0
+    DateTime=2020-12-05T19:11:16.8429164Z
+Restler Information: 0 : Launching 'dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Fuzz" --output_dir "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Fuzz\ResponseBuckets" --dictionary_file "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --max_instances_per_bucket 10'
+    DateTime=2020-12-05T19:11:16.8606789Z
+Restler Information: 0 : Process execution terminated in 00:00:02.4773947 with exit code 0xE0434352: 'dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Fuzz" --output_dir "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Fuzz\ResponseBuckets" --dictionary_file "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --max_instances_per_bucket 10'
+    DateTime=2020-12-05T19:11:19.3384519Z
+Restler Information: 0 : (35688) dotnet "C:\Users\Joshua\source\repos\restler-fuzzer\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Fuzz" --output_dir "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Fuzz\ResponseBuckets" --dictionary_file "C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json" --max_instances_per_bucket 10 exited with code: -532462766
+    DateTime=2020-12-05T19:11:19.3387321Z
+Restler Error: 0 : Results analyzer for logs in C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Fuzz failed.
+    DateTime=2020-12-05T19:11:19.3435320Z
+Restler Information: 0 : Request coverage (successful / total): 4 / 5
+    DateTime=2020-12-05T19:11:19.5297496Z
+Restler Information: 0 : No bugs were found.
+    DateTime=2020-12-05T19:11:19.5341832Z
+Restler Information: 0 : Task Fuzz succeeded.
+    DateTime=2020-12-05T19:11:19.5481765Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2020-12-05T19:11:19.5521217Z

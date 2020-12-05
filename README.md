@@ -1,3 +1,11 @@
+# Problem - Results analyzer fails with an error that a response without a request was found
+See [ResultsAnalyzerStdErr.txt](Server\restler-fuzzer\results\Fuzz\ResultsAnalyzerStdErr.txt)
+
+## Steps to reproduce run
+1. Get [RESTler-fuzzer](https://github.com/microsoft/restler-fuzzer) and [build it](https://github.com/microsoft/restler-fuzzer#build-instructions)
+1. Run `dotnet run -c PRECREATED` the Server project or use the UI of your choice
+1. Once the server has started and is accepting requests, run `python Server/restler-fuzzer/run.py --restler_drop_dir {{path-to-restler-fuzzer-bin}} --fuzz`
+
 # Simple demo project to test various RESTler-fuzzer features
 
 ## Running Server + RESTler-fuzzer

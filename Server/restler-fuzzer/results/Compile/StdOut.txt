@@ -1,0 +1,79 @@
+[12/5/2020 2:10:59 PM] Generating grammar...
+[12/5/2020 2:11:00 PM] Getting requests...
+[12/5/2020 2:11:00 PM] Getting dependencies...
+[12/5/2020 2:11:00 PM] Get consumers.
+[12/5/2020 2:11:00 PM] Get producers.
+[12/5/2020 2:11:00 PM] Done processing producers
+[12/5/2020 2:11:00 PM] Compute dependencies
+[[12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Post }[12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Get }
+[[12/5/2020 2:11:00 PM12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Post }] Second pass dependencies for request { endpoint = "/api/v1/PreCreates"
+  method = Get }[12/5/2020 2:11:00 PM[] Second pass dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Post }
+[12/5/2020 2:11:00 PM12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Get }
+[12/5/2020 2:11:00 PM] [12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Get }
+
+[12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreates"
+  method = Get }
+[12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreates"
+  method = Get }
+[12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Get }
+
+
+12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Delete }] Second pass dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Get }
+Second pass dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Delete }
+[12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Delete }
+[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Get }
+
+[[12/5/2020 2:11:00 PM12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Get }
+[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreates"
+  method = Get }
+[[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Post }
+] Done dependencies for request { endpoint = "/api/v1/PreCreates"
+  method = Get }
+12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Delete }
+[12/5/2020 2:11:00 PM[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Delete }] Done dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Get }
+
+[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreates"
+  method = Get }[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Get }[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Get }[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Post }
+[12/5/2020 2:11:00 PM
+] Done dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Delete }
+
+
+[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreates/{webId}"
+  method = Post }
+Annotated resource not found: { producerId = { requestId = { endpoint = "/api/1/PreCreates/{webId}"
+                               method = Post }
+                 resourceName = "id" }
+  producerParameter = ResourceName "id"
+  consumerParameter = ResourceName "webId"
+  exceptConsumerId = None }
+[12/5/2020 2:11:00 PM] Second pass dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Get }
+[12/5/2020 2:11:00 PM] Done dependencies for request { endpoint = "/api/v1/PreCreateSubResources/{webId}"
+  method = Get }
+[12/5/2020 2:11:00 PM] Dependency analysis completed.
+[12/5/2020 2:11:00 PM] Generating request primitives...
+Writing new dictionary to C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile\dict.json
+[12/5/2020 2:11:00 PM] Generating python grammar...
+[12/5/2020 2:11:00 PM] Done generating python grammar.
+Workflow completed.  See C:\Users\Joshua\source\repos\restler-fuzzer-testing\Server\restler-fuzzer\results\Compile for REST-ler grammar.

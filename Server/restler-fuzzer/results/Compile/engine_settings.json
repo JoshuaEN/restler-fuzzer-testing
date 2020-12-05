@@ -1,0 +1,11 @@
+{
+  "fuzzing_mode": "directed-smoke-test",
+  "time_budget": 0.5,
+  "token_refresh_cmd": "python C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\gettoken.py --token_url http://localhost:5000/api/v1/authenticate",
+  "token_refresh_interval": 150,
+  "per_resource_settings": {
+    "/api/v1/PreCreates/{webId}": {
+      "custom_dictionary": "C:\\Users\\Joshua\\source\\repos\\restler-fuzzer-testing\\Server\\restler-fuzzer\\results\\subresource.dict.json"
+    }
+  }
+}

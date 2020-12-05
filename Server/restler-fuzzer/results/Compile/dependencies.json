@@ -1,0 +1,72 @@
+{
+  "/api/v1/PreCreateSubResources/{webId}": {
+    "DELETE": {
+      "Path": [
+        {
+          "producer_endpoint": "/api/v1/PreCreates/{webId}",
+          "producer_method": "POST",
+          "producer_resource_name": "id",
+          "consumer_param": "webId"
+        }
+      ]
+    },
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "restler_custom_payload__webId",
+          "consumer_param": "webId"
+        }
+      ]
+    }
+  },
+  "/api/v1/PreCreates/{webId}": {
+    "GET": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "restler_custom_payload__webId",
+          "consumer_param": "webId"
+        }
+      ]
+    },
+    "POST": {
+      "Path": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "restler_custom_payload__webId",
+          "consumer_param": "webId"
+        }
+      ],
+      "Body": [
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "description"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "id"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "name"
+        },
+        {
+          "producer_endpoint": "",
+          "producer_method": "",
+          "producer_resource_name": "",
+          "consumer_param": "preCreateId"
+        }
+      ]
+    }
+  }
+}
