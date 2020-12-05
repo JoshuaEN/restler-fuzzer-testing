@@ -18,13 +18,13 @@
   </ItemGroup>
 
   <!-- For default dotnet run -->
-  <PropertyGroup Condition=" '$(Configuration)'!='TRADITIONALS' and '$(Configuration)'!='PUT_ONLYS' and '$(Configuration)'!='POST_ON_RESOURCES' and '$(Configuration)'!='ENDPOINT_AS_EXPECTED' and '$(Configuration)'!='ENDPOINT_SMALL_RESPONSES' and '$(Configuration)'!='RECURSIVE_MODELS' and '$(Configuration)'!='NESTED_MODELS' and '$(Configuration)'!='AS_EXPECT_PASCAL_CASES' and '$(Configuration)'!='TEST_JSON_PASCAL_CASE' and '$(Configuration)'!='NESTED'">
-    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_RECURSIVE_MODELS ENDPOINT_NESTED_MODELS ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES ENDPOINT_NESTED ENDPOINT_AUTHN ENDPOINT_PAYLOADS</DefineConstants>
+  <PropertyGroup Condition=" '$(Configuration)'!='TRADITIONALS' and '$(Configuration)'!='PUT_ONLYS' and '$(Configuration)'!='POST_ON_RESOURCES' and '$(Configuration)'!='ENDPOINT_AS_EXPECTED' and '$(Configuration)'!='ENDPOINT_SMALL_RESPONSES' and '$(Configuration)'!='RECURSIVE_MODELS' and '$(Configuration)'!='NESTED_MODELS' and '$(Configuration)'!='AS_EXPECT_PASCAL_CASES' and '$(Configuration)'!='TEST_JSON_PASCAL_CASE' and '$(Configuration)'!='NESTED' and '$(Configuration)'!='PRECREATED'">
+    <DefineConstants>ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_RECURSIVE_MODELS ENDPOINT_NESTED_MODELS ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES ENDPOINT_NESTED ENDPOINT_AUTHN ENDPOINT_PAYLOADS ENDPOINT_PRECREATED</DefineConstants>
   </PropertyGroup>
 
   <!-- For Visual Studio -->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_RECURSIVE_MODELS ENDPOINT_NESTED_MODELS ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES ENDPOINT_NESTED ENDPOINT_AUTHN ENDPOINT_PAYLOADS</DefineConstants>
+    <DefineConstants>TRACE; ENDPOINT_TRADITIONALS ENDPOINT_PUT_ONLYS ENDPOINT_POST_ON_RESOURCES ENDPOINT_SMALL_RESPONSES ENDPOINT_RECURSIVE_MODELS ENDPOINT_NESTED_MODELS ENDPOINT_AS_EXPECTED ENDPOINT_AS_EXPECT_PASCAL_CASES ENDPOINT_NESTED ENDPOINT_AUTHN ENDPOINT_PAYLOADS ENDPOINT_PRECREATED</DefineConstants>
   </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)'=='TRADITIONALS'">
@@ -77,5 +77,9 @@
 
   <PropertyGroup Condition="'$(Configuration)'=='PAYLOADS'">
     <DefineConstants>ENDPOINT_PAYLOADS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='PRECREATED'">
+    <DefineConstants>ENDPOINT_PRECREATED</DefineConstants>
   </PropertyGroup>
 </Project>

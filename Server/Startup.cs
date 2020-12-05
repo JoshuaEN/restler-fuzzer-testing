@@ -90,6 +90,10 @@ namespace Server
 #if ENDPOINT_PAYLOADS
             services.AddSingleton<InMemoryStorageService<PayloadController, string, Payload>>();
 #endif
+#if ENDPOINT_PRECREATED
+            services.AddSingleton<InMemoryStorageService<PreCreateController, string, PreCreate>>();
+            services.AddSingleton<InMemoryStorageService<PreCreateSubResourceController, string, PreCreateSubResource>>();
+#endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
